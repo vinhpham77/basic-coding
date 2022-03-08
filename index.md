@@ -14,7 +14,7 @@ C
 int main()
 {
 	printf("Hello World!");
-	getchar():
+	getchar();
 	return 0;
 }
 **Sách tinh gọn**  `Code`
