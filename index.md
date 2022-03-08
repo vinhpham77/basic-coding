@@ -2,7 +2,7 @@
 
 Sau này, chỉ có chịu khó, chỉ có làm, cần cù bù siêng năng hiểu chưa? chỉ có làm thì mới có ăn. Không làm mà đòi có ăn thì ăn ** ăn **.
 ```markdown
-	If you never try, you'll never know - mì cay 7 cấp độ Sanu
+			If you never try, you'll never know - Mì cay 7 cấp độ Sanu
 ```
 ### Chú ý
 
@@ -22,7 +22,7 @@ int main()
 
 ### Sách tinh gọn `Code`
 
-![**Sách tinh gọn**]("C:\Users\LENOVO LEGION\basic-coding\Web\img\300code.jpg") và [thông tin chi tiết ở đây](https://www.google.com/). 
+![**Sách tinh gọn**](/basic-coding/Web/img/300code.jpg) và [thông tin chi tiết ở đây](https://www.google.com/). 
 
 ### Lộ trình Full Stack
 
