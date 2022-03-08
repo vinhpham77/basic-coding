@@ -1,0 +1,2 @@
+V;Thu Sep 15 00:00:00 ICT 102;Giám đốc;1.5;3000
+Vinh;Mon Jan 11 00:00:00 ICT 1999;Phó giám đốc;1.3;500000
