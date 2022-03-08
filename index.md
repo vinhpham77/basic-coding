@@ -2,7 +2,7 @@
 
 "Sau lày, chỉ có chịu khó, chỉ có nàm, cần cù bù siêng năng hiểu chưa? chỉ có nàm thì mới có ăn. Những * * hông nàm mà đòi có ăn thì chỉ có ăn * nhá, ăn *." - Thầy Huấn
 ```markdown
-			"If you never try, you'll never know" - Mì cay 7 cấp độ Sanu
+			"If you never try, you'll never know" - Mì cay 7 cấp độ SanU
 ```
 ### Chú ý
 
