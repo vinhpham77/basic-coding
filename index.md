@@ -17,10 +17,10 @@ int main()
 	getchar();
 	return 0;
 }
-**Sách tinh gọn**  `Code`
 ```
 
-[Thông tin chi tiết ở đây](https://www.google.com/).
+### Sách tinh gọn `Code`
+![**Sách tinh gọn**](https://www.google.com/url?sa=i&url=https%3A%2F%2Fquantrimang.com%2Fcuon-sach-300-bai-code-thieu-nhi-va-nhung-mau-chuyen-vui-cua-anh-em-coder-176589&psig=AOvVaw2JjfC6rviMfwc9DIualMwP&ust=1646841999963000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMDh_dTytvYCFQAAAAAdAAAAABAD) và [thông tin chi tiết ở đây](https://www.google.com/). 
 
 ### Lộ trình Full Stack
 
