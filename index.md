@@ -1,12 +1,12 @@
 ## Chào mừng đến trang của Vin Provjp
 
-"Sau lày, chỉ có chịu khó, chỉ có nàm, cần cù bù siêng năng hiểu chưa? chỉ có nàm thì mới có ăn. Những * * hông nàm mà đòi có ăn thì chỉ có ăn ** nhá, ăn **." - Thầy Huấn
+"Sau lày, chỉ có chịu khó, chỉ có nàm, cần cù bù siêng năng hiểu chưa? chỉ có nàm thì mới có ăn. Những * * hông nàm mà đòi có ăn thì chỉ có ăn * nhá, ăn *." - Thầy Huấn
 ```markdown
 			If you never try, you'll never know - Mì cay 7 cấp độ Sanu
 ```
 ### Chú ý
 
-Mọi ngôn ngữ trên thế giới đều có chung xuất phát điểm: Hello World!
+Mọi ngôn ngữ lập trình đều có chung xuất phát điểm: Hello World!
 ```markdown
 C
 
