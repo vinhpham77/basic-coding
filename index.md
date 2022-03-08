@@ -1,4 +1,4 @@
-## Welcome to Trang của Vin Provjp
+## Chào mừng đến trang của Vin Provjp
 
 Sau này, chỉ có chịu khó, chỉ có làm, cần cù bù siêng năng hiểu chưa? chỉ có làm thì mới có ăn. Không làm mà đòi có ăn thì ăn ** ăn **.
 If you never try, you'll never know - mì cay 7 cấp độ Sanu
@@ -17,9 +17,8 @@ int main()
 	getchar():
 	return 0;
 }
-```
-
 **Sách tinh gọn**  `Code`
+```
 
 [Thông tin chi tiết ở đây](https://www.google.com/).
 
