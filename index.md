@@ -17,8 +17,9 @@ int main()
 	getchar():
 	return 0;
 }
-**Sách tinh gọn**  `Code`
 ```
+
+**Sách tinh gọn**  `Code`
 
 [Thông tin chi tiết ở đây](https://www.google.com/).
 
