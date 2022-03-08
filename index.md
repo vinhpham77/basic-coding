@@ -1,6 +1,6 @@
 ## Chào mừng đến trang của Vin Provjp
 
-"Sau này, chỉ có chịu khó, chỉ có làm, cần cù bù siêng năng hiểu chưa? chỉ có làm thì mới có ăn. Không làm mà đòi có ăn thì chỉ có ăn ** nhá, ăn **." - Thầy Huấn
+"Sau này, chỉ có chịu khó, chỉ có làm, cần cù bù siêng năng hiểu chưa? chỉ có làm thì mới có ăn. Những cái loại hông làm mà đòi có ăn thì chỉ có ăn ** nhá, ăn **." - Thầy Huấn
 ```markdown
 			If you never try, you'll never know - Mì cay 7 cấp độ Sanu
 ```
@@ -22,7 +22,7 @@ int main()
 
 ### Sách tinh gọn `Code`
 
-![**Sách tinh gọn**](/basic-coding/Web/img/300code.jfif)  [Thông tin chi tiết](https://www.youtube.com/watch?v=gVlYxmdbYqM).
+![**Sách tinh gọn**](/basic-coding/Web/img/300code.jfif)<br />[Thông tin chi tiết](https://www.youtube.com/watch?v=gVlYxmdbYqM)
 
 ### Lộ trình Full Stack
 
