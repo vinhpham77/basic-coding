@@ -22,7 +22,7 @@ int main()
 
 ### Sách tinh gọn `Code`
 
-![**Sách tinh gọn**](/basic-coding/Web/img/300code.jpg) và [thông tin chi tiết ở đây](https://www.google.com/). 
+![**Sách tinh gọn**](/basic-coding/Web/img/300code.jfif) và [thông tin chi tiết ở đây](https://www.google.com/). 
 
 ### Lộ trình Full Stack
 
