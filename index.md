@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+## Welcome to Trang của Vin Provjp
 
-You can use the [editor on GitHub](https://github.com/vinhpham77/basic-codes/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Sau này, chỉ có chịu khó, chỉ có làm, cần cù bù siêng năng hiểu chưa? chỉ có làm thì mới có ăn. Không làm mà đòi có ăn thì ăn ** ăn **.
+If you never try, you'll never know - mì cay 7 cấp độ Sanu
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Chú ý
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+Mọi ngôn ngữ trên thế giới đều có chung xuất phát điểm: Hello World!
 ```markdown
-Syntax highlighted code block
+C
 
-# Header 1
-## Header 2
-### Header 3
+#include <stdio.h>
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+int main()
+{
+	printf("Hello World!");
+	getchar():
+	return 0;
+}
+**Sách tinh gọn**  `Code`
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+[Thông tin chi tiết ở đây](https://www.google.com/).
 
-### Jekyll Themes
+### Lộ trình Full Stack
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/vinhpham77/basic-codes/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Đường dài mới biết ngựa hay(tui tuổi con ngựa), [gói gọn ở đây](https://stackoverflow.com).
 
-### Support or Contact
+### Liên hệ
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Nếu có điều gì còn thắc mắc, vui lòng liên hệ [địa chỉ](https://www.facebook.com/me/) và vấn đề sẽ được giải quyết.
