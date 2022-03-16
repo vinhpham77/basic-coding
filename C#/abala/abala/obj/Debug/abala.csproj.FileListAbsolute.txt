@@ -1,0 +1,11 @@
+C:\Users\LENOVO LEGION\basic-coding\C#\abala\abala\bin\Debug\abala.exe.config
+C:\Users\LENOVO LEGION\basic-coding\C#\abala\abala\bin\Debug\abala.exe
+C:\Users\LENOVO LEGION\basic-coding\C#\abala\abala\bin\Debug\abala.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\abala\abala\obj\Debug\abala.csproj.AssemblyReference.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\abala\abala\obj\Debug\abala.csproj.SuggestedBindingRedirects.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\abala\abala\obj\Debug\abala.Form1.resources
+C:\Users\LENOVO LEGION\basic-coding\C#\abala\abala\obj\Debug\abala.Properties.Resources.resources
+C:\Users\LENOVO LEGION\basic-coding\C#\abala\abala\obj\Debug\abala.csproj.GenerateResource.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\abala\abala\obj\Debug\abala.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\abala\abala\obj\Debug\abala.exe
+C:\Users\LENOVO LEGION\basic-coding\C#\abala\abala\obj\Debug\abala.pdb
