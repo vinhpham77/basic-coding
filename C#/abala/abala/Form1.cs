@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace abala
 {
@@ -37,8 +38,28 @@ namespace abala
             oFile.Filter = "Tập tin ảnh|*.jpg;*.png;*.bmp|File tuỳ ý(*.*)|*.*";
             if (oFile.ShowDialog() == DialogResult.OK)
             {
-                pictureBox1.Image = Image.FromFile(oFile.FileName);
+                pbxImage.Image = Image.FromFile(oFile.FileName);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            txtFirstName.Clear();
+            txtLastName.Clear();
+            if (rbtnFemale.Checked)
+            {
+                rbtnMale.Select();
+            }
+            cbxEnglish.Checked = false;
+            cbxEnglish.Checked = false;
+            cbxJapanese.Checked = false;
+            lbxSubjects.ClearSelected();
+            cbxQQ.SelectedIndex = 0;
+        }
+
+        private void rbtnGender_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
