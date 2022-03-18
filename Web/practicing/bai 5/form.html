@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mẫu điền thông tin</title>
+</head>
+<body>
+	<form>
+		<table>
+			<tr>
+				<td><label for="txtName">Tên:</label></td>
+				<td><input type="text" name="txtName" id="txtName"></td>
+			</tr>
+			<tr>
+				<td><label for="password">Mật khẩu:</label></td>
+				<td><input type="password" name="password" id="password"></td>
+			</tr>
+			<tr>
+				<td><label for="selctCity">Thành phố:</label></td>
+				<td>
+					<select name="selctCity" id="selctCity">
+						<option>--CHỌN THÀNH PHỐ--</option>
+						<option>Hà Nội</option>
+						<option>Hải Phòng</option>
+						<option>Quy Nhơn</option>
+						<option>Hồ Chí Minh</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Giới tính:</td>
+				<td><input type="radio" name="rGender" value="female">Nữ<input type="radio" name="rGender" value="male">Nam</td>
+			</tr>
+			<tr>
+				<td><label for="fileAvt">Avatar:</label></td>
+				<td><input type="file" name="fileAvt" id="fileAvt"></td>
+			</tr>
+			<tr>
+				<td>Ngôn ngữ:</td>
+				<td>
+					<input type="checkbox" name="cbxJava">JAVA
+					<input type="checkbox" name="cbxNodeJS">NODEJS
+					<input type="checkbox" name="cbxPHP">PHP
+				</td>
+			</tr>
+			<tr><td><button>Confirm</button></td></tr>
+		</table>
+	</form>
+</body>
+</html>
