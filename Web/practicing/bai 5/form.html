@@ -4,10 +4,17 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Mẫu điền thông tin</title>
+
+	<script type="text/javascript">
+		function loadImg(event) {
+			img.src = URL.createObjectURL(event.target.files[0]);
+		}
+	</script>
 </head>
+
 <body>
 	<form>
-		<table>
+		<table align="center">
 			<tr>
 				<td><label for="txtName">Tên:</label></td>
 				<td><input type="text" name="txtName" id="txtName"></td>
@@ -30,11 +37,11 @@
 			</tr>
 			<tr>
 				<td>Giới tính:</td>
-				<td><input type="radio" name="rGender" value="female">Nữ<input type="radio" name="rGender" value="male">Nam</td>
+				<td><input type="radio" name="rGender" value="female">Nữ<input type="radio" name="rGender" value="male">Nam</td> 
 			</tr>
 			<tr>
 				<td><label for="fileAvt">Avatar:</label></td>
-				<td><input type="file" name="fileAvt" id="fileAvt"></td>
+				<td><img style="height: 80px; width: 70px;" id="img" alt="Ảnh của bạn"><input type="file" name="fileAvt" id="fileAvt" accept="image/*" onchange="loadImg(event)"></td>
 			</tr>
 			<tr>
 				<td>Ngôn ngữ:</td>

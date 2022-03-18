@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO LEGION\\OneDrive - itqnu77\\Codes\\C#\\QLSV\\QLSV\\QLSV.csproj",
+      "projectUniqueName": "C:\\Users\\LENOVO LEGION\\basic-coding\\C#\\QLSV\\QLSV\\QLSV.csproj",
       "projectName": "QLSV",
-      "projectPath": "C:\\Users\\LENOVO LEGION\\OneDrive - itqnu77\\Codes\\C#\\QLSV\\QLSV\\QLSV.csproj",
+      "projectPath": "C:\\Users\\LENOVO LEGION\\basic-coding\\C#\\QLSV\\QLSV\\QLSV.csproj",
       "packagesPath": "C:\\Users\\LENOVO LEGION\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO LEGION\\OneDrive - itqnu77\\Codes\\C#\\QLSV\\QLSV\\obj\\",
+      "outputPath": "C:\\Users\\LENOVO LEGION\\basic-coding\\C#\\QLSV\\QLSV\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO LEGION\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
