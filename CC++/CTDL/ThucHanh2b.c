@@ -16,7 +16,7 @@ struct Danh_Ba
 	struct Thue_Bao thue_bao;
 	struct Danh_Ba *lien_ket;
 };
-struct Quan_Ly
+struct QLDB
 {
 	struct Danh_Ba *dau;
 	struct Danh_Ba *cuoi;
@@ -24,33 +24,35 @@ struct Quan_Ly
 
 void nhap_TB(struct Thue_Bao *);
 void in_TB(struct Thue_Bao);
-void khoi_tao_QL(struct Quan_Ly *);
-void nhap_DB(struct Quan_Ly *);
+void khoi_tao_QLDB(struct QLDB *);
+void nhap_DB(struct QLDB *);
 void liet_ke_TB(struct Danh_Ba *);
-void them_TB_dau_DB(struct Quan_Ly *, struct Thue_Bao);
-int them_TB_cuoi_DB(struct Quan_Ly *, struct Thue_Bao);
-int them_TB_sau_ten(struct Quan_Ly *, struct Thue_Bao, char *);
+void them_TB_dau_DB(struct QLDB *, struct Thue_Bao);
+int them_TB_cuoi_DB(struct QLDB *, struct Thue_Bao);
+int them_TB_sau_ten(struct QLDB *, struct Thue_Bao, char *);
 int dem_TB(struct Danh_Ba *);
-int xoa_TB_ten(struct Quan_Ly *, char *);
+int xoa_TB_ten(struct QLDB *, char *);
 struct Danh_Ba * tim_DB_co_TB_ten(struct Danh_Ba *, char *);
 struct Thue_Bao * tim_TB_co_sdt(struct Danh_Ba *, char *);
 int them_sdt_vao_tb(struct Danh_Ba *, char *, char *);
 int xoa_sdt(struct Danh_Ba *, char *);
 int la_sdt_Viettel(char *);
 int la_TB_Viettel(struct Thue_Bao);
-void tao_QL_Viettel_tu_QL(struct Quan_Ly *, struct Quan_Ly *);
+void tao_DB_Viettel_tu_DB(struct Danh_Ba *, struct QLDB *);
+void ghep_hai_DB(struct Danh_Ba *, struct Danh_Ba *);
 
 int main()
 {
 	char ten[30];
 	char sdt[11];
 	struct Thue_Bao *tb = (struct Thue_Bao *) malloc(sizeof(struct Thue_Bao));
-	struct Quan_Ly *ql = (struct Quan_Ly *) malloc(sizeof(struct Quan_Ly));
+	struct QLDB *ql = (struct QLDB *) malloc(sizeof(struct QLDB));
+	struct QLDB *ql_moi = (struct QLDB *) malloc(sizeof(struct QLDB));
 	
-	khoi_tao_QL(ql);
+	khoi_tao_QLDB(ql);
 
-//	nhap_TB(&tb);
-//	them_TB_cuoi_DB(ql, tb);
+//	nhap_TB(tb);
+//	them_TB_dau_DB(ql, *tb);
 
 	nhap_DB(ql);
 //	liet_ke_TB(ql->dau);
@@ -64,22 +66,16 @@ int main()
 //	nhap_TB(tb);
 //	them_TB_cuoi_DB(ql, *tb);
 //	liet_ke_TB(ql->dau);
-
+//
 //	printf("\n");
 //	nhap_TB(tb);
 //	printf("Nhap ten thue bao muon them sau do: ");
 //	gets(ten);
 //	printf("%d\n", them_TB_sau_ten(ql, *tb, ten));
 //	liet_ke_TB(ql->dau);
-
-//	printf("\n");
-//	if (ql->cuoi != NULL)
-//	{
-//		in_TB(ql->cuoi->thue_bao);
-//	}
-
+//
 //	printf("\nSo luong thue bao: %d", dem_TB(ql->dau));
-
+//
 //	printf("\nNhap ten thue bao muon xoa: ");
 //	gets(ten);
 //	printf("%d\n", xoa_TB_ten(ql, ten));
@@ -96,25 +92,27 @@ int main()
 //	{
 //		in_TB(*tb);
 //	}
-
+//
 //	printf("\nNhap ten thue bao can them sdt: ");
 //	gets(ten);
 //	printf("Nhap sdt can them: ");
 //	gets(sdt);
 //	printf("%d\n", them_sdt_vao_tb(ql->dau, ten, sdt));
 //	liet_ke_TB(ql->dau);
-	
+//	
 //	printf("\nNhap sdt can xoa: ");
 //	gets(sdt);
 //	printf("%d\n", xoa_sdt(ql->dau, sdt));
 //	liet_ke_TB(ql->dau);
 	
 	
+//	tao_DB_Viettel_tu_DB(ql->dau, ql_moi);
+//	liet_ke_TB(ql_moi->dau);
 	
 	return 0;
 }
 
-void khoi_tao_QL(struct Quan_Ly *ql)
+void khoi_tao_QLDB(struct QLDB *ql)
 {
 	ql->dau = NULL;
 	ql->cuoi = NULL;
@@ -152,11 +150,11 @@ void in_TB(struct Thue_Bao tb)
 	}
 }
 
-void nhap_DB(struct Quan_Ly *ql)
+void nhap_DB(struct QLDB *ql)
 {
 	int n;
 	int i;
-	struct Thue_Bao *tb;
+	struct Thue_Bao tb;
 
 	printf("Nhap so luong thue bao: ");
 	scanf("%d", &n);
@@ -164,9 +162,8 @@ void nhap_DB(struct Quan_Ly *ql)
 	
 	for	(i = 0; i < n; i++)
 	{
-		tb = (struct Thue_Bao *) malloc(sizeof(struct Thue_Bao));
-		nhap_TB(tb);
-		them_TB_cuoi_DB(ql, *tb);
+		nhap_TB(&tb);
+		them_TB_cuoi_DB(ql, tb);
 	}
 }
 
@@ -182,7 +179,7 @@ void liet_ke_TB(struct Danh_Ba *dau)
 	}
 }
 
-void them_TB_dau_DB(struct Quan_Ly *ql, struct Thue_Bao tb)
+void them_TB_dau_DB(struct QLDB *ql, struct Thue_Bao tb)
 {
 	struct Danh_Ba *p_new = (struct Danh_Ba *) malloc(sizeof(struct Danh_Ba));
 
@@ -201,7 +198,7 @@ void them_TB_dau_DB(struct Quan_Ly *ql, struct Thue_Bao tb)
 	}
 }
 
-int them_TB_cuoi_DB(struct Quan_Ly *ql, struct Thue_Bao tb)
+int them_TB_cuoi_DB(struct QLDB *ql, struct Thue_Bao tb)
 {
 	struct Danh_Ba *p;
 	struct Danh_Ba *p_new;
@@ -231,7 +228,7 @@ int them_TB_cuoi_DB(struct Quan_Ly *ql, struct Thue_Bao tb)
 	return 1;
 }
 
-int them_TB_sau_ten(struct Quan_Ly *ql, struct Thue_Bao tb, char *ten)
+int them_TB_sau_ten(struct QLDB *ql, struct Thue_Bao tb, char *ten)
 {
 	int la_tb_cuoi;
 	struct Danh_Ba *p_new;
@@ -309,7 +306,7 @@ int dem_TB(struct Danh_Ba *dau)
 	return dem;
 }
 
-int xoa_TB_ten(struct Quan_Ly *ql, char *ten)
+int xoa_TB_ten(struct QLDB *ql, char *ten)
 {
 	struct Danh_Ba *p = ql->dau;
 	struct Danh_Ba *tam;
@@ -412,4 +409,21 @@ int la_TB_Viettel(struct Thue_Bao tb)
 	for (i = 0; i < tb.so_sdt && !la_sdt_Viettel(tb.sdt[i]); i++);
 	
 	return i < tb.so_sdt;
+}
+
+void tao_DB_Viettel_tu_DB(struct Danh_Ba *dau, struct QLDB *ql_moi)
+{
+	struct Danh_Ba *p = dau;
+	
+	khoi_tao_QLDB(ql_moi);
+	
+	while (p != NULL)
+	{
+		if (la_TB_Viettel(p->thue_bao))
+		{
+			them_TB_cuoi_DB(ql_moi, p->thue_bao);
+		}
+		
+		p = p->lien_ket;
+	}
 }
