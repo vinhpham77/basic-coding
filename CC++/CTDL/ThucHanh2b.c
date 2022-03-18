@@ -39,7 +39,7 @@ int xoa_sdt(struct Danh_Ba *, char *);
 int la_sdt_Viettel(char *);
 int la_TB_Viettel(struct Thue_Bao);
 void tao_DB_Viettel_tu_DB(struct Danh_Ba *, struct QLDB *);
-void ghep_hai_DB(struct Danh_Ba *, struct Danh_Ba *);
+void ghep_hai_DB(struct QLDB *, struct Danh_Ba *);
 
 int main()
 {
@@ -47,6 +47,7 @@ int main()
 	char sdt[11];
 	struct Thue_Bao *tb = (struct Thue_Bao *) malloc(sizeof(struct Thue_Bao));
 	struct QLDB *ql = (struct QLDB *) malloc(sizeof(struct QLDB));
+	struct QLDB *ql2 = (struct QLDB *) malloc(sizeof(struct QLDB));
 	struct QLDB *ql_moi = (struct QLDB *) malloc(sizeof(struct QLDB));
 	
 	khoi_tao_QLDB(ql);
@@ -56,59 +57,57 @@ int main()
 
 	nhap_DB(ql);
 //	liet_ke_TB(ql->dau);
-//
-//	printf("\n");
-//	nhap_TB(tb);
-//	them_TB_dau_DB(ql, *tb);
-//	liet_ke_TB(ql->dau);
-//
-//	printf("\n");
-//	nhap_TB(tb);
-//	them_TB_cuoi_DB(ql, *tb);
-//	liet_ke_TB(ql->dau);
-//
-//	printf("\n");
-//	nhap_TB(tb);
-//	printf("Nhap ten thue bao muon them sau do: ");
-//	gets(ten);
-//	printf("%d\n", them_TB_sau_ten(ql, *tb, ten));
-//	liet_ke_TB(ql->dau);
-//
-//	printf("\nSo luong thue bao: %d", dem_TB(ql->dau));
-//
-//	printf("\nNhap ten thue bao muon xoa: ");
-//	gets(ten);
-//	printf("%d\n", xoa_TB_ten(ql, ten));
+
+	printf("\n");
+	nhap_TB(tb);
+	them_TB_dau_DB(ql, *tb);
 //	liet_ke_TB(ql->dau);
 
-//	printf("Nhap sdt cua thue bao muon tim: ");
-//	gets(sdt);
-//	tb = tim_TB_co_sdt(ql->dau, sdt);
-//	if (tb == NULL)
-//	{
-//		printf("Khong tim thay thue bao nao co sdt %s\n", sdt);
-//	}
-//	else
-//	{
-//		in_TB(*tb);
-//	}
-//
-//	printf("\nNhap ten thue bao can them sdt: ");
-//	gets(ten);
-//	printf("Nhap sdt can them: ");
-//	gets(sdt);
-//	printf("%d\n", them_sdt_vao_tb(ql->dau, ten, sdt));
+	printf("\n");
+	nhap_TB(tb);
+	printf("Nhap ten thue bao muon them sau do: ");
+	gets(ten);
+	printf("%d\n", them_TB_sau_ten(ql, *tb, ten));
 //	liet_ke_TB(ql->dau);
-//	
-//	printf("\nNhap sdt can xoa: ");
-//	gets(sdt);
-//	printf("%d\n", xoa_sdt(ql->dau, sdt));
+
+	printf("\nSo luong thue bao: %d", dem_TB(ql->dau));
+
+	printf("\nNhap ten thue bao muon xoa: ");
+	gets(ten);
+	printf("%d\n", xoa_TB_ten(ql, ten));
+//	liet_ke_TB(ql->dau);
+
+	printf("Nhap sdt cua thue bao muon tim: ");
+	gets(sdt);
+	tb = tim_TB_co_sdt(ql->dau, sdt);
+	if (tb == NULL)
+	{
+		printf("Khong tim thay thue bao nao co sdt %s\n", sdt);
+	}
+	else
+	{
+		in_TB(*tb);
+	}
+
+	printf("\nNhap ten thue bao can them sdt: ");
+	gets(ten);
+	printf("Nhap sdt can them: ");
+	gets(sdt);
+	printf("%d\n", them_sdt_vao_tb(ql->dau, ten, sdt));
 //	liet_ke_TB(ql->dau);
 	
+	printf("\nNhap sdt can xoa: ");
+	gets(sdt);
+	printf("%d\n", xoa_sdt(ql->dau, sdt));
+//	liet_ke_TB(ql->dau);
 	
-//	tao_DB_Viettel_tu_DB(ql->dau, ql_moi);
+	tao_DB_Viettel_tu_DB(ql->dau, ql_moi);
 //	liet_ke_TB(ql_moi->dau);
 	
+	khoi_tao_QLDB(ql2);
+	nhap_DB(ql2);
+	ghep_hai_DB(ql, ql2->dau);
+//	liet_ke_TB(ql->dau);
 	return 0;
 }
 
@@ -116,7 +115,7 @@ void khoi_tao_QLDB(struct QLDB *ql)
 {
 	ql->dau = NULL;
 	ql->cuoi = NULL;
-}
+} 
 
 void nhap_TB(struct Thue_Bao *tb)
 {
@@ -368,10 +367,10 @@ int them_sdt_vao_tb(struct Danh_Ba *dau, char *ten, char *sdt)
 	return 0;
 }
 
-int xoa_sdt(struct Danh_Ba *db, char *sdt)
+int xoa_sdt(struct Danh_Ba *dau, char *sdt)
 {
 	int i;
-	struct Danh_Ba *p = db;
+	struct Danh_Ba *p = dau;
 	
 	while (p != NULL)
 	{
@@ -424,6 +423,17 @@ void tao_DB_Viettel_tu_DB(struct Danh_Ba *dau, struct QLDB *ql_moi)
 			them_TB_cuoi_DB(ql_moi, p->thue_bao);
 		}
 		
+		p = p->lien_ket;
+	}
+}
+
+void ghep_hai_DB(struct QLDB *ql_dich, struct Danh_Ba *dau_nguon)
+{
+	struct Danh_Ba *p = dau_nguon;
+	
+	while (p != NULL)
+	{
+		them_TB_cuoi_DB(ql_dich, p->thue_bao);
 		p = p->lien_ket;
 	}
 }
