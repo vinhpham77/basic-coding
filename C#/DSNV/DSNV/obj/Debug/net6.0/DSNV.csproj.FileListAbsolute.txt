@@ -1,0 +1,15 @@
+C:\Users\LENOVO LEGION\basic-coding\C#\DSNV\DSNV\bin\Debug\net6.0\DSNV.exe
+C:\Users\LENOVO LEGION\basic-coding\C#\DSNV\DSNV\bin\Debug\net6.0\DSNV.deps.json
+C:\Users\LENOVO LEGION\basic-coding\C#\DSNV\DSNV\bin\Debug\net6.0\DSNV.runtimeconfig.json
+C:\Users\LENOVO LEGION\basic-coding\C#\DSNV\DSNV\bin\Debug\net6.0\DSNV.dll
+C:\Users\LENOVO LEGION\basic-coding\C#\DSNV\DSNV\bin\Debug\net6.0\DSNV.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\DSNV\DSNV\obj\Debug\net6.0\DSNV.csproj.AssemblyReference.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\DSNV\DSNV\obj\Debug\net6.0\DSNV.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO LEGION\basic-coding\C#\DSNV\DSNV\obj\Debug\net6.0\DSNV.AssemblyInfoInputs.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\DSNV\DSNV\obj\Debug\net6.0\DSNV.AssemblyInfo.cs
+C:\Users\LENOVO LEGION\basic-coding\C#\DSNV\DSNV\obj\Debug\net6.0\DSNV.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\DSNV\DSNV\obj\Debug\net6.0\DSNV.dll
+C:\Users\LENOVO LEGION\basic-coding\C#\DSNV\DSNV\obj\Debug\net6.0\refint\DSNV.dll
+C:\Users\LENOVO LEGION\basic-coding\C#\DSNV\DSNV\obj\Debug\net6.0\DSNV.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\DSNV\DSNV\obj\Debug\net6.0\DSNV.genruntimeconfig.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\DSNV\DSNV\obj\Debug\net6.0\ref\DSNV.dll

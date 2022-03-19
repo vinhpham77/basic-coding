@@ -1,0 +1,15 @@
+C:\Users\LENOVO LEGION\basic-coding\C#\DiemHP\DiemHP\bin\Debug\net6.0\DiemHP.exe
+C:\Users\LENOVO LEGION\basic-coding\C#\DiemHP\DiemHP\bin\Debug\net6.0\DiemHP.deps.json
+C:\Users\LENOVO LEGION\basic-coding\C#\DiemHP\DiemHP\bin\Debug\net6.0\DiemHP.runtimeconfig.json
+C:\Users\LENOVO LEGION\basic-coding\C#\DiemHP\DiemHP\bin\Debug\net6.0\DiemHP.dll
+C:\Users\LENOVO LEGION\basic-coding\C#\DiemHP\DiemHP\bin\Debug\net6.0\DiemHP.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\DiemHP\DiemHP\obj\Debug\net6.0\DiemHP.csproj.AssemblyReference.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\DiemHP\DiemHP\obj\Debug\net6.0\DiemHP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO LEGION\basic-coding\C#\DiemHP\DiemHP\obj\Debug\net6.0\DiemHP.AssemblyInfoInputs.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\DiemHP\DiemHP\obj\Debug\net6.0\DiemHP.AssemblyInfo.cs
+C:\Users\LENOVO LEGION\basic-coding\C#\DiemHP\DiemHP\obj\Debug\net6.0\DiemHP.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\DiemHP\DiemHP\obj\Debug\net6.0\DiemHP.dll
+C:\Users\LENOVO LEGION\basic-coding\C#\DiemHP\DiemHP\obj\Debug\net6.0\refint\DiemHP.dll
+C:\Users\LENOVO LEGION\basic-coding\C#\DiemHP\DiemHP\obj\Debug\net6.0\DiemHP.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\DiemHP\DiemHP\obj\Debug\net6.0\DiemHP.genruntimeconfig.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\DiemHP\DiemHP\obj\Debug\net6.0\ref\DiemHP.dll

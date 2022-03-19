@@ -1,0 +1,15 @@
+C:\Users\LENOVO LEGION\basic-coding\C#\DSTL\DSTL\obj\Debug\net6.0\DSTL.csproj.AssemblyReference.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\DSTL\DSTL\obj\Debug\net6.0\DSTL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO LEGION\basic-coding\C#\DSTL\DSTL\obj\Debug\net6.0\DSTL.AssemblyInfoInputs.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\DSTL\DSTL\obj\Debug\net6.0\DSTL.AssemblyInfo.cs
+C:\Users\LENOVO LEGION\basic-coding\C#\DSTL\DSTL\obj\Debug\net6.0\DSTL.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\DSTL\DSTL\bin\Debug\net6.0\DSTL.exe
+C:\Users\LENOVO LEGION\basic-coding\C#\DSTL\DSTL\bin\Debug\net6.0\DSTL.deps.json
+C:\Users\LENOVO LEGION\basic-coding\C#\DSTL\DSTL\bin\Debug\net6.0\DSTL.runtimeconfig.json
+C:\Users\LENOVO LEGION\basic-coding\C#\DSTL\DSTL\bin\Debug\net6.0\DSTL.dll
+C:\Users\LENOVO LEGION\basic-coding\C#\DSTL\DSTL\bin\Debug\net6.0\DSTL.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\DSTL\DSTL\obj\Debug\net6.0\DSTL.dll
+C:\Users\LENOVO LEGION\basic-coding\C#\DSTL\DSTL\obj\Debug\net6.0\refint\DSTL.dll
+C:\Users\LENOVO LEGION\basic-coding\C#\DSTL\DSTL\obj\Debug\net6.0\DSTL.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\DSTL\DSTL\obj\Debug\net6.0\DSTL.genruntimeconfig.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\DSTL\DSTL\obj\Debug\net6.0\ref\DSTL.dll
