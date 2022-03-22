@@ -1,0 +1,11 @@
+C:\Users\LENOVO LEGION\basic-coding\C#\FlightReservation\FlightReservation\bin\Debug\FlightReservation.exe.config
+C:\Users\LENOVO LEGION\basic-coding\C#\FlightReservation\FlightReservation\bin\Debug\FlightReservation.exe
+C:\Users\LENOVO LEGION\basic-coding\C#\FlightReservation\FlightReservation\bin\Debug\FlightReservation.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\FlightReservation\FlightReservation\obj\Debug\FlightReservation.csproj.AssemblyReference.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\FlightReservation\FlightReservation\obj\Debug\FlightReservation.csproj.SuggestedBindingRedirects.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\FlightReservation\FlightReservation\obj\Debug\FlightReservation.frmDetails.resources
+C:\Users\LENOVO LEGION\basic-coding\C#\FlightReservation\FlightReservation\obj\Debug\FlightReservation.Properties.Resources.resources
+C:\Users\LENOVO LEGION\basic-coding\C#\FlightReservation\FlightReservation\obj\Debug\FlightReservation.csproj.GenerateResource.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\FlightReservation\FlightReservation\obj\Debug\FlightReservation.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\FlightReservation\FlightReservation\obj\Debug\FlightReservation.exe
+C:\Users\LENOVO LEGION\basic-coding\C#\FlightReservation\FlightReservation\obj\Debug\FlightReservation.pdb

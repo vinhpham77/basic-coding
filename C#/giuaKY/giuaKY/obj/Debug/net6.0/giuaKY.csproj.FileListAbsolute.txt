@@ -1,0 +1,15 @@
+C:\Users\LENOVO LEGION\basic-coding\C#\giuaKY\giuaKY\bin\Debug\net6.0\giuaKY.exe
+C:\Users\LENOVO LEGION\basic-coding\C#\giuaKY\giuaKY\bin\Debug\net6.0\giuaKY.deps.json
+C:\Users\LENOVO LEGION\basic-coding\C#\giuaKY\giuaKY\bin\Debug\net6.0\giuaKY.runtimeconfig.json
+C:\Users\LENOVO LEGION\basic-coding\C#\giuaKY\giuaKY\bin\Debug\net6.0\giuaKY.dll
+C:\Users\LENOVO LEGION\basic-coding\C#\giuaKY\giuaKY\bin\Debug\net6.0\giuaKY.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\giuaKY\giuaKY\obj\Debug\net6.0\giuaKY.csproj.AssemblyReference.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\giuaKY\giuaKY\obj\Debug\net6.0\giuaKY.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO LEGION\basic-coding\C#\giuaKY\giuaKY\obj\Debug\net6.0\giuaKY.AssemblyInfoInputs.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\giuaKY\giuaKY\obj\Debug\net6.0\giuaKY.AssemblyInfo.cs
+C:\Users\LENOVO LEGION\basic-coding\C#\giuaKY\giuaKY\obj\Debug\net6.0\giuaKY.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\giuaKY\giuaKY\obj\Debug\net6.0\giuaKY.dll
+C:\Users\LENOVO LEGION\basic-coding\C#\giuaKY\giuaKY\obj\Debug\net6.0\refint\giuaKY.dll
+C:\Users\LENOVO LEGION\basic-coding\C#\giuaKY\giuaKY\obj\Debug\net6.0\giuaKY.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\giuaKY\giuaKY\obj\Debug\net6.0\giuaKY.genruntimeconfig.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\giuaKY\giuaKY\obj\Debug\net6.0\ref\giuaKY.dll
