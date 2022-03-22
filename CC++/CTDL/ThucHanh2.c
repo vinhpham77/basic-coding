@@ -42,24 +42,24 @@ int main()
 	khoi_tao_DB(&db);
 	
 	nhap_DB(&db);
-//	liet_ke_TB(db);
+	liet_ke_TB(db);
 	
-//	nhap_TB(&tb);
-//	them_TB_dau_DB(&db, tb);
-//	liet_ke_TB(db);
+	nhap_TB(&tb);
+	them_TB_dau_DB(&db, tb);
+	liet_ke_TB(db);
 	
 	nhap_TB(&tb);
 	printf("\nNhap ten thue bao muon them sau do: ");
 	gets(ten);
 	printf("%d\n", them_TB_sau_ten(db, tb, ten));
-//	liet_ke_TB(db);
+	liet_ke_TB(db);
 
 	printf("\nSo luong thue bao: %d\n", dem_TB(db));
-//
+
 	printf("\nNhap ten thue bao muon xoa: ");
 	gets(ten);
 	printf("%d\n", xoa_TB_ten(&db, ten));
-//	liet_ke_TB(db);
+	liet_ke_TB(db);
 
 	printf("\nNhap sdt cua thue bao can tim: ");
 	gets(sdt);
@@ -76,7 +76,7 @@ int main()
 	printf("\nNhap sdt can xoa: ");
 	gets(sdt);
 	printf("%d\n", xoa_sdt(db, sdt));
-//	liet_ke_TB(db);
+	liet_ke_TB(db);
 
 	printf("\nNhap ten thue bao can them sdt: ");
 	gets(ten);
