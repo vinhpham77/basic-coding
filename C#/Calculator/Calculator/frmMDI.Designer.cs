@@ -55,7 +55,8 @@
             this.mnuItemExit});
             this.mnuArith.Location = new System.Drawing.Point(0, 0);
             this.mnuArith.Name = "mnuArith";
-            this.mnuArith.Size = new System.Drawing.Size(393, 28);
+            this.mnuArith.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.mnuArith.Size = new System.Drawing.Size(295, 24);
             this.mnuArith.TabIndex = 0;
             this.mnuArith.Text = "menuStrip1";
             // 
@@ -66,37 +67,42 @@
             this.mnuItemSubtract,
             this.mnuItemMultipy,
             this.mnuItemDivide});
+            this.mnuItemArith.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuItemArith.Name = "mnuItemArith";
             this.mnuItemArith.ShortcutKeyDisplayString = "";
-            this.mnuItemArith.Size = new System.Drawing.Size(163, 24);
+            this.mnuItemArith.Size = new System.Drawing.Size(137, 20);
             this.mnuItemArith.Text = "&Arithmetic Calculator";
             this.mnuItemArith.Click += new System.EventHandler(this.aToolStripMenuItem_Click);
             // 
             // mnuItemAdd
             // 
+            this.mnuItemAdd.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuItemAdd.Name = "mnuItemAdd";
-            this.mnuItemAdd.Size = new System.Drawing.Size(224, 26);
+            this.mnuItemAdd.Size = new System.Drawing.Size(180, 22);
             this.mnuItemAdd.Text = "Add";
             this.mnuItemAdd.Click += new System.EventHandler(this.mnuItemAdd_Click);
             // 
             // mnuItemSubtract
             // 
+            this.mnuItemSubtract.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuItemSubtract.Name = "mnuItemSubtract";
-            this.mnuItemSubtract.Size = new System.Drawing.Size(224, 26);
+            this.mnuItemSubtract.Size = new System.Drawing.Size(180, 22);
             this.mnuItemSubtract.Text = "Subtract";
             this.mnuItemSubtract.Click += new System.EventHandler(this.mnuItemSubtract_Click);
             // 
             // mnuItemMultipy
             // 
+            this.mnuItemMultipy.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuItemMultipy.Name = "mnuItemMultipy";
-            this.mnuItemMultipy.Size = new System.Drawing.Size(224, 26);
+            this.mnuItemMultipy.Size = new System.Drawing.Size(180, 22);
             this.mnuItemMultipy.Text = "Multipy";
             this.mnuItemMultipy.Click += new System.EventHandler(this.mnuItemMultipy_Click);
             // 
             // mnuItemDivide
             // 
+            this.mnuItemDivide.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuItemDivide.Name = "mnuItemDivide";
-            this.mnuItemDivide.Size = new System.Drawing.Size(224, 26);
+            this.mnuItemDivide.Size = new System.Drawing.Size(180, 22);
             this.mnuItemDivide.Text = "Divide";
             this.mnuItemDivide.Click += new System.EventHandler(this.mnuItemDivide_Click);
             // 
@@ -104,14 +110,16 @@
             // 
             this.mnuItemExit.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuItemQuit});
+            this.mnuItemExit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuItemExit.Name = "mnuItemExit";
-            this.mnuItemExit.Size = new System.Drawing.Size(47, 24);
+            this.mnuItemExit.Size = new System.Drawing.Size(40, 20);
             this.mnuItemExit.Text = "&Exit";
             // 
             // mnuItemQuit
             // 
+            this.mnuItemQuit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuItemQuit.Name = "mnuItemQuit";
-            this.mnuItemQuit.Size = new System.Drawing.Size(120, 26);
+            this.mnuItemQuit.Size = new System.Drawing.Size(180, 22);
             this.mnuItemQuit.Text = "&Quit";
             this.mnuItemQuit.Click += new System.EventHandler(this.mnuItemQuit_Click);
             // 
@@ -125,71 +133,78 @@
             this.pnlCal.Controls.Add(this.lblResult);
             this.pnlCal.Controls.Add(this.lblSecondNo);
             this.pnlCal.Controls.Add(this.lblFirstNo);
-            this.pnlCal.Location = new System.Drawing.Point(35, 59);
+            this.pnlCal.Location = new System.Drawing.Point(26, 48);
+            this.pnlCal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlCal.Name = "pnlCal";
-            this.pnlCal.Size = new System.Drawing.Size(316, 171);
+            this.pnlCal.Size = new System.Drawing.Size(238, 139);
             this.pnlCal.TabIndex = 1;
             // 
             // txtResult
             // 
-            this.txtResult.Location = new System.Drawing.Point(167, 123);
+            this.txtResult.Location = new System.Drawing.Point(125, 100);
+            this.txtResult.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtResult.Name = "txtResult";
             this.txtResult.ReadOnly = true;
-            this.txtResult.Size = new System.Drawing.Size(100, 22);
+            this.txtResult.Size = new System.Drawing.Size(76, 20);
             this.txtResult.TabIndex = 5;
             this.txtResult.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtSecondNo
             // 
-            this.txtSecondNo.Location = new System.Drawing.Point(167, 73);
+            this.txtSecondNo.Location = new System.Drawing.Point(125, 59);
+            this.txtSecondNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSecondNo.Name = "txtSecondNo";
-            this.txtSecondNo.Size = new System.Drawing.Size(100, 22);
+            this.txtSecondNo.Size = new System.Drawing.Size(76, 20);
             this.txtSecondNo.TabIndex = 4;
             // 
             // txtFirstNo
             // 
-            this.txtFirstNo.Location = new System.Drawing.Point(167, 22);
+            this.txtFirstNo.Location = new System.Drawing.Point(125, 18);
+            this.txtFirstNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFirstNo.Name = "txtFirstNo";
-            this.txtFirstNo.Size = new System.Drawing.Size(100, 22);
+            this.txtFirstNo.Size = new System.Drawing.Size(76, 20);
             this.txtFirstNo.TabIndex = 3;
             // 
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(38, 129);
+            this.lblResult.Location = new System.Drawing.Point(28, 105);
+            this.lblResult.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(45, 16);
+            this.lblResult.Size = new System.Drawing.Size(37, 13);
             this.lblResult.TabIndex = 2;
             this.lblResult.Text = "Result";
             // 
             // lblSecondNo
             // 
             this.lblSecondNo.AutoSize = true;
-            this.lblSecondNo.Location = new System.Drawing.Point(38, 79);
+            this.lblSecondNo.Location = new System.Drawing.Point(28, 64);
+            this.lblSecondNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSecondNo.Name = "lblSecondNo";
-            this.lblSecondNo.Size = new System.Drawing.Size(105, 16);
+            this.lblSecondNo.Size = new System.Drawing.Size(84, 13);
             this.lblSecondNo.TabIndex = 1;
             this.lblSecondNo.Text = "Second Number";
             // 
             // lblFirstNo
             // 
             this.lblFirstNo.AutoSize = true;
-            this.lblFirstNo.Location = new System.Drawing.Point(38, 28);
+            this.lblFirstNo.Location = new System.Drawing.Point(28, 23);
+            this.lblFirstNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFirstNo.Name = "lblFirstNo";
-            this.lblFirstNo.Size = new System.Drawing.Size(83, 16);
+            this.lblFirstNo.Size = new System.Drawing.Size(66, 13);
             this.lblFirstNo.TabIndex = 0;
             this.lblFirstNo.Text = "First Number";
             // 
             // frmMDI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.ClientSize = new System.Drawing.Size(393, 268);
+            this.ClientSize = new System.Drawing.Size(295, 218);
             this.Controls.Add(this.pnlCal);
             this.Controls.Add(this.mnuArith);
-            this.IsMdiContainer = true;
             this.MainMenuStrip = this.mnuArith;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmMDI";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
