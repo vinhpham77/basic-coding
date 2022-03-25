@@ -39,6 +39,7 @@ namespace TextFileEditor
             this.rtxtTextFile.Size = new System.Drawing.Size(737, 381);
             this.rtxtTextFile.TabIndex = 0;
             this.rtxtTextFile.Text = "";
+            this.rtxtTextFile.TextChanged += new System.EventHandler(this.rtxtTextFile_TextChanged);
             // 
             // frmTextFile
             // 

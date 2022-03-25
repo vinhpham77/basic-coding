@@ -9,3 +9,14 @@ C:\Users\May-21\Downloads\PortableGit\basic-coding\C#\TextFileEditor\TextFileEdi
 C:\Users\May-21\Downloads\PortableGit\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.exe
 C:\Users\May-21\Downloads\PortableGit\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.pdb
 C:\Users\May-21\Downloads\PortableGit\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.frmTextFileEditor.resources
+C:\Users\admin\Downloads\PortableGit\basic-coding\C#\TextFileEditor\TextFileEditor\bin\Debug\TextFileEditor.exe.config
+C:\Users\admin\Downloads\PortableGit\basic-coding\C#\TextFileEditor\TextFileEditor\bin\Debug\TextFileEditor.exe
+C:\Users\admin\Downloads\PortableGit\basic-coding\C#\TextFileEditor\TextFileEditor\bin\Debug\TextFileEditor.pdb
+C:\Users\admin\Downloads\PortableGit\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.csproj.AssemblyReference.cache
+C:\Users\admin\Downloads\PortableGit\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.frmTextFile.resources
+C:\Users\admin\Downloads\PortableGit\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.frmTextFileEditor.resources
+C:\Users\admin\Downloads\PortableGit\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.Properties.Resources.resources
+C:\Users\admin\Downloads\PortableGit\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.csproj.GenerateResource.cache
+C:\Users\admin\Downloads\PortableGit\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.csproj.CoreCompileInputs.cache
+C:\Users\admin\Downloads\PortableGit\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.exe
+C:\Users\admin\Downloads\PortableGit\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.pdb

@@ -35,7 +35,7 @@ namespace TextFileEditor
             this.menuItemOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemClose = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemSave = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuItemChangeColor = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemSetColor = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemExit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +58,7 @@ namespace TextFileEditor
             this.menuItemOpen,
             this.mnuItemClose,
             this.mnuItemSave,
-            this.mnuItemChangeColor});
+            this.mnuItemSetColor});
             this.mnuItemFile.Name = "mnuItemFile";
             this.mnuItemFile.Size = new System.Drawing.Size(37, 20);
             this.mnuItemFile.Text = "File";
@@ -75,24 +75,30 @@ namespace TextFileEditor
             this.menuItemOpen.Name = "menuItemOpen";
             this.menuItemOpen.Size = new System.Drawing.Size(180, 22);
             this.menuItemOpen.Text = "Open";
+            this.menuItemOpen.Click += new System.EventHandler(this.menuItemOpen_Click);
             // 
             // mnuItemClose
             // 
+            this.mnuItemClose.Enabled = false;
             this.mnuItemClose.Name = "mnuItemClose";
             this.mnuItemClose.Size = new System.Drawing.Size(180, 22);
             this.mnuItemClose.Text = "Close";
+            this.mnuItemClose.Click += new System.EventHandler(this.mnuItemClose_Click);
             // 
             // mnuItemSave
             // 
+            this.mnuItemSave.Enabled = false;
             this.mnuItemSave.Name = "mnuItemSave";
             this.mnuItemSave.Size = new System.Drawing.Size(180, 22);
             this.mnuItemSave.Text = "Save";
+            this.mnuItemSave.Click += new System.EventHandler(this.mnuItemSave_Click);
             // 
-            // mnuItemChangeColor
+            // mnuItemSetColor
             // 
-            this.mnuItemChangeColor.Name = "mnuItemChangeColor";
-            this.mnuItemChangeColor.Size = new System.Drawing.Size(180, 22);
-            this.mnuItemChangeColor.Text = "Change Color";
+            this.mnuItemSetColor.Enabled = false;
+            this.mnuItemSetColor.Name = "mnuItemSetColor";
+            this.mnuItemSetColor.Size = new System.Drawing.Size(180, 22);
+            this.mnuItemSetColor.Text = "Set Color";
             // 
             // mnuItemExit
             // 
@@ -127,7 +133,7 @@ namespace TextFileEditor
         private System.Windows.Forms.ToolStripMenuItem menuItemOpen;
         private System.Windows.Forms.ToolStripMenuItem mnuItemClose;
         private System.Windows.Forms.ToolStripMenuItem mnuItemSave;
-        private System.Windows.Forms.ToolStripMenuItem mnuItemChangeColor;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemSetColor;
         private System.Windows.Forms.ToolStripMenuItem mnuItemExit;
     }
 }

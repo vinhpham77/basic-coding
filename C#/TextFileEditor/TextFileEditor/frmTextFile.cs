@@ -21,5 +21,10 @@ namespace TextFileEditor
         {
  
         }
+
+        private void rtxtTextFile_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
