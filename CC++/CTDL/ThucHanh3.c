@@ -74,8 +74,10 @@ void in_DT(struct Da_Thuc *dau)
 		
 		return;
 	}
-
-	printf("%fx^%d", dau->he_so, dau->mu);
+	else
+	{
+		printf("%fx^%d", dau->he_so, dau->mu);	
+	}
 
 	for (p = dau->lien_ket; p != NULL; p = p->lien_ket)
 	{
@@ -222,7 +224,7 @@ void them(struct Da_Thuc **dau, int mu, float he_so)
 	{
 		them_dau(dau, mu, he_so);
 	}
-	else if (p != q && p == NULL)
+	else if (p == NULL)
 	{
 		them_cuoi(dau, &q, mu, he_so);
 	}

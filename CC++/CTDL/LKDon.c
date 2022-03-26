@@ -30,11 +30,12 @@ int xoa_SV_ho_ten(struct QLDS *, char *);
 int them_SV_vao_vi_tri(struct QLDS *, struct Sinh_Vien, int);
 int xoa_SV_vi_tri(struct QLDS *, int);
 void chen_DSSV_sau_SV_ho_ten(struct QLDS *, struct QLDS *, char *);
-void dao_nguoc_DSSV(struct QLDS *);
+void dao_nguoc_DSSV(struct DSSV *);
 
 int main()
 {
 	struct QLDS *ql = (struct QLDS *) malloc(sizeof(struct QLDS));
+	struct QLDS *ql_2 = (struct QLDS *) malloc(sizeof(struct QLDS));
 	struct QLDS *ql_ds_gioi = (struct QLDS *) malloc(sizeof(struct QLDS));
 	struct Sinh_Vien sv1 = {"A", 2002, 6.8};
 	struct Sinh_Vien sv2 = {"B", 2002, 6.0};
@@ -42,6 +43,12 @@ int main()
 	struct Sinh_Vien sv4 = {"D", 2002, 7.9};
 	struct Sinh_Vien sv5 = {"E", 2002, 9.4};
 
+	struct Sinh_Vien sv6 = {"Z", 2002, 6.8};
+	struct Sinh_Vien sv7 = {"Y", 2002, 6.0};
+	struct Sinh_Vien sv8 = {"X", 2002, 8.2};
+	struct Sinh_Vien sv9 = {"V", 2002, 7.9};
+	struct Sinh_Vien sv10 = {"U", 2002, 9.4};
+	
 	struct Sinh_Vien sv = {"TT", 2000, 7.8};
 
 	khoi_tao_DSSV(ql);
@@ -50,15 +57,27 @@ int main()
 	them_SV(ql, sv3);
 	them_SV(ql, sv4);
 	them_SV(ql, sv5);
+	
+	khoi_tao_DSSV(ql_2);
+	them_SV(ql_2, sv6);
+	them_SV(ql_2, sv7);
+	them_SV(ql_2, sv8);
+	them_SV(ql_2, sv9);
+	them_SV(ql_2, sv10);
 
-	printf("%d\n", dem_SV(ql->dau));
+//	printf("%d\n", dem_SV(ql->dau));
 
 //	khoi_tao_DSSV(ql_ds_gioi);
 //	tao_DSSV_gioi(ql_ds_gioi, ql->dau);
 //	in_DSSV(ql_ds_gioi->dau);
 
-	//them_SV_vao_vi_tri(ql, sv, 2);
-	//xoa_SV_vi_tri(ql, 7);
+//	them_SV_vao_vi_tri(ql, sv, 2);
+//	xoa_SV_vi_tri(ql, 7);
+//	in_DSSV(ql->dau);
+	chen_DSSV_sau_SV_ho_ten(ql, ql_2, "E");
+	in_SV(ql->cuoi->sv);
+	//in_DSSV(ql->dau);
+	dao_nguoc_DSSV(ql->dau);
 	in_DSSV(ql->dau);
 	return 0;
 }
@@ -299,13 +318,48 @@ struct DSSV * tim_DSSV_ho_ten(struct DSSV *dau, char *ho_ten)
 void chen_DSSV_sau_SV_ho_ten(struct QLDS *ql_dich, struct QLDS *ql_phu, char *ho_ten)
 {
 	struct DSSV *p = tim_DSSV_ho_ten(ql_dich->dau, ho_ten);
+	struct DSSV *tmp;
 	struct DSSV *q = ql_phu->dau;
+	struct DSSV *pt;
 	
 	if (q == NULL || p == NULL)
 	{
 		return;
 	}
 	
+	tmp = p->lien_ket;
+	while (q != NULL)
+	{
+		pt = (struct DSSV*) malloc(sizeof(struct DSSV));
+		pt->sv = q->sv;
+		pt->lien_ket = NULL;
+		p->lien_ket = pt;
+		p = pt;
+		q = q->lien_ket;
+	}
 	
+	p->lien_ket = tmp;
+	if (tmp == NULL)
+	{
+		ql_dich->cuoi = p;
+	}
+}
+
+void dao_nguoc_DSSV(struct DSSV *dau)
+{
+	struct DSSV *p = dau;
+	struct DSSV *q;
+	struct Sinh_Vien tmp;
 	
+	while (p != NULL)
+	{
+		for (q = p->lien_ket; q != NULL; q = q->lien_ket)
+		{
+			tmp = p->sv;
+			p->sv = q->sv;
+			q->sv = tmp;	
+		}
+		
+		p = p->lien_ket;
+	}
 }
