@@ -51,6 +51,7 @@ int main()
 	return 0;
 }
 
+// 1. Khoi tao da thuc tu mang co n phan tu duoc luu theo so mu tang dan
 struct Da_Thuc* khoi_tao_DT(float *mang, int so_pt)
 {
 	int i;
@@ -64,6 +65,7 @@ struct Da_Thuc* khoi_tao_DT(float *mang, int so_pt)
 	return dau;
 }
 
+// 2. In da thuc len man hinh 
 void in_DT(struct Da_Thuc *dau)
 {
 	struct Da_Thuc *p;
@@ -85,6 +87,7 @@ void in_DT(struct Da_Thuc *dau)
 	}
 }
 
+// 3. Tinh gia tri cua da thuc tai x
 double tinh_gia_tri_DT(struct Da_Thuc *dau, float x)
 {
 	int i;
@@ -108,6 +111,7 @@ double tinh_gia_tri_DT(struct Da_Thuc *dau, float x)
 	return  gia_tri;
 }
 
+// 4. Cong hai da thuc
 struct Da_Thuc* cong_hai_DT(struct Da_Thuc *dau_dt1, struct Da_Thuc *dau_dt2)
 {
 	struct Da_Thuc *dau_dt_moi = NULL;
@@ -150,6 +154,7 @@ struct Da_Thuc* cong_hai_DT(struct Da_Thuc *dau_dt1, struct Da_Thuc *dau_dt2)
 	return dau_dt_moi;
 }
 
+// 5. Tinh dao ham bac mot cua da thuc
 struct Da_Thuc* tinh_dao_ham_bac_mot(struct Da_Thuc *dau)
 {
 	struct Da_Thuc *p = dau;
@@ -165,6 +170,8 @@ struct Da_Thuc* tinh_dao_ham_bac_mot(struct Da_Thuc *dau)
 	return dau_dt_moi;
 }
 
+
+// 6. Nhan hai da thuc
 struct Da_Thuc* nhan_hai_DT(struct Da_Thuc *dau_dt1, struct Da_Thuc *dau_dt2)
 {
 	struct Da_Thuc *p;
@@ -187,6 +194,7 @@ struct Da_Thuc* nhan_hai_DT(struct Da_Thuc *dau_dt1, struct Da_Thuc *dau_dt2)
 	return dau_dt_moi;
 }
 
+// Them thua so vao dau cua da thuc
 void them_dau(struct Da_Thuc **dau, int mu, float he_so)
 {
 	struct Da_Thuc *p;
@@ -201,8 +209,8 @@ void them_dau(struct Da_Thuc **dau, int mu, float he_so)
 	}
 }
 
-// Them phan tu vao vi tri thich hop sao cho cac phan tu co so bac tang dan,
-// hoac cong them he so neu co ton tai phan tu co so mu nhu the
+// Them thua so vao vi tri thich hop sao cho cac thua so co so mu tang dan,
+// hoac cong them thua so vao da thuc neu co ton tai thua so co so mu nhu the
 void them(struct Da_Thuc **dau, int mu, float he_so)
 {
 	struct Da_Thuc *p = *dau;
@@ -228,7 +236,7 @@ void them(struct Da_Thuc **dau, int mu, float he_so)
 	{
 		them_cuoi(dau, &q, mu, he_so);
 	}
-	else if (p != NULL && p->mu == mu)
+	else if (p->mu == mu)
 	{
 		p->he_so += he_so;
 	}
