@@ -20,3 +20,15 @@ C:\Users\admin\Downloads\PortableGit\basic-coding\C#\TextFileEditor\TextFileEdit
 C:\Users\admin\Downloads\PortableGit\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.csproj.CoreCompileInputs.cache
 C:\Users\admin\Downloads\PortableGit\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.exe
 C:\Users\admin\Downloads\PortableGit\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\TextFileEditor\TextFileEditor\bin\Debug\TextFileEditor.exe.config
+C:\Users\LENOVO LEGION\basic-coding\C#\TextFileEditor\TextFileEditor\bin\Debug\TextFileEditor.exe
+C:\Users\LENOVO LEGION\basic-coding\C#\TextFileEditor\TextFileEditor\bin\Debug\TextFileEditor.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.csproj.AssemblyReference.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.csproj.SuggestedBindingRedirects.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.frmTextFile.resources
+C:\Users\LENOVO LEGION\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.frmTextFileEditor.resources
+C:\Users\LENOVO LEGION\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.Properties.Resources.resources
+C:\Users\LENOVO LEGION\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.csproj.GenerateResource.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.exe
+C:\Users\LENOVO LEGION\basic-coding\C#\TextFileEditor\TextFileEditor\obj\Debug\TextFileEditor.pdb

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TextFileEditor
@@ -16,7 +13,9 @@ namespace TextFileEditor
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmTextFileEditor());
+            frmTextFileEditor frmTextFileEditor = new frmTextFileEditor();
+            frmTextFileEditor.StartPosition = FormStartPosition.CenterScreen;
+            Application.Run(frmTextFileEditor);
         }
     }
 }

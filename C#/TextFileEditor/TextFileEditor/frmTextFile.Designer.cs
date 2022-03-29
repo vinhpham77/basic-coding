@@ -29,26 +29,25 @@ namespace TextFileEditor
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTextFile));
             this.rtxtTextFile = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // rtxtTextFile
             // 
-            this.rtxtTextFile.Location = new System.Drawing.Point(12, 12);
+            resources.ApplyResources(this.rtxtTextFile, "rtxtTextFile");
             this.rtxtTextFile.Name = "rtxtTextFile";
-            this.rtxtTextFile.Size = new System.Drawing.Size(737, 381);
-            this.rtxtTextFile.TabIndex = 0;
-            this.rtxtTextFile.Text = "";
             this.rtxtTextFile.TextChanged += new System.EventHandler(this.rtxtTextFile_TextChanged);
             // 
             // frmTextFile
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(761, 405);
             this.Controls.Add(this.rtxtTextFile);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmTextFile";
-            this.Text = "TextFile";
+            this.ShowIcon = false;
             this.Load += new System.EventHandler(this.frmTextFile_Load);
             this.ResumeLayout(false);
 

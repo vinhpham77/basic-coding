@@ -1,18 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.IO;
+using System.Windows.Forms;
 
 namespace TextFileEditor
 {
     public partial class frmTextFileEditor : Form
     {
+        public bool SaveEnabled { get => mnuItemSave.Enabled; set => mnuItemSave.Enabled = value; }
+        public bool CloseEnabled { get => mnuItemClose.Enabled; set => mnuItemClose.Enabled = value; }
+
+        public int SaveInstead()
+        {
+            var result = MessageBox.Show("Do you want to save this?", "Save", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                mnuItemSave.PerformClick();
+                return 1;
+            }
+            else if (result == DialogResult.No)
+            {
+                return 0;
+            }
+            else
+            {
+                return -1;
+            }
+        }
         public frmTextFileEditor()
         {
             InitializeComponent();
@@ -30,24 +44,24 @@ namespace TextFileEditor
 
         private void mnuItemNew_Click(object sender, EventArgs e)
         {
-            if (mnuItemSave.Enabled)
+            if (mnuItemSave.Enabled && MdiChildren.Length > 0)
             {
-                var result = MessageBox.Show("Do you want to save this?", "Save", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
-                if (result == DialogResult.Yes)
+                if (SaveInstead() == -1)
                 {
-                    mnuItemSave.PerformClick();
+                    return;
+                }
+                else
+                {
+                    ((frmTextFile)ActiveMdiChild).Close();
                 }
             }
-            else
-            {
-                mnuItemSave.Enabled = true;
-                mnuItemClose.Enabled = true;
-                mnuItemSetColor.Enabled = true;
-                frmTextFile frm = new frmTextFile();
-                frm.MdiParent = this;
-                frm.Show();
-            }
 
+            mnuItemSave.Enabled = true;
+            mnuItemClose.Enabled = true;
+            frmTextFile frm = new frmTextFile();
+            frm.MdiParent = this;
+            frm.StartPosition = FormStartPosition.CenterScreen;
+            frm.Show();
         }
 
         private void mnuItemSave_Click(object sender, EventArgs e)
@@ -57,17 +71,34 @@ namespace TextFileEditor
             if (dialog.ShowDialog().Equals(DialogResult.OK))
             {
                 File.WriteAllText(dialog.FileName, ActiveMdiChild.ActiveControl.Text);
+                mnuItemSave.Enabled = false;
             }
         }
 
         private void menuItemOpen_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "Text File|*.txt";
+            if (dialog.ShowDialog().Equals(DialogResult.OK))
+            {
+                mnuItemNew.PerformClick();
+                ((frmTextFile)ActiveMdiChild).rtxtText = File.ReadAllText(dialog.FileName);
+            }
         }
 
         private void mnuItemClose_Click(object sender, EventArgs e)
         {
-            ActiveMdiChild.Close();
+            if (mnuItemSave.Enabled && MdiChildren.Length > 0)
+            {
+                if (SaveInstead() == -1)
+                {
+                    return;
+                }
+            }
+
+            mnuItemClose.Enabled = false;
+            mnuItemSave.Enabled = false;
+            ((frmTextFile)ActiveMdiChild).Close();
         }
     }
 }
