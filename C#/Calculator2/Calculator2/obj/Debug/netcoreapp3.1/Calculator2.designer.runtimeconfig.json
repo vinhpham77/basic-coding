@@ -6,8 +6,8 @@
       "version": "3.1.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\May-8\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\May-8\\.nuget\\packages"
+      "C:\\Users\\LENOVO LEGION\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\LENOVO LEGION\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

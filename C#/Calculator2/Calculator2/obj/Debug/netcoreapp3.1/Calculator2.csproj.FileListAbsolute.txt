@@ -18,3 +18,23 @@ C:\Users\May-8\git\C#\Calculator2\Calculator2\obj\Debug\netcoreapp3.1\Calculator
 C:\Users\May-8\git\C#\Calculator2\Calculator2\obj\Debug\netcoreapp3.1\Calculator2.dll
 C:\Users\May-8\git\C#\Calculator2\Calculator2\obj\Debug\netcoreapp3.1\Calculator2.pdb
 C:\Users\May-8\git\C#\Calculator2\Calculator2\obj\Debug\netcoreapp3.1\Calculator2.genruntimeconfig.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\bin\Debug\netcoreapp3.1\Calculator2.exe
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\bin\Debug\netcoreapp3.1\Calculator2.deps.json
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\bin\Debug\netcoreapp3.1\Calculator2.runtimeconfig.json
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\bin\Debug\netcoreapp3.1\Calculator2.runtimeconfig.dev.json
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\bin\Debug\netcoreapp3.1\Calculator2.dll
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\bin\Debug\netcoreapp3.1\Calculator2.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\obj\Debug\netcoreapp3.1\Calculator2.csproj.AssemblyReference.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\obj\Debug\netcoreapp3.1\Calculator2_MarkupCompile.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\obj\Debug\netcoreapp3.1\Calculator2_MarkupCompile.lref
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\obj\Debug\netcoreapp3.1\Calculator2.g.resources
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\obj\Debug\netcoreapp3.1\Calculator2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\obj\Debug\netcoreapp3.1\Calculator2.AssemblyInfoInputs.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\obj\Debug\netcoreapp3.1\Calculator2.AssemblyInfo.cs
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\obj\Debug\netcoreapp3.1\Calculator2.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\obj\Debug\netcoreapp3.1\Calculator2.dll
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\obj\Debug\netcoreapp3.1\Calculator2.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\Calculator2\Calculator2\obj\Debug\netcoreapp3.1\Calculator2.genruntimeconfig.cache

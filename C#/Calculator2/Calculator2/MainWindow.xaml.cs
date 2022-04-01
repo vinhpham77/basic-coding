@@ -1,17 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace Calculator2
 {
@@ -25,6 +12,14 @@ namespace Calculator2
             InitializeComponent();
         }
 
+        public bool GetData(out int a, out int b)
+        {
+            a = 0;
+            b = 0;
+
+            return int.TryParse(txt1.Text, out a) && int.TryParse(txt2.Text, out b);
+        }
+
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
 
@@ -32,7 +27,48 @@ namespace Calculator2
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            int a;
+            int b;
+
+            if (GetData(out a, out b))
+            {
+                txtAnsw.Text = (a + b).ToString();
+            }
+            else
+            {
+                txtAnsw.Text = "Invalid!";
+            }
+        }
+
+        private void btnSub_Click(object sender, RoutedEventArgs e)
+        {
+            int a;
+            int b;
+
+            if (GetData(out a, out b))
+            {
+                txtAnsw.Text = (a - b).ToString();
+            }
+            else
+            {
+                txtAnsw.Text = "Invalid!";
+            }
+        }
+
+        private void cbxCenter_Click(object sender, RoutedEventArgs e)
+        {
+            if ((bool)cbxCenter.IsChecked)
+            {
+                txt1.TextAlignment = TextAlignment.Center;
+                txt2.TextAlignment = TextAlignment.Center;
+                txtAnsw.TextAlignment = TextAlignment.Center;
+            }
+            else
+            {
+                txt1.TextAlignment = TextAlignment.Left;
+                txt2.TextAlignment = TextAlignment.Left;
+                txtAnsw.TextAlignment = TextAlignment.Left;
+            }
         }
     }
 }

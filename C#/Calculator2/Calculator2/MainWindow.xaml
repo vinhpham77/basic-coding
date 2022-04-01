@@ -20,16 +20,16 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Label x:Name="lbl1" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center">Operand 1:</Label>
-        <Label x:Name="lbl2" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">Operand 2:</Label>
-        <Button x:Name="btnAdd" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Padding="40, 5" Click="Button_Click">Add</Button>
-        <Label x:Name="lblAnsw" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3">Answer:</Label>
-        <CheckBox x:Name="cbxCenter" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.ColumnSpan="2" Checked="CheckBox_Checked" FontStyle="Italic" >Center Numeric Values</CheckBox>
+        <Label x:Name="lbl1" FontSize="23" HorizontalAlignment="Center" VerticalAlignment="Center">Operand 1:</Label>
+        <Label x:Name="lbl2" FontSize="23" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1">Operand 2:</Label>
+        <Button x:Name="btnAdd" FontSize="23" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Padding="40, 5" Click="Button_Click">Add</Button>
+        <Label x:Name="lblAnsw" FontSize="23" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3">Answer:</Label>
+        <CheckBox x:Name="cbxCenter" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="4" Grid.ColumnSpan="2" FontStyle="Italic" FontSize="22" Padding="4,-1,0,-3" Click="cbxCenter_Click" >Center Numeric Values</CheckBox>
 
-        <TextBox x:Name="txt1" FontSize="25" TextAlignment="Center" Grid.Column="1" Margin="30, 27"></TextBox>
-        <TextBox x:Name="txt2" FontSize="25" TextAlignment="Center" Grid.Column="1" Grid.Row="1" Margin="30, 27"></TextBox>
-        <Button x:Name="btnSub" FontSize="25" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Padding="20, 5">Subtract</Button>
-        <TextBox x:Name="txtAnsw" FontSize="25" TextAlignment="Center" Grid.Column="1" Grid.Row="3" Margin="30, 27"></TextBox>
-
+        <TextBox x:Name="txt1" FontSize="23" Grid.Column="1" Margin="30, 27"/>
+        <TextBox x:Name="txt2" FontSize="23" Grid.Column="1" Grid.Row="1" Margin="30, 27"></TextBox>
+        <Button x:Name="btnSub" FontSize="23" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" Padding="20, 5" Click="btnSub_Click">Subtract</Button>
+        <TextBox x:Name="txtAnsw" FontSize="23" Grid.Column="1" Grid.Row="3" Margin="30, 27"></TextBox>
+       
     </Grid>
 </Window>
