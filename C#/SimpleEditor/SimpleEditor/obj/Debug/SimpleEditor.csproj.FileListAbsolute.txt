@@ -1,0 +1,30 @@
+C:\Users\May-14\source\repos\SimpleEditor\SimpleEditor\bin\Debug\SimpleEditor.exe.config
+C:\Users\May-14\source\repos\SimpleEditor\SimpleEditor\bin\Debug\SimpleEditor.exe
+C:\Users\May-14\source\repos\SimpleEditor\SimpleEditor\bin\Debug\SimpleEditor.pdb
+C:\Users\May-14\source\repos\SimpleEditor\SimpleEditor\obj\Debug\SimpleEditor.csproj.AssemblyReference.cache
+C:\Users\May-14\source\repos\SimpleEditor\SimpleEditor\obj\Debug\MainWindow.g.cs
+C:\Users\May-14\source\repos\SimpleEditor\SimpleEditor\obj\Debug\App.g.cs
+C:\Users\May-14\source\repos\SimpleEditor\SimpleEditor\obj\Debug\SimpleEditor_MarkupCompile.cache
+C:\Users\May-14\source\repos\SimpleEditor\SimpleEditor\obj\Debug\SimpleEditor_MarkupCompile.lref
+C:\Users\May-14\source\repos\SimpleEditor\SimpleEditor\obj\Debug\MainWindow.baml
+C:\Users\May-14\source\repos\SimpleEditor\SimpleEditor\obj\Debug\SimpleEditor.g.resources
+C:\Users\May-14\source\repos\SimpleEditor\SimpleEditor\obj\Debug\SimpleEditor.Properties.Resources.resources
+C:\Users\May-14\source\repos\SimpleEditor\SimpleEditor\obj\Debug\SimpleEditor.csproj.GenerateResource.cache
+C:\Users\May-14\source\repos\SimpleEditor\SimpleEditor\obj\Debug\SimpleEditor.csproj.CoreCompileInputs.cache
+C:\Users\May-14\source\repos\SimpleEditor\SimpleEditor\obj\Debug\SimpleEditor.exe
+C:\Users\May-14\source\repos\SimpleEditor\SimpleEditor\obj\Debug\SimpleEditor.pdb
+C:\Users\May-14\Desktop\Van Vinh\C#\SimpleEditor\SimpleEditor\bin\Debug\SimpleEditor.exe.config
+C:\Users\May-14\Desktop\Van Vinh\C#\SimpleEditor\SimpleEditor\bin\Debug\SimpleEditor.exe
+C:\Users\May-14\Desktop\Van Vinh\C#\SimpleEditor\SimpleEditor\bin\Debug\SimpleEditor.pdb
+C:\Users\May-14\Desktop\Van Vinh\C#\SimpleEditor\SimpleEditor\obj\Debug\SimpleEditor.csproj.AssemblyReference.cache
+C:\Users\May-14\Desktop\Van Vinh\C#\SimpleEditor\SimpleEditor\obj\Debug\MainWindow.g.cs
+C:\Users\May-14\Desktop\Van Vinh\C#\SimpleEditor\SimpleEditor\obj\Debug\App.g.cs
+C:\Users\May-14\Desktop\Van Vinh\C#\SimpleEditor\SimpleEditor\obj\Debug\SimpleEditor_MarkupCompile.cache
+C:\Users\May-14\Desktop\Van Vinh\C#\SimpleEditor\SimpleEditor\obj\Debug\SimpleEditor_MarkupCompile.lref
+C:\Users\May-14\Desktop\Van Vinh\C#\SimpleEditor\SimpleEditor\obj\Debug\MainWindow.baml
+C:\Users\May-14\Desktop\Van Vinh\C#\SimpleEditor\SimpleEditor\obj\Debug\SimpleEditor.g.resources
+C:\Users\May-14\Desktop\Van Vinh\C#\SimpleEditor\SimpleEditor\obj\Debug\SimpleEditor.Properties.Resources.resources
+C:\Users\May-14\Desktop\Van Vinh\C#\SimpleEditor\SimpleEditor\obj\Debug\SimpleEditor.csproj.GenerateResource.cache
+C:\Users\May-14\Desktop\Van Vinh\C#\SimpleEditor\SimpleEditor\obj\Debug\SimpleEditor.csproj.CoreCompileInputs.cache
+C:\Users\May-14\Desktop\Van Vinh\C#\SimpleEditor\SimpleEditor\obj\Debug\SimpleEditor.exe
+C:\Users\May-14\Desktop\Van Vinh\C#\SimpleEditor\SimpleEditor\obj\Debug\SimpleEditor.pdb
