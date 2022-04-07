@@ -1,0 +1,34 @@
+﻿<Window x:Class="SimpleEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleEditor"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="600">
+    <Grid>
+        <Grid.Resources>
+            <Style x:Key="BasicStyle" TargetType="ContentControl">
+                <Setter Property="Width" Value=""/>
+            </Style>
+        </Grid.Resources>
+        <Menu>
+            <MenuItem x:Name="mnuFile" Header="_File">
+                <MenuItem x:Name="mnuNewFile" Header="_New"/>
+                <MenuItem x:Name="mnuOpenFile" Header="_Open"/>
+                <MenuItem x:Name="mnuSaveFile" Header="_Save"/>
+            </MenuItem>
+            <MenuItem x:Name="mnuEdit" Header="Edit">
+                <MenuItem x:Name="mnuCutEdit" Header="Cut"/>
+                <MenuItem x:Name="mnuCopyEdit" Header="_Copy"/>
+                <MenuItem x:Name="mnuPasteEdit" Header="_Paste"/>
+            </MenuItem>
+            <MenuItem x:Name="mnuView" Header="_View"></MenuItem>
+        <ToolBar x:Name="tbar" Width="500" Height="20">
+            <Button x:Name="btnNewFile">
+                <Image Source="new.bmp"/>
+            </Button>
+        </ToolBar>
+        </Menu>
+    </Grid>
+</Window>
