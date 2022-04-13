@@ -1,34 +1,118 @@
-﻿<Window x:Class="SimpleEditor.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SimpleEditor"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="600">
+﻿<Window
+    x:Class="SimpleEditor.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:SimpleEditor"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="600"
+    Height="450"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <ResourceDictionary Source="DictionaryMain.xaml" />
+    </Window.Resources>
+
     <Grid>
-        <Grid.Resources>
-            <Style x:Key="BasicStyle" TargetType="ContentControl">
-                <Setter Property="Width" Value=""/>
-            </Style>
-        </Grid.Resources>
-        <Menu>
-            <MenuItem x:Name="mnuFile" Header="_File">
-                <MenuItem x:Name="mnuNewFile" Header="_New"/>
-                <MenuItem x:Name="mnuOpenFile" Header="_Open"/>
-                <MenuItem x:Name="mnuSaveFile" Header="_Save"/>
-            </MenuItem>
-            <MenuItem x:Name="mnuEdit" Header="Edit">
-                <MenuItem x:Name="mnuCutEdit" Header="Cut"/>
-                <MenuItem x:Name="mnuCopyEdit" Header="_Copy"/>
-                <MenuItem x:Name="mnuPasteEdit" Header="_Paste"/>
-            </MenuItem>
-            <MenuItem x:Name="mnuView" Header="_View"></MenuItem>
-        <ToolBar x:Name="tbar" Width="500" Height="20">
-            <Button x:Name="btnNewFile">
-                <Image Source="new.bmp"/>
-            </Button>
-        </ToolBar>
-        </Menu>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem x:Name="mnuFile" Header="_File">
+                    <MenuItem
+                        x:Name="mnuNewFile"
+                        Click="mnuNewFile_Click"
+                        Command="New"
+                        Header="_New" />
+                    <MenuItem
+                        x:Name="mnuOpenFile"
+                        Command="Open"
+                        Header="_Open" />
+                    <MenuItem
+                        x:Name="mnuSaveFile"
+                        Command="Save"
+                        Header="_Save" />
+                </MenuItem>
+                <MenuItem x:Name="mnuEdit" Header="Edit">
+                    <MenuItem
+                        x:Name="mnuCutEdit"
+                        Command="Cut"
+                        Header="Cut" />
+                    <MenuItem
+                        x:Name="mnuCopyEdit"
+                        Command="Copy"
+                        Header="_Copy" />
+                    <MenuItem
+                        x:Name="mnuPasteEdit"
+                        Command="Paste"
+                        Header="_Paste" />
+                </MenuItem>
+                <MenuItem x:Name="mnuView" Header="_View">
+                    <MenuItem
+                        x:Name="mnuStatusBar"
+                        Click="mnuStatusBar_Click"
+                        Header="_Status Bar"
+                        IsChecked="True" />
+                </MenuItem>
+
+            </Menu>
+            <ToolBarTray DockPanel.Dock="Top">
+                <ToolBar x:Name="tbar">
+                    <Button
+                        x:Name="btnNewFile"
+                        Command="New"
+                        ToolTip="New">
+                        <Image Source="icons/new.png" />
+                    </Button>
+                    <Button
+                        x:Name="btnOpenFile"
+                        Command="Open"
+                        ToolTip="Open">
+                        <Image Source="icons/open.png" />
+                    </Button>
+                    <Button
+                        x:Name="btnSaveFile"
+                        Command="Save"
+                        ToolTip="Save">
+                        <Image Source="icons/save.png" />
+                    </Button>
+                    <Separator />
+                    <Button
+                        x:Name="btnCutEdit"
+                        Command="Cut"
+                        ToolTip="Cut">
+                        <Image Source="icons/cut.png" />
+                    </Button>
+                    <Button
+                        x:Name="btnCopyEdit"
+                        Command="Copy"
+                        ToolTip="Copy">
+                        <Image Source="icons/copy.png" />
+                    </Button>
+                    <Button
+                        x:Name="btnPasteEdit"
+                        Command="Paste"
+                        ToolTip="Paste">
+                        <Image Source="icons/paste.png" />
+                    </Button>
+                    <Separator />
+                    <ComboBox
+                        x:Name="cbxFonts"
+                        MinWidth="140"
+                        SelectionChanged="cbxFonts_SelectionChanged" />
+                    <ComboBox
+                        x:Name="cbxFontSize"
+                        MinWidth="40"
+                        SelectionChanged="ComboBox_SelectionChanged" />
+                </ToolBar>
+            </ToolBarTray>
+            <StatusBar x:Name="statusBar" DockPanel.Dock="Bottom">
+                <StatusBarItem x:Name="statusChar" Content="Char 0" />
+                <Separator />
+                <StatusBarItem x:Name="statusLine" Content="Line 0" />
+                <Separator />
+                <StatusBarItem x:Name="statusCol" Content="Col 0" />
+            </StatusBar>
+            <RichTextBox x:Name="rtxtBox" TextChanged="rtxtBox_TextChanged" />
+        </DockPanel>
     </Grid>
 </Window>
+

@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 struct Nguoi
 {
 	char ho_ten[30];
@@ -29,7 +28,6 @@ int dem_nguoi(struct CGPNP*);
 int tinh_so_the_he(struct CGPNP*);
 int dem_so_nguoi_sinh_truoc(struct CGPNP*, int);
 struct Nguoi *tim_nguoi(struct CGPNP*, char*);
-struct CGPNP *tim_phu_huynh(struct CGPNP*, char*);
 struct CGPNP *tim_gia_pha(struct CGPNP*, char*);
 int cho_biet_the_he(struct CGPNP*, char*);
 int la_con(struct CGPNP*, char*, char*);
@@ -97,20 +95,20 @@ int main()
 		printf("\n%s khong phai la con cua %s\n", ho_ten2, ho_ten);
 	}
 
-//	strcpy(ho_ten, "Nguyen C");
-//	strcpy(ho_ten2, "Nguyen E");
-//	if (la_con_chau(goc, ho_ten, ho_ten2))
-//	{
-//		printf("\n%s la con chau cua %s\n", ho_ten2, ho_ten);
-//	}
-//	else
-//	{
-//		printf("\n%s khong phai la con chau cua %s\n", ho_ten2, ho_ten);
-//	}
+	strcpy(ho_ten, "Nguyen C");
+	strcpy(ho_ten2, "Nguyen D");
+	if (la_con_chau(goc, ho_ten, ho_ten2))
+	{
+		printf("\n%s la con chau cua %s\n", ho_ten2, ho_ten);
+	}
+	else
+	{
+		printf("\n%s khong phai la con chau cua %s\n", ho_ten2, ho_ten);
+	}
 
 	strcpy(ho_ten, "Nguyen E");
 	strcpy(ho_ten2, "Nguyen F");
-	
+
 	if (la_anh_em(goc, ho_ten, ho_ten2))
 	{
 		printf("\n%s la anh em voi %s\n", ho_ten, ho_ten2);
@@ -119,7 +117,11 @@ int main()
 	{
 		printf("\n%s khong phai la anh em voi %s\n", ho_ten, ho_ten2);
 	}
-	
+
+	strcpy(ho_ten, "Nguyen C");
+	printf("\nDanh sach con chau cua %s\n", ho_ten);
+	liet_ke_con_chau(goc, ho_ten);
+
 	strcpy(ho_ten, "Nguyen D");
 	nguoi = tao_nguoi("Nguyen Con", 2002);
 	if (them_con(goc, ho_ten, *nguoi))
@@ -132,29 +134,7 @@ int main()
 	}
 //	in_truoc(goc);
 
-
 	return 0;
-}
-
-struct Nguoi *tao_nguoi(char *ten, int nam_sinh)
-{
-	struct Nguoi *nguoi = (struct Nguoi*) malloc(sizeof(struct Nguoi));
-
-	strcpy(nguoi->ho_ten, ten);
-	nguoi->nam_sinh = nam_sinh;
-
-	return nguoi;
-}
-
-struct CGPNP *tao_nut(struct Nguoi nguoi, struct CGPNP *trai, struct CGPNP *phai)
-{
-	struct CGPNP *nut = (struct CGPNP*) malloc(sizeof(struct CGPNP));
-
-	nut->du_lieu = nguoi;
-	nut->trai = trai;
-	nut->phai = phai;
-
-	return nut;
 }
 
 // a) In danh sách những người có trong cây
@@ -232,24 +212,6 @@ struct Nguoi *tim_nguoi(struct CGPNP *goc, char *ten)
 	return nguoi != NULL ? nguoi : tim_nguoi(goc->phai, ten);
 }
 
-struct CGPNP *tim_gia_pha(struct CGPNP *goc, char *ten)
-{
-	struct CGPNP *gia_pha;
-
-	if (goc == NULL)
-	{
-		return NULL;
-	}
-
-	if (strcmp(goc->du_lieu.ho_ten, ten) == 0)
-	{
-		return goc;
-	}
-
-	gia_pha = tim_gia_pha(goc->trai, ten);
-	return gia_pha != NULL ? gia_pha : tim_gia_pha(goc->phai, ten);
-}
-
 // f) Cho biết người tên x thuộc thế hệ thứ mấy trong cây
 int cho_biet_the_he(struct CGPNP *goc, char *ten)
 {
@@ -258,7 +220,7 @@ int cho_biet_the_he(struct CGPNP *goc, char *ten)
 	int dem = 0;
 	int n = 0;
 
-	while(1)
+	while (1)
 	{
 		n++;
 		if (p != NULL)
@@ -305,34 +267,148 @@ int la_con(struct CGPNP *goc, char *ten_phu_huynh, char *ten_con)
 	return p->trai != NULL && strcmp(p->trai->du_lieu.ho_ten, ten_con) == 0 || (p->phai != NULL && strcmp(p->phai->du_lieu.ho_ten, ten_con) == 0);
 }
 
-// h) Kiểm tra người tên y có phải con cháu của người tên x không
 int la_con_chau(struct CGPNP *goc, char *ten_tien_boi, char *ten_hau_boi)
 {
-//	struct CGPNP *p = tim_phu_huynh(goc, ten_tien_boi);
-//	struct Nguoi *nguoi;
-//
-//	if (p == NULL)
-//	{
-//		return 0;
-//	}
-//
-//	nguoi = tim_nguoi(p->trai, ten_hau_boi);
-//	if (nguoi == NULL || nguoi == &p->trai->du_lieu)
-//	{
-//		nguoi = tim_nguoi(p->phai, ten_hau_boi);
-//		return nguoi != NULL && nguoi != &p->phai;
-//	}
-//	return nguoi != NULL && nguoi != &p->trai->du_lieu && nguoi != &p->phai->du_lieu;
+	struct Ngan_Xep *nx = NULL;
+	struct CGPNP *p = goc;
+	int th_hau_boi = 0;
+	int th_tien_boi = 0;
+	int n = 0;
 
-	return 0;
+	while (1)
+	{
+		n++;
+
+		if (p == NULL)
+		{
+			if (nx == NULL)
+			{
+				break;
+			}
+			else
+			{
+				p = nx->cgp;
+				n = nx->the_he;
+				pop(&nx);
+			}
+		}
+
+		if (th_tien_boi == 0 && strcmp(p->du_lieu.ho_ten, ten_tien_boi) == 0)
+		{
+			th_tien_boi = n;
+		}
+		else
+		{
+			if (th_hau_boi == 0 && strcmp(p->du_lieu.ho_ten, ten_hau_boi) == 0)
+			{
+				th_hau_boi = n;
+			}
+		}
+
+		if (th_tien_boi != 0 && th_hau_boi != 0)
+		{
+			break;
+		}
+
+		if (p->phai != NULL)
+		{
+			push(&nx, p->phai, n + 1);
+		}
+
+		p = p->trai;
+	}
+
+	return th_hau_boi != 0 && th_tien_boi < th_hau_boi;
 }
 
-void liet_ke_con_chau(struct CGPNP *goc, char *ten);
-void thay_nguoi(struct CGPNP **goc, char *ten_bi_thay, struct CGPNP *gia_pha_thay);
+// i) Liệt kê tất cả con cháu của người tên x
+void liet_ke_con_chau(struct CGPNP *goc, char *ten)
+{
+	struct Ngan_Xep *nx = NULL;
+	struct CGPNP *p = goc;
+	int n = 0;
+	int th_tien_boi = 0;
+
+	th_tien_boi = cho_biet_the_he(goc, ten);
+
+	if (th_tien_boi == 0)
+	{
+		return;
+	}
+
+	while (1)
+	{
+		n++;
+
+		if (p == NULL)
+		{
+			if (nx == NULL)
+			{
+				break;
+			}
+			else
+			{
+				p = nx->cgp;
+				n = nx->the_he;
+				pop(&nx);
+			}
+		}
+
+		if (th_tien_boi < n)
+		{
+			printf("%s  %d\n", p->du_lieu.ho_ten, p->du_lieu.nam_sinh);
+		}
+
+		if (p->phai != NULL)
+		{
+			push(&nx, p->phai, n + 1);
+		}
+
+		p = p->trai;
+	}
+}
+
+// j) Thay người tên x bằng một người ng
+void thay_nguoi(struct CGPNP **goc, char *ten, struct CGPNP *gp)
+{
+//	struct Ngan_Xep *nx = NULL;
+//	struct CGPNP *p = goc;
+//
+//	while (1)
+//	{
+//		n++;
+//
+//		if (p == NULL)
+//		{
+//			if (nx == NULL)
+//			{
+//				break;
+//			}
+//			else
+//			{
+//				p = nx->cgp;
+//				n = nx->the_he;
+//				pop(&nx);
+//			}
+//		}
+//
+//		if (strcmp(p->du_lieu.ho_ten, ten) == 0)
+//		{
+//
+//		}
+//
+//		if (p->phai != NULL)
+//		{
+//			push(&nx, p->phai, n + 1);
+//		}
+//
+//		p = p->trai;
+//	}
+}
 
 // k) Kiểm tra hai người tên x, y có phải là anh em không
 int la_anh_em(struct CGPNP *goc, char *ten1, char *ten2)
-{	
+{
 	if (goc == NULL || goc->trai == NULL || goc->phai == NULL)
 	{
 		return 0;
@@ -342,7 +418,7 @@ int la_anh_em(struct CGPNP *goc, char *ten1, char *ten2)
 	{
 		return strcmp(goc->phai->du_lieu.ho_ten, ten2) == 0;
 	}
-	
+
 	if (strcmp(goc->trai->du_lieu.ho_ten, ten2) == 0)
 	{
 		return strcmp(goc->phai->du_lieu.ho_ten, ten1) == 0;
@@ -350,11 +426,55 @@ int la_anh_em(struct CGPNP *goc, char *ten1, char *ten2)
 
 	return la_anh_em(goc->trai, ten1, ten2) || la_anh_em(goc->phai, ten1, ten2);
 }
-void in_theo_the_he(struct CGPNP *goc);
-int la_giong_nhau(struct CGPNP *goc_1, struct CGPNP *goc_2);
 
-// n) Thêm người ng vào con của người tên x. Nếu người tên x đã đủ 2 con thì không thêm
-int them_con(struct CGPNP *goc, char *ten_phu_huynh, struct Nguoi con)
+void in_theo_the_he(struct CGPNP *goc);
+int la_giong_nhau(struct CGPNP *goc1, struct CGPNP *goc2)
+{
+//	struct Ngan_Xep *nx1 = NULL, *nx2 = NULL;
+//	struct CGPNP *p = goc1, *q = goc2;
+//	int n;
+//
+//		while (1)
+//		{
+//			n++;
+//
+//			if (p == NULL)
+//			{
+//				if (q != NULL)
+//				{
+//					return 0;
+//				}
+//
+//				if (nx1 == NULL)
+//				{
+//					if (nx2)
+//						break;
+//				}
+//				else
+//				{
+//					p = nx->cgp;
+//					n = nx->the_he;
+//					pop(&nx);
+//				}
+//			}
+//
+//			if (p->phai != NULL)
+//			{
+//
+//
+//				if (th_tien_boi < n)
+//				{
+//					printf("%s  %d\n", p->du_lieu.ho_ten, p->du_lieu.nam_sinh);
+//				}
+//				push(&nx, p->phai, n + 1);
+//			}
+//
+//			p = p->trai;
+//		}
+}
+
+//	n) Thêm người ng vào con của người tên x. Nếu người tên x đã đủ 2 con thì không thêm
+int	them_con(struct CGPNP *goc, char *ten_phu_huynh, struct Nguoi con)
 {
 	struct CGPNP *p = tim_gia_pha(goc, ten_phu_huynh);
 
@@ -376,6 +496,27 @@ int them_con(struct CGPNP *goc, char *ten_phu_huynh, struct Nguoi con)
 	return 0;
 }
 
+struct Nguoi *tao_nguoi(char *ten, int nam_sinh)
+{
+	struct Nguoi *nguoi = (struct Nguoi*) malloc(sizeof(struct Nguoi));
+
+	strcpy(nguoi->ho_ten, ten);
+	nguoi->nam_sinh = nam_sinh;
+
+	return nguoi;
+}
+
+struct CGPNP *tao_nut(struct Nguoi nguoi, struct CGPNP *trai, struct CGPNP *phai)
+{
+	struct CGPNP *nut = (struct CGPNP*) malloc(sizeof(struct CGPNP));
+
+	nut->du_lieu = nguoi;
+	nut->trai = trai;
+	nut->phai = phai;
+
+	return nut;
+}
+
 void push(struct Ngan_Xep **cuoi, struct CGPNP *cgp, int the_he)
 {
 	struct Ngan_Xep *p = (struct Ngan_Xep*) malloc(sizeof(struct Ngan_Xep));
@@ -392,4 +533,22 @@ void pop(struct Ngan_Xep **cuoi)
 
 	*cuoi = p->lk;
 	free(p);
+}
+
+struct CGPNP *tim_gia_pha(struct CGPNP *goc, char *ten)
+{
+	struct CGPNP *gia_pha;
+
+	if (goc == NULL)
+	{
+		return NULL;
+	}
+
+	if (strcmp(goc->du_lieu.ho_ten, ten) == 0)
+	{
+		return goc;
+	}
+
+	gia_pha = tim_gia_pha(goc->trai, ten);
+	return gia_pha != NULL ? gia_pha : tim_gia_pha(goc->phai, ten);
 }

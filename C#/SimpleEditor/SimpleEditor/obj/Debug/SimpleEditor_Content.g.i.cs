@@ -8,6 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("new.bmp")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/cut.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/new.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/open.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/paste.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("icons/save.png")]
 
 

@@ -38,18 +38,19 @@
 										<sub></sub>		
 									<tag2>
 									<tag3></tag3>
-3. CSS reset(https://meyerweb.com/eric/tools/css/reset/)		
+3. CSS reset(https://meyerweb.com/eric/tools/css/reset/)
 4. Thuộc tính color
 	- name: red, orange, blue,...
 	- hexa: #FF0000, #FFC600, #100AFE, #666666 -> #666,...
 	- rgb:  rgb(0,0,0), rgb(255,255,255)
 	- rgba: rbga(0,0,0,0.5) 
 		(alpha: opacity 0 -> 1)
+	- currentColor là giá trị màu thuộc tính color của nó hoặc container
 5. Thuộc tính kích thước
 	- width, height: 
 		+ Cố định chiều rộng, chiều cao
 	- min-width, min-height:
-		+ Cố định chiều rộng, chiều cao tối thiểu. Nếu nội dung lớn hơn kích thước thì kích thước sẽ tự động tăng lên
+		+ Cố định chiều rộng, chiều cao tối thiểu. Nếu nội dung lớn hơn kích thước thì kích thước sẽ tự động tăng lên 
 	- max-width, max-height:
 		+ Cố định chiều rộng, chiều cao tối đa
 	- overflow: hidden;
@@ -61,13 +62,19 @@
 	- background-color: gray;
 	- background-image: url();
 	- background-position: x y;
-	- background-size: cover;
-		+ Zoom ra cho phủ hết background
+	- background-size:
+		+ contain: Zoom ra hiển thị đầy đủ ảnh, có thể không phủ hết background
+		+ cover: Zoom ra cho phủ hết background, có thể không hiển thị đầy đủ ảnh
 	- background-repeat: no-repeat;
 		+ Không lặp lại hình nếu hình nhỏ hơn kích thước phần tử chứa
 	- background-attachment: fixed;
 		+ Khi scroll thì hình vẫn đứng yên(vô hiệu hoá background-size: cover)
-	==> background: background-color background-image background-repeat background-position background-size;
+	- background-clip:
+		+ border-box
+		+ padding-box
+		+ content-box
+		+ text
+	=> background: background-color background-image background-repeat background-position background-size;
 7. Các đơn vị kích thước
 	- 100px(pixel): Cố định kích thước 100pixel
 	- 100%: Tỉ lệ 100% với ô chứa
@@ -77,6 +84,7 @@
 	- 1em = 1rem = 16px
 		+ em: Là đơn vị phụ thuộc vào thuộc tính font-size của nó hoặc phần tử chứa nó
 		+ rem: Là đơn vị phụ thuộc vào thuộc tính font-size của thẻ html
+	- dùng calc(đơn vị - đơn vị) trả về kết quả đơn vị
 8. Thuộc tính border
 	- border-width: 2px;
 	- border-style:
@@ -91,7 +99,7 @@
 		+ 50%: Bo lại thành hình tròn
 	- outline: outline-width outline-style outline-color;
 		+ Viền của kích thước đầy đủ(không bo tròn)	
-	==> border: border-width border-style border-color;
+	=> border: border-width border-style border-color;
 		(border-top, border-right, border-bottom, border-left)
 9. Thuộc tính margin(khoảng cách (bên ngoài) giữa các phần tử)
 	- margin-top: 
@@ -105,7 +113,7 @@
 	- Nếu khối ở trên margin-bottom: x-value và khối ở dưới margin-top: y-value:
 		+ Thì sẽ áp dụng value lớn hơn.
 		+ Chỉ nên sử dụng một loại margin-bottom hoặc margin-top thôi
-	==> margin: 
+	=> margin: 
 		+ 10px: top = right = bottom = left = 10px
 		+ 10px 20px: top = bottom = 10px, left = right = 20px
 		+ 10px 20px 30px: top = 10px, left = right = 20px, bottom = 30px
@@ -114,7 +122,7 @@
 	- padding-top: 
 		(padding-right, padding-bottom, padding-left)
 		+ 10px: Khoảng cách nội dung so với viền trên là 10px
-	==> padding: 
+	=> padding: 
 		+ 10px: top = right = bottom = left = 10px
 		+ 10px 20px: top = bottom = 10px, left = right = 20px
 		+ 10px 20px 30px: top = 10px, left = right = 20px, bottom = 30px
@@ -122,13 +130,15 @@
 11. Box-sizing
 	- Nên sử dụng box-sizing cho toàn trang web
 	- box-sizing:
-		+ content-box(giá trị mặc định): Chiều rộng, chiều cao sẽ chỉ quy định cho chiều rộng, chiều cao của nội dung
+		+ content-box(giá trị mặc định): Chiều rộng, chiều cao sẽ quy định cho chiều rộng, chiều cao của nội dung
 			.width: 100px; height: 100px: Nghĩa là content-width = 100px, content-height = 100px
 		+ border-box: Chiều rộng, chiều cao sẽ quy định cho chiều rộng, chiều cao của cả khối
 			.width: 100px; height: 100px: Nghĩa là block-width = 100px, block-height = 100px
 		(block-width = content-width + padding-left + padding-right + border-left + border-right)
 		(block.height = content.height + padding-top + padding-bottom + border-top + border-bottom)
-12. Thuộc tính display
+		+ padding-box;
+		+ text;
+12. Thuộc tính display cơ bản(https://www.w3schools.com/cssref/pr_class_display.asp)
 	- display:
 		+ inline:
 			. Phần tử sẽ nằm trên cùng một dòng, nếu phần tử vượt quá độ dài của dòng thì sẽ xuống dòng mới
@@ -140,8 +150,101 @@
 		+ inline-block:
 			. Phần tử sẽ nằm trên một dòng
 			. Có thể điều chỉnh width, height và padding, margin ở bốn hướng.
+		+ contents: làm cho container mất, khiến phần tử con lên một cấp trong DOM
+		+ list-items: xác định các phần tử là các <li>
+		+ run-in: xác định phần tử là block hoặc inline dựa trên bối cảnh, nội dung
 		+ none: ẩn phần tử đi, không thể thao tác
-13. Thuộc tính font
+13. Flex
+	- container
+		+ flex-direction:
+			+ row(mặc định)
+			+ row-reverse: đảo ngược hàng
+			+ column
+			+ column-direction: đảo ngược cột
+		+ flex-wrap:
+			+ nowrap(mặc định): các phần tử co dãn để nằm gọn trong 1 hàng(cột)
+			+ wrap: các phần tử không co dãn mà sang hàng(cột) mới
+			+ wrap-reserve: các phần tử trên mỗi hàng sẽ đảo ngược
+		+ flex-flow: flex-direction flex-wrap
+		+ justify-content(theo chiều flex-direction)
+			. stretch(mặc định): các phần tử phủ container
+			. center: căn giữa tất cả các hàng(cột)
+			. flex-start: tại đầu flex
+			. flex-start: tại cuối flex
+			. baseline: các phần tử nằm trên một đường thẳng, căn theo center của các phần tử
+		+ align-items(theo chiều ngược lại với flex-direction)
+			. flex-start: căn tại đầu mỗi hàng(cột)
+			. center: căn giữa cho mỗi hàng(cột)
+		+ align-content: căn các hàng(cột) -> không có hiệu lực với nowrap
+			. center: center mỗi hàng(cột)
+			. flex-start: các hàng căn tại đầu flex
+			. space-between: cách đều giữa các hàng(cột)
+			. space-around: cách đều giữa các hàng(cột) và lề
+			. center: đưa các hàng(cột) ra giữa
+
+	- Khi sử dụng table hay grid thì các phần tử mà dùng display: flex thì phải dùng direction column để giao diện không bị bóp méo. -> mục đích chỉnh vị trí những thành phần bên trong ô
+14. Grid Layout
+	Cách 1
+		- container:
+			+ display: grid;
+			+ grid-template-columns: 
+				. px1 px2 px3 ... pxn; -> n cột
+				. 1fr 1fr 1fr ...; -> n cột bằng nhau hoặc repeat(n, 1fr);
+				. Số lượng cột mỗi hàng tự động theo cửa sổ
+					repeat((auto-fill), minmax(px, 1fr)); -> zoom hiển thị đủ số cột, có thể còn thừa khoảng trống
+					repeat((auto-fit), minmax(px, 1fr)); -> zoom hiển thị đầy container
+			+ grid-template-rows: px px; hoặc auto....; -> n hàng, không cần dùng rows khi mỗi ô đều có kích thước giống nhau
+			+ gap: (khoảng cách giữa các ô)
+				. row-gap;
+				. row-gap column-gap; 
+		- element:
+			+ grid-column:
+				. track-line-start / track-line-end;
+				. track-line-start / span n; -> n là số cột(hàng) chiếm
+			+ grid-row: track-line-start / track-line-end;
+	Cách 2
+		- container:
+			+ display: grid
+			+ grid-template-areas:
+				. "ô1 ô1 ô2 ô3"
+				  "ô1 ô1 ô2 ô3"
+				  ...;
+
+				. "ô1 ô2 ô3"
+				  "ô4 ô5 ô6"
+				  ...;
+			+ grid-gap;
+
+		- element: {
+			grid-area: ô1;
+		}...
+
+	- Số hàng(cột) nhiều hơn 1 dòng thì sẽ scroll chứ không sang dòng mới
+		+ grid-template-columns: unset;
+		+ grid-auto-flow: 
+			. column; -> scroll dọc
+			. row; -> scroll ngang
+		+ grid-auto-columns: kích thước mỗi cột nên cho 50-80% để hiển thị một phần ô để biết có scroll
+		+ overflow-x: auto; hiển thị scroll ngang
+	- Hiệu ứng snap scroll(scroll mượt hơn)
+		+ container:
+			. display: flex;
+			. overflow-x: auto;
+			. scroll-snap-type:
+				. x mandatory -> scroll ngang đến đầu phần tử sau
+				. y proximity(mặc định)-> scroll dọc đến hết lực
+		+ element:
+			. scroll-snap-align:
+				. start; -> lướt đến đầu element tiếp theo, element ở vị trí đầu
+				. center; -> lướt đến element tiếp theo, element nằm ở center
+				. end; -> lướt đến cuối element tiếp theo, element nằm ở cuối
+			. scroll-snap-stop:
+				. normal(mặc định) -> lướt nhả hết lực
+				. always -> lướt nhả đến element sau
+			. khi sử dụng box-shadow mà có scroll-snap thì phải thêm scroll-padding để phần shadow không bị cắt đi
+				. scroll-padding cách phần tử khỏi lề;
+			. webkit-overflow-scrolling: touch;
+15. Thuộc tính font
 	- Font chữ mặc định là Times New Roman
 	- Nên nhúng font từ Google Font
 	- font-famlily: "font", kiểu;
@@ -154,7 +257,7 @@
 		+ italic: in nghiêng
 		+ bold: in đậm
 		+...
-14. Thuộc tính chữ
+16. Thuộc tính chữ
 	- color(màu chữ): gray;
 	- line-height(khoảng cách dòng): 1.5;
 	- letter-spacing(khoảng cách chữ): 1px;
@@ -180,13 +283,13 @@
 	- text-decoration:
 		+ none: không có gì
 		+ underlined(mặc định của thẻ a): gạch chân
-15. Thuộc tính hình ảnh
+17. Thuộc tính hình ảnh
 	- max-width: 100%; (để không xuất hiện scroll khi ảnh lớn hơn phần tử chứa)
 	- object-fit: cover; (ảnh scale cho vừa kích thước mà không bị méo khi ảnh nhỏ hơn kích thước phần tử)
 	- object-position:
 		+ center(mặc định): scale từ giữa
 		+ top(bottom, left, right): scale từ top xuống
-16. Các pseudo cơ bản
+18. Các pseudo cơ bản
 	- selector:link: khi chưa nhấn
 	- selector:visited: khi đã nhấn vào
 	- selector:hover: khi rê chuột vào
@@ -197,11 +300,12 @@
 		+ selector:lang(vi) {}
 		  <q lang="vi"></q>
 	- selector:focus: khi đang chọn, gõ vào selector như input
-	-...
-17. Gradient(trộn màu)
+	- selector:is(header, main,...) -> chọn ra những selector là header, main,... sẽ áp dụng ưu tiên cho chúng
+	- selector:where(header, main, ) -> chọn ra ... nếu định nghĩa lại thẻ header, main thì sẽ đè lên phần where
+19. Gradient(trộn màu)
 	- background-image: linear-gradient(direction, color1 (pc1%), color2 (pc2%));
 		+ direction: to right, to left, to bottom, to top, to right bottom, to left bottom,... hoặc 120deg, 90deg,...
-		+ nếu không có % thì hai màu sẽ trộn lại với nhau rất tự nhiên
+		+ nếu không có % thì hai màu sẽ trộn lại với nhau tự nhiên
 		+ quy định quãng 0 -> pc1 sẽ cố định color1, quy định quãng pc2 -> 100 sẽ cố định color2
 	- Màu gradident phủ lên hình nền:
 		background-image: linear-gradient(direction, rgba1, rgba2), url();
@@ -210,24 +314,25 @@
 		background-image: linear-gradient();
 		-webkit-background-clip: text;
 		background-clip: text;
-18. Supports(https://caniuse.com/)
+		color: transparent;
+20. Supports(https://caniuse.com/)
 	- @supports (thuộc tính: giá trị) {
 		//Thực hiện những câu lệnh bên trong nếu trình duyệt hỗ trợ lệnh css trên
 	}
 	- @supports not (thuộc tính: giá trị) {
 		//Thực hiện những câu lệnh bên trong nếu trình duyệt không hỗ trợ lệnh css trên
 	} 
-19. Ẩn phần tử
+21. Ẩn phần tử
 	- opacity: 0; (vẫn chiếm diện tích, có thể thao tác)
 	- visibility: hidden; (vẫn chiếm diện tích, không thể thao tác)
 	- display: none; (không chiếm diện tích, không thể thao tác)
 		+ opcacity và visibility thường được dùng để dùng làm hiệu ứng transition
 		+ display: none đơn giản làm ẩn phần tử
-20. Shadow(tạo bóng)
+22. Shadow(tạo bóng)
 	- box-shadow(tạo bóng cho khối): x y blur scale color;
 		(text-shadow: tạo bóng cho chữ)
 	- Nên dùng shadow editor của Chrome dev tool để dễ dàng chỉnh sửa như mong muốn
-21. Biến
+23. Biến
 	- Biến toàn cục
 		:root {
 			--var1: value;
@@ -242,12 +347,12 @@
 			--var1: value;
 			property: var(--var1);
 		}
-22. Độ ưu tiên
+24. Độ ưu tiên
 	- Khác cấp: tag < class < id
 	- Cùng cấp: ưu tiên từ dưới lên
 	- Cùng thuộc tính: !important; là ưu tiên nhất(hạn chế dùng)
 	- Cùng thuộc tính ở style và inline-style: ưu tiên inline-style
-23. Child selector(tag:child {})
+25. Child selector(tag:child {})
 	- tag:first-child: những tag mà là thẻ con đầu 
 	- tag:last-child: những tag mà là thẻ con cuối
 	- tag:nth-child(2): những tag mà là thẻ con thứ 2 tính từ trên xuống
@@ -256,7 +361,7 @@
 	- tag:ntn-child(odd hoặc even): những tag mà là thẻ con ở vị trí lẻ hoặc chẵn
 	- tag:ntn-child(2*n+1): những tag mà là thẻ con ở vị trí 2*n + 1 (với n chạy từ 0 -> hết)
 	-tag:first-child sub: chọn sub mà là thẻ con đầu tiên của thẻ tag đầu
-24: Type selector
+26. Type selector
 	- tag:first-of-child: những tag đầu 
 	- tag:last-of-child: những tag cuối
 	- tag:nth-of-child(2): những tag thứ 2 tính từ tag đầu xuống
@@ -264,7 +369,7 @@
 	- tag:not(:first-of-child): tất cả các tag không phải tag đầu .not(:last-of-child) . not(:ntn-of-child(1)) ...
 	- tag:ntn-of-child(odd hoặc even): những tag vị trí lẻ hoặc chẵn tính từ tag đầu
 	- tag:ntn-of-child(2*n+1): những tag ở vị trí 2*n + 1 (với n chạy từ 0 -> hết) tính từ tag đầu
-25. Combinators(trỏ đến thẻ phía dưới cùng cấp)
+27. Combinators(trỏ đến thẻ phía dưới cùng cấp)
 	- thẻ bắt đầu + .class thẻ ngay dưới
 		h3 + .tit {
 			//tit là class của thẻ ngay dưới h3
@@ -279,7 +384,7 @@
 		h3 ~ .tit3{
 			//.tit3 là class của thẻ ở phía dưới thẻ h3
 		}
-26. Selectors nâng cao(https://www.w3schools.com/cssref/css_selectors.asp)
+28. Selectors nâng cao(https://www.w3schools.com/cssref/css_selectors.asp)
 	- Trỏ đến thẻ a có href bắt đầu bằng https:
 		a[href^="https"] {
 
@@ -292,14 +397,104 @@
 		a[href*="google"] {
 
 		}
+	- Trỏ đến thẻ con:
+		selector > sub {}
 	=> tag[attribute=""] {}	
 	- p::first-letter
 	- p::first-line
 	- ...
-27. Transition
+29. Transition
 	- transition: 
-		+ property1 time transition-type, ...;
+		+ property1 transition-duration (transition-timing-function), ...;
 			transition: background-color 0.2s linear, color 0.5s linear
 		+ all time type;
 	- transition-delay: time;
+	- transition-duration: time;
+	- transition-timing-function: 
+		+ ease(mặc định): chậm -> nhanh -> chậm
+		+ linear: đều
+		+ ease-in: chậm -> nhanh
+		+ ease-out: nhanh -> chậm
+		+ ease-in-out: chậm -> đều -> chậm
+		+ cubic-bezier(n, n, n, n): tự định nghĩa
 	- transition không thể áp dụng cho property của display
+30. Transform(biến đổi phần tử, nhưng thực chất phần tử vẫn như cũ)
+	- transform: 
+		+ rotate3d(deg, deg, deg);
+		+ rotate(20deg);
+		+ rotateX(20deg);
+		+ rotateY(20deg);
+		+ rotateZ(20deg);
+	- transform: 
+		+ skew(deg, deg);
+		+ skewX(20deg); 
+		+ skewY(20deg);
+	- transform: 
+		+ scale(x, (y));
+		+ scale3d(x, y, z);
+		+ scaleX(1.5);
+		+ scaleY(1.5);
+		+ scaleZ(1.5);
+	- transform:
+		+ translate(px, px);
+		+ translate3d(px, px, px);
+		+ translateX(px);
+		+ translateY(px);
+		+ translateZ(px);
+	- transform:
+		+ matrix(n, n, n, n, n, n); -> tự định nghĩa transform 2D
+		+ matrix3d(n, n, n, n, n, n, n, n, n, n, n, n, n, n, n, n); -> tự định nghĩa transform 3D, ma trận 4x4
+	- transform: perspective(n); -> tự định nghĩa kiểu xem phối cảnh
+	- transform: none
+31. Position
+	- position:
+		+ static; (mặc định, các phần tử hiển thị đúng thứ tự)
+		+ relative; (định vị theo vị trí ban đầu)
+		+ absolute; 
+			. Định vị theo relative container gần nhất, mặc định body là relative
+			. Phần tử không còn chiếm diện tích
+		+ fixed; 
+			. Phần tử không chiếm diện tích
+			. Định vị theo body
+			. Không nên sử dụng transform: translate ở container để tránh gặp lỗi không định vị theo body
+		+ sticky; 
+			. Định vị theo thanh scroll dọc
+			. Tự chuyển đổi giữa relative và fixed, relative cho tới khi scroll xuống vị trí sticky theo body thì sẽ fixed
+
+	- left: 10px; (như margin nhưng thực chất vẫn phần tử vẫn ở vị trí ban đầu)
+	- top: 10px; (các thuộc tính top, left,... chỉ có hiệu lực khi có position và không có hiệu lực với static)
+	- bottom: 10px; (ưu tiên top nếu có cả top bottom)
+	- right: -20px; (ưu tiên left nếu có cả left right)
+
+	- Căn trung tâm:
+		. top: 50%;
+		. left: 50%;
+		. margin-top: -height; margin-left: -width;
+			hoặc transform: translate(-50%, -50%);
+	- Căn dọc giữa:
+		. top: 50%;
+		. transform: translateY(-50%);
+	- Căn ngang giữa:
+		. left: 50%;
+		. transform: translateX(-50%);
+	- Phủ hết container:
+		+ top: 0;
+		+ left: 0;
+		+ width: 100%; (phủ ngang)
+		+ height: 100%; (phủ dọc)
+		 	Hoặc
+		+ top: 0;
+		+ bottom: 0;
+		+ height: auto; (phủ dọc) hoặc (100% mà không cần bottom 0)
+		+ left: 0;
+		+ right: 0;
+		+ width: auto; (phủ ngang) (auto nếu trước đó đã set width height cố định)
+
+	- z-index: 0; (có hiệu lực khi có position, phần tử có z-index lớn hơn sẽ đè lên z-index nhỏ hơn, mặc định phần tử sẽ đè lên container)
+32. Pseudo before và after
+	- Phải dùng thuộc tính content, thì pseudo before hay after mới có tác dụng
+	- Chèn content vào phần tử thì không thể chọn content đó như text của html.
+	- pseudo before và after là một phần tử con của selector
+	- Dùng position absolute để hiển thị phần tử, container relative
+	. Kẻ line ngang chữ, dùng before after kéo left right ra, cho absolute theo container, cho z-index nhỏ hơn z-index của container
+	- Áp dụng pseudo hiệu ứng cho before after: selector:hover:before ...

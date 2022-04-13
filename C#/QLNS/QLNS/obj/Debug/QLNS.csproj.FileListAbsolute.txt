@@ -1,0 +1,11 @@
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNS\QLNS\bin\Debug\QLNS.exe.config
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNS\QLNS\bin\Debug\QLNS.exe
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNS\QLNS\bin\Debug\QLNS.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNS\QLNS\obj\Debug\QLNS.csproj.AssemblyReference.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNS\QLNS\obj\Debug\QLNS.csproj.SuggestedBindingRedirects.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNS\QLNS\obj\Debug\QLNS.frmQLNS.resources
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNS\QLNS\obj\Debug\QLNS.Properties.Resources.resources
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNS\QLNS\obj\Debug\QLNS.csproj.GenerateResource.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNS\QLNS\obj\Debug\QLNS.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNS\QLNS\obj\Debug\QLNS.exe
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNS\QLNS\obj\Debug\QLNS.pdb
