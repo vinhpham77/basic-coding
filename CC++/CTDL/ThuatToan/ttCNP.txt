@@ -1,0 +1,401 @@
+
+
+Bài 1: Sử dụng cây tìm kiếm nhị phân để tổ chức dữ liệu cho các tập hợp số nguyên.
+	
+	* Khai báo:
+		struct Tap_Hop
+		{
+			int so;
+			struct Tap_Hop *trai, *phai;
+		};
+
+	1. Tạo một tập hợp rỗng
+		
+		a) Thuật toán
+			Dữ liệu vào: Địa chỉ của tập hợp.
+			Dữ liệu ra: Tập hợp sẽ rỗng.
+			Thao tác:
+				1. Cho tập hợp rỗng và dừng.
+
+		b) Cài đặt
+			void *tao_rong(struct Tap_Hop **goc)
+			{
+				*goc = NULL;
+			}
+
+	2) Kiểm tra một số nguyên x có thuộc tập hợp S không?
+		
+		a) Thuật toán
+			Dữ liệu vào: tập S, số nguyên x.
+			Dữ liệu ra: 1 nếu x có thuộc tập S, 0 nếu ngược lại.
+			Thao tác:
+				1. Nếu tập S rỗng thì dừng và trả về 0.
+				2. Nếu x = số của tập S thì dừng và trả về 1.
+				3. Nếu x < số của tập S thì:
+					3.1. Dừng và trả về 1 nếu x thuộc tập con trái của S, 0 nếu ngược lại.
+				4. Dừng và trả về 1 nếu x thuộc tập con phải của S, 0 nếu ngược lại.
+
+		b) Cài đặt
+
+			int thuoc(struct CSN *S, int x)
+			{
+				if (S == NULL)
+				{
+					return 0;
+				}
+
+				if (x == S->so)
+				{
+					return 1;
+				}
+
+				if (x < S->so)
+				{
+					return thuoc(S->trai, x);
+				}
+
+				return thuoc(S->phai, x);
+			}
+
+	3) Liệt kê các số trong tập hợp S
+		
+		a) Thuật toán
+			Dữ liệu vào: tập S.
+			Dữ liệu ra: Hiển thị các số trong tập hợp.
+			Thao tác:
+				1. Nếu S rỗng thì dừng.
+				2. Hiển thị số của S;
+				3. Liệt kê các số của tập con trái của S và liệt kê các số tập con phải của S.
+				4. Dừng.
+
+		b) Cài đặt
+
+			void liet_ke(struct Tap_Hop *S)
+			{
+				if (S == NULL)
+				{
+					return;
+				}
+
+				printf("%d\n", S->so);
+				liet_ke(S->trai);
+				liet_ke(S->phai);
+			}
+
+	4) Kiểm tra S1 có là tập con của S2 không?
+
+		a) Thuật toán
+
+			Dữ liệu vào: tập S1, tập S2.
+			Dữ liệu ra: 1 nếu S1 là tập con S2, 0 nếu ngược lại.
+			Thao tác:
+				1. Nếu S1 rỗng thì dừng và trả về 1.
+				2. Dừng và trả về 1 nếu số của S1 thuộc S2 và tập con trái của S1 là tập con S2 và tập con phải của S1 là tập con S2
+						, 0 nếu ngược lại.
+				3. Dừng và trả về 0.
+
+		b) Cài đặt
+
+			int la_tap_con(struct Tap_Hop *S1, struct Tap_Hop *S2)
+			{
+				if (S1 == NULL)
+				{
+					return 1;
+				}
+
+				if (S2 == NULL)
+				{
+
+					return thuoc(S2, S1->so) && la_tap_con(S1->trai, S2) && la_tap_con(S1->phai, S2);
+				}
+
+				return 0;
+			}
+
+	5) Tìm giao của hai tập hợp S1 và S2.
+
+		a) Thuật toán
+
+			Dữ liệu vào: Tập S1, tập S2, tập S3 rỗng.
+			Dữ liệu ra: Tập S3 là giao của tập S1 và tập S2.
+			Thao tác:
+				1. Nếu S1 khác rỗng thì:
+					1.1. Nếu số của S1 thuộc S2 thì thêm số của S1 vào S3.
+					1.2. S3 = giao của tập con trái S1 và S2 vào S3.
+					1.3. S3 = giao của tập con phải S1 và S2 vào S3.
+				2. Dừng và trả về S3.
+
+		b) Cài đặt
+
+			struct Tap_Hop *giao(struct Tap_Hop *S1, struct Tap_Hop *S2, struct Tap_Hop *S3)
+			{
+				if (S1 != NULL)
+				{
+					if (thuoc(S2, S1->so))
+					{
+						them(&S3, S1->so);
+					}
+
+					S3 = giao(S1->trai, S2, S3);
+					S3 = giao(S1->phai, S2, S3);
+				}
+
+				return S3;
+			}
+
+			void them(struct Tap_Hop **S, int so)
+			{
+				struct Tap_Hop *X;
+				struct Tap_Hop *P;
+				
+				if (*S == NULL)
+				{
+					X = (struct Tap_Hop*) malloc(sizeof(struct Tap_Hop));
+					X->so = so;
+					X->trai = X->phai = NULL;
+					*S = X;
+				}
+				else
+				{
+					P = *S;
+					
+					if (so < P->so)
+					{
+						them(&P->trai, so);
+					}
+					else if (so > P->so)
+					{
+						them(&P->phai, so);
+					}
+				}
+			}
+
+	6) Tìm hợp của hai tập hợp S1 và S2.
+
+		a) Thuật toán
+
+			Dữ liệu vào:  Tập S1, tập S2, tập S3 rỗng.
+			Dữ liệu ra: Tập S3 là hợp của tập S1 và tập S2.
+			Thao tác:
+				1. Thêm tập S1 vào S3.
+				2. Thêm tập S2 vào S3.
+				3. Dừng và trả về S3.
+
+		b) Cài đặt
+
+			struct Tap_Hop *hop(struct struct Tap_Hop *S1, struct Tap_Hop *S2, struct Tap_Hop *S3)
+			{
+				them_TH(&S3, S1);
+				them_TH(&S3, S2);
+
+				return S3;
+			}
+
+			void them_TH(struct Tap_Hop **S1, struct Tap_Hop *S2)
+			{
+				if (S2 == NULL)
+				{
+					return;
+				}
+				
+				them(S1, S2->so);
+				them_TH(S1, S2->trai);
+				them_TH(S1, S2->phai);
+			}
+
+	7) Tìm hiệu của hai tập hợp S1 và S2.
+		
+		a) Thuật toán
+
+			Dữ liệu vào:  Tập S1, tập S2, tập S3 rỗng.
+			Dữ liệu ra: S3 là hiệu của tập S1 và tập S2.
+			Thao tác: 
+				1. Nếu S1 khác rỗng thì:
+					1.1. Nếu số của S1 không thuộc S2 thì thêm số của S1 vào S3.
+					1.2. S3 = hiệu của tập con trái và S2 vào S3.
+					1.3. S3 = hiệu của tập con phải và S2 vào S3.
+				2. Dừng và trả về S3.
+		
+		b) Cài đặt
+
+			struct Tap_Hop *hieu(struct Tap_Hop *S1, struct Tap_Hop *S2, struct Tap_Hop *S3)
+			{
+				if (S1 != NULL)
+				{
+					if (!thuoc(S2, S1->so))
+					{
+						them(&S3, S1->so);
+					}
+
+					S3 = hieu(S1->trai, S2, S3);
+					S3 = hieu(S1->phai, S2, S3);
+				}
+
+				return S3;
+			}
+
+Bài 2. Cho cây nhị phân mà mỗi nút là một số nguyên.
+	
+	* Khai báo:
+		struct CSN
+		{
+			int du_lieu;
+			struct CSN *trai, *phai;
+		};
+
+	1) Kiểm tra cây nhị phân có phải là cây tìm kiếm nhị phân không?
+		
+		a) Thuật toán
+
+			Dữ liệu vào: Cây nhị phân.
+			Dữ liệu ra: 1 nếu cây nhị phân là cây tìm kiếm nhị phân, 0 nếu ngược lại.
+			Thao tác:
+				1. Nếu cây rỗng hoặc cả hai cây con đều rỗng thì dừng và trả về 1.
+				2. Nếu dữ liệu cây con trái bé hơn dữ liệu cây và dữ liệu cây bé hơn dữ liệu cây con phải thì:
+					2.1. Dừng và trả về 1 nếu cây con trái là CTKNP và cây con phải là CTKNP, 0 nếu ngược lại.
+				3. Dừng và trả về 0.
+
+		b) Cài đặt
+
+			int la_CTKNP(struct CSN *goc)
+			{
+				if (goc == NULL || (goc == NULL && goc && NULL)) 
+				{
+					return 1;
+				}
+
+				if (max(goc->trai) < goc->du_lieu && goc->du_lieu < min(goc->phai))
+				{
+					return la_CTKNP(goc->trai) && la_CTKNP(goc->phai);
+				}
+
+				return 0;
+			}
+
+			int max(struct CSN *goc)
+			{
+				int m = INT_MIN;
+				int m1;
+				int m2;
+
+				if (goc != NULL)
+				{
+					m = goc->du_lieu;
+					m1 = max(goc->trai);
+					m2 = max(goc->phai);
+
+					if (m1 > m)
+					{
+						m = m1;
+					}
+
+					if (m2 > m)
+					{
+						m = m2;
+					}
+				}
+
+				return m;
+			}
+
+			int min(struct CSN *goc)
+			{
+				int m = INT_MAX;
+				int m1;
+				int m2;
+
+				if (goc != NULL)
+				{
+					m = goc->du_lieu;
+					m1 = min(goc->trai);
+					m2 = min(goc->phai);
+
+					if (m1 < m)
+					{
+						m = m1;
+					}
+
+					if (m2 < m)
+					{
+						m = m2;
+					}
+
+				}
+
+				return m;
+			}
+
+	2) Kiểm tra cây nhị phân có phải là cây cân bằng không?
+		a) Thuật toán
+			Dữ liệu vào: Cây nhị phân.
+			Dữ liệu ra: 1 nếu cây nhị phân đúng là cây cân bằng, 0 nếu ngược lại.
+			Thao tác:
+				1. Nếu cây rỗng thì dừng và trả về 1.
+				2. lech = chiều cao của cây con trái - chiều cao của cây con phải.
+				3. Nếu lech >= -1 hoặc lech <= 1 thì:
+					3.1. Dừng và trả về 1 nếu cây là CTKNP và cây con trái là CCB và cây con phải là CCB, 0 nếu ngược lại.
+				4. Dừng và trả về 0.
+		b) Cài đặt
+			int la_CCB(struct CSN *goc)
+			{
+				int lech;
+
+				if (goc == NULL)
+				{
+					return 1;
+				}
+
+				lech = tinh_chieu_cao(goc->trai) - tinh_chieu_cao(goc->phai);
+				
+				if (lech >= -1 && lech <= 1)
+				{
+					return la_CTKNP(goc) && la_CCB(goc->trai) && la_CCB(goc->phai);
+				}	
+				
+				return 0;
+			}
+
+			int tinh_chieu_cao(struct CSN *goc)
+			{
+				int x, y;
+
+				if (goc == NULL)
+				{
+					return 0;
+				}
+
+				x = tinh_chieu_cao(goc->trai);
+				y = tinh_chieu_cao(goc->phai);
+
+				return x > y ? x + 1 : y + 1;
+			}
+
+	3) Kiểm tra cây nhị phân có phải là cây cân bằng hoàn toàn không?
+		a) Thuật toán
+			Dữ liệu vào: Cây nhị phân.
+			Dữ liệu ra: 1 nếu cây nhị phân là cây cân bằng hoàn toàn, 0 nếu ngược lại.
+			Thao tác:
+				1. Nếu cây rỗng thì dừng và trả về 1.
+				2. lech = số nút cây con trái - số nút của cây con phải.
+				3. Nếu lech >= -1 hoặc lech <= 1 thì:
+					3.1. Dừng và trả về 1 nếu cây là CTKNP và cây con trái là CCBHH và cây con phải là CCBHH, 0 nếu ngược lại;
+				4. Dừng và trả về 0.
+		b) Cài đặt
+			int la_CCB(struct CSN *goc)
+			{
+				int lech;
+
+				if (goc == NULL)
+				{
+					return 1;
+				}
+
+				lech = tinh_chieu_cao(goc->trai) - tinh_chieu_cao(goc->phai);
+				
+				if (lech >= -1 && lech <= 1)
+				{
+					return la_CTKNP(goc) && la_CCB(goc->trai) && la_CCB(goc->phai);
+				}	
+				
+				return 0;
+			}

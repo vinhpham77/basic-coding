@@ -1,0 +1,9 @@
+drink:uong
+drive:lai
+add:them
+question:cau hoi
+wine:ruou
+horse:ngua
+hint:meo
+cow:bo
+beg:quy
