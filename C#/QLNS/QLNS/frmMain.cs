@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace QLNS
 {
-    public partial class frmQLNS : Form
+    public partial class frmQLNS : Form 
     {
         DataSet ds;
         SqlCommand cmd;
@@ -16,22 +16,10 @@ namespace QLNS
         {
             InitializeComponent();
         }
-
+        
         private void InformFailedConnectionToDB()
         {
             MessageBox.Show("Lỗi truy xuất dữ liệu!", "Cơ sở dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Stop);
-        }
-
-        private void InformSucessfulAction(object sender, bool isSuccessful)
-        {
-            if (isSuccessful)
-            {
-                MessageBox.Show("Thành công!", (sender as Button).Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Thất bại!", (sender as Button).Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void dgvQLNS_Load()
@@ -109,6 +97,11 @@ namespace QLNS
                 InformSucessfulAction(sender, isSuccessfull);
                 conn.Close();
             }
+        }
+
+        private void dgvQLNS_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

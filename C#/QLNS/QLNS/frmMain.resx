@@ -126,7 +126,7 @@
     <value>4, 5, 4, 5</value>
   </data>
   <data name="cbbDepartment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 33</value>
+    <value>199, 28</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="cbbDepartment.TabIndex" type="System.Int32, mscorlib">
@@ -151,7 +151,7 @@
     <value>4, 5, 4, 5</value>
   </data>
   <data name="txtCoefficientsSal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 30</value>
+    <value>117, 26</value>
   </data>
   <data name="txtCoefficientsSal.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -175,7 +175,7 @@
     <value>4, 5, 4, 5</value>
   </data>
   <data name="txtEmployeeName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>259, 30</value>
+    <value>259, 26</value>
   </data>
   <data name="txtEmployeeName.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -199,7 +199,7 @@
     <value>4, 5, 4, 5</value>
   </data>
   <data name="txtEmployeeNo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 30</value>
+    <value>117, 26</value>
   </data>
   <data name="txtEmployeeNo.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -226,7 +226,7 @@
     <value>4, 0, 4, 0</value>
   </data>
   <data name="lblCoefficientsSal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 25</value>
+    <value>94, 20</value>
   </data>
   <data name="lblCoefficientsSal.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -256,7 +256,7 @@
     <value>4, 0, 4, 0</value>
   </data>
   <data name="lblDepartment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>107, 25</value>
+    <value>86, 20</value>
   </data>
   <data name="lblDepartment.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -286,7 +286,7 @@
     <value>4, 0, 4, 0</value>
   </data>
   <data name="lblEmployeeName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 25</value>
+    <value>108, 20</value>
   </data>
   <data name="lblEmployeeName.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -316,7 +316,7 @@
     <value>4, 0, 4, 0</value>
   </data>
   <data name="lblEmployeeNo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 25</value>
+    <value>103, 20</value>
   </data>
   <data name="lblEmployeeNo.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -526,7 +526,7 @@
     <value>591, 25</value>
   </data>
   <data name="txtSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>203, 30</value>
+    <value>203, 26</value>
   </data>
   <data name="txtSearch.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
