@@ -1,3 +1,11 @@
+0. Javascript làm được những gì?
+	- JavaScript có thể thay đổi tất cả các phần tử HTML trong trang 
+	- JavaScript có thể thay đổi tất cả các thuộc tính HTML trong trang 
+	- JavaScript có thể thay đổi tất cả các kiểu CSS trong trang
+	- JavaScript có thể xóa các phần tử và thuộc tính HTML hiện có 
+	- JavaScript có thể thêm các phần tử và thuộc tính HTML mới 
+	- JavaScript có thể phản ứng với tất cả các sự kiện HTML hiện có trong trang 
+	- JavaScript có thể tạo các sự kiện HTML mới trong trang
 1. Khai báo biến hằng
 	- var: biến toàn cục
 	- let: biến khối
@@ -58,7 +66,110 @@
 			^[A-Z](?:'[A-Z])?[a-z]+(?: [A-Z]('[A-Z])?[a-z]+)*$
 		Email
 			^\w+@[a-z]+(?:\.[a-z]+)+$
-	2.2. Thao tác(https://viblo.asia/p/bieu-thuc-chinh-quy-regex-trong-javascript-QpmleQ9mlrd)
+	2.2. Flags
+		- d    tạo kết quả khớp chuỗi con
+		- g    tìm toàn bộ
+		- i    tìm không quan tâm chữ in hoa hay in thường
+		- m    tìm nhiều dòng
+		- s    cho phép . khớp với kí tự xuống dòng
+		- u    
+		- y
+	2.3. Thao tác(https://viblo.asia/p/bieu-thuc-chinh-quy-regex-trong-javascript-QpmleQ9mlrd)
+		- Khai báo
+			+ var/let/const = /pattern/flags;
+			+ var/let/const = /new Regex('pattern', 'flags');
+		- Function
+			+ bool regex.test('string'); kiểm tra string trùng khớp không
+			+ [] regex.exec('string'); trả về mảng các xâu thuộc string trùng khớp
+			+ [] string.match(regex); trả về mảng các xâu con thuộc string trùng khớp, nếu không có thì xâu chứa null
+			+ int string.search(regex); trả về index của 1 xâu con trùng khớp, -1 nếu không tìm thấy
+			+ void paragraph.replace(regex, string); thực hiện thay thế 1 chuỗi con khớp bằng string
+			+ void paragraph.replace(regex, string); thực hiện thay thế các chuỗi con khớp bằng string
+			+ [] paragraph.split(regex); thực hiện chia paragraph thành các chuỗi con mà khớp regex
 
+3. DOM
+	* Không bao giờ sử dụng document.write() sau khi document được load. Nó sẽ ghi đè lên cả document phía trên.
+	3.1. Tìm phần tử
+		- document.getElementById("id") tìm 1 phần tử có id là "id"
+		- document.getElementsByTagName(name) tìm những phần tử có tên thẻ là name
+		- document.getElementsByClassName(name) tìm những phần tử có class là name
+		- tìm tất cả các phần tử HTML khớp với selector CSS được chỉ định (id, tên lớp, loại, đặc tính, giá trị của đặc tính, v.v.), sử dụng phương thức querySelectorAll().
+			 VD: const x = document.querySelectorAll("p.intro"); trả về danh sách tất cả các phần tử <p> có class = "intro".
+	3.2. Thay đổi phần tử
+		- element.innerHTML =  "nội dung mới"
+			VD: document.getElementById("id01").innerHTML = "New Heading";
+		- element.attribute = "value mới"
+			VD: document.getElementById("myImage").src = "landscape.jpg";
+		- element.style.property = "new style"
+		- element.setAttribute(attribute, "new value")
+	3.3. Thêm và xoá phần tử
+		- document.createElement(element)		tạo một phần tử html
+		- document.removeChild(element)			xoá một phần tử html
+		- document.appendChild(element)			thêm một phần tử html
+		- document.replaceChild(new, old)		thay thế thẻ html
+		- document.write(text)					viết(in) vào luồng ra của html
+	3.4. Thêm một sự kiện
+		- element.onclick = function(){code}
+	3.5. Tìm đối tượng
+		- document.anchors				trả về tất cả thẻ <a> có một đặc tính(attribute) name
+		- document.baseURI				trả về đường dẫn tuyệt đối URI cơ sở của document
+		- document.body					trả về phần tử <body>
+		- document.cookie				trả về cookie của document
+		- document.doctype				Trả về doctype của document
+		- document.documentElement		Trả về phần tử <html>
+		- document.documentMode			Trả về chế độ được sử dụng bởi trình duyệt
+		- document.documentURI			Trả về đường dẫn URI document
+		- document.domain				Trả về tên miền của document server
+		- document.embeds				Trả về tất cả phần tử <embed>
+		- document.forms				Trả về tất cả phần tử <form>
+		- document.head					Trả về phần tử <head>
+		- document.images				Trả về tất cả phần tử <img>
+		- document.implementation		Trả về DOM implementation
+		- document.inputEncoding		Trả về mã hoá của document (character set)
+		- document.lastModified			Trả về ngày giờ của document lần cuối được update
+		- document.links				Trả về tất cả phần tử <area> và <a> mà có một đặc tính(attribute) href
+		- document.readyState			Trả về trạng thái(loading) của document
+		- document.referrer				Trả về đường dẫn URI của referrer (document liên kết)
+		- document.scripts				Trả về tất cả phần tử <script>
+		- document.strictErrorChecking	Trả về nếu kiểm tra lỗi được thực thi
+		- document.title				Trả về phần tử <title>
+		- document.URL					Trả về đường dẫn URL hoàn chỉnh của document
+	3.6. DOM Forms
+		- type 			kiểu của phần tử input
+			types: button, checkbox, color, date, datetime-local, email, file, hidden, image, month, number, password, radio, range, reset, search, submit, tel, text(mặc định), time, url, week.
+		- disabled		phần tử input nên bị vô hiệu
+		- max			giá trị tối đa của phần tử input
+			VD: max="5"; max="2002-12-31";
+		- min			giá trị tối thiểu của phần tử input
+		- pattern		giá trị pattern(regex) của phần tử input
+		- required		cột input bắt buộc có một phần tử(chỉ text, search, url, tel, email, password, date pickers, number, checkbox, radio, and file)
+		- size			size của phần tử input
+		- maxlength		số lượng kí tự tối đa của input
+		- multiple		cho phép nhập nhiều phần tử(chỉ type email và file).
+		- placeholder 	hiển thị mẹo ẩn mô tả giá trị mong muốn(chỉ text, search, url, tel, email, và password)
+		- step			là giá trị chia hết cho step(chỉ number, range, date, datetime-local, month, time and week)
+		- autofocus 	tự động focus vào input mỗi khi load
+		- autocomplete 	cho phép tự động điền form
+		- list 			danh sách, phải có datalist, giá trị list bằng id datalist
+	3.7. DOM Event Listener
+		* không dùng event có "on" , tham khảo danh sách html event (https://www.w3schools.com/jsref/dom_obj_event.asp).
+		- element.addEventListener("click", function(){ alert("Hello World!"); });
+		- window.addEventListener("resize", function(){
+  			document.getElementById("demo").innerHTML = sometext;
+		  });
+	3.8. DOM Navigation
+		- Trong một cây, nút đầu tiên gọi là nút gốc(node root)
+		- Mọi nút(node) đều có nút cha(parentNode), ngoại trừ nút gốc
+		- Một nút có thể có nhiều con(childNodes)
+		- Anh chị em(sibling) là những nút có cùng cha(parentNode)
 
-
+		- Tìm phần tử(element)
+			+ parentNode
+			+ childNodes[nodenumber]
+			+ firstChild
+			+ lastChild
+			+ nextSibling
+			+ previousSibling
+				VD: document.getElementById("id01").childNodes[0],...
+		- 
+4. BOM

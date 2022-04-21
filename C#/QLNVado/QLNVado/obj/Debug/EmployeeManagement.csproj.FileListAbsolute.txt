@@ -1,0 +1,12 @@
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNVado\QLNVado\bin\Debug\QLNVado.exe.config
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNVado\QLNVado\bin\Debug\QLNVado.exe
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNVado\QLNVado\bin\Debug\QLNVado.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNVado\QLNVado\obj\Debug\EmployeeManagement.csproj.AssemblyReference.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNVado\QLNVado\obj\Debug\EmployeeManagement.csproj.SuggestedBindingRedirects.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNVado\QLNVado\obj\Debug\QLNVado.Form1.resources
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNVado\QLNVado\obj\Debug\QLNVado.Properties.Resources.resources
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNVado\QLNVado\obj\Debug\EmployeeManagement.csproj.GenerateResource.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNVado\QLNVado\obj\Debug\EmployeeManagement.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNVado\QLNVado\obj\Debug\QLNVado.exe
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNVado\QLNVado\obj\Debug\QLNVado.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\QLNVado\QLNVado\obj\Debug\QLNVado.frmMain.resources

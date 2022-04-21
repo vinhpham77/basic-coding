@@ -171,6 +171,7 @@ namespace QLNS
             resources.ApplyResources(this.dgvQLNS, "dgvQLNS");
             this.dgvQLNS.Name = "dgvQLNS";
             this.dgvQLNS.RowTemplate.Height = 24;
+            this.dgvQLNS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQLNS_CellContentClick);
             // 
             // frmQLNS
             // 
