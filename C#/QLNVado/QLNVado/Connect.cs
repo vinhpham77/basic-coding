@@ -14,17 +14,15 @@ namespace QLNVado
     {
         static SqlConnection conn;
         static SqlDataAdapter da;
-        static SqlCommand cmd;
 
-        static public void ConnectToDB()
-        {
-            
-        }
-
-        static public void OpenConnection()
+        public static void ConnectToDB()
         {
             conn = new SqlConnection();
             conn.ConnectionString = ConfigurationManager.ConnectionStrings["VinCowboi"].ConnectionString;
+        }
+
+        public static void OpenConnection()
+        {
             try
             {
                 conn.Open();    
@@ -35,16 +33,15 @@ namespace QLNVado
             }
         }
 
-        static public void CloseConnection()
+        public static void CloseConnection()
         {
             conn.Close();
         }
 
-        static public DataTable GetData(string cmdText)
+        public static DataTable GetData(string cmdText)
         {
             DataTable dt = new DataTable();
-            cmd = new SqlCommand(cmdText);
-            da = new SqlDataAdapter(cmd);
+            da = new SqlDataAdapter(cmdText, conn);
             da.Fill(dt);
             return dt;
         }
