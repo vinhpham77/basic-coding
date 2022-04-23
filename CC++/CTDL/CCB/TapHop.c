@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
 
 struct Tap_Hop
 {
@@ -11,10 +10,11 @@ struct Tap_Hop
 
 int thuoc(struct Tap_Hop*, int);
 struct Tap_Hop *them(struct Tap_Hop*, int);
+struct Tap_Hop *them_TH(struct Tap_Hop*, struct Tap_Hop*);
 void liet_ke(struct Tap_Hop*);
 int la_tap_con(struct Tap_Hop*, struct Tap_Hop*);
 struct Tap_Hop *giao(struct Tap_Hop*, struct Tap_Hop*, struct Tap_Hop*);
-struct Tap_Hop *hop(struct Tap_Hop*, struct Tap_Hop*, struct Tap_Hop*);
+struct Tap_Hop *hop(struct Tap_Hop*, struct Tap_Hop*);
 struct Tap_Hop *hieu(struct Tap_Hop*, struct Tap_Hop*, struct Tap_Hop*);
 struct Tap_Hop *xoay_trai(struct Tap_Hop*);
 struct Tap_Hop *xoay_phai(struct Tap_Hop*);
@@ -33,23 +33,26 @@ int main()
 		S = them(S, i);
 	}
 	
+	printf("Tap S: ");
+	liet_ke(S);
+	
 	so = 5;
 	if (thuoc(S, so))
 	{
-		printf("%d thuoc S\n", so);
+		printf("\n%d thuoc S", so);
 	}
 	else
 	{
-		printf("%d khong thuoc S\n", so);
+		printf("\n%d khong thuoc S", so);
 	}
-	
-	liet_ke(S);
 	
 	R = them(R, 10);
 	R = them(R, 90);
 	R = them(R, 5);
 	R = them(R, 7);
 	R = them(R, 22);
+	printf("\nTap R: ");
+	liet_ke(R);
 	if (la_tap_con(R, S))
 	{
 		printf("\nR la tap con cua S\n");
@@ -59,18 +62,34 @@ int main()
 		printf("\nR khong phai tap con cua S\n");
 	}
 	
+	printf("R giao S: ");
 	liet_ke(giao(R, S, NULL));
-//	printf("%d\n", la_CTKNP(goc));
-//	printf("%d", la_CCB(goc));
-//	printf("\n%d", la_CCBHH(goc));
+	
+	printf("\nR hop S: ");
+	liet_ke(hop(R, S));
+	
+	printf("\nR hieu S: ");
+	liet_ke(hieu(R, S, NULL));
 
-//	printf("%d\n\n", thuoc(goc0, 2));
-//	liet_ke(goc0);
-//	printf("\n%d\n", la_tap_con(gocS, NULL));
-
-//	them(&gocS, 22);
-//	liet_ke(gocS);
-
+	S = R = NULL;
+	so = 100000;
+	for(i = 1; i <= so; i++)
+	{
+		S = them(S, rand());
+	}
+	for(i = 1; i <= so; i++)
+	{
+		R = them(R, rand()/10);
+	}
+	
+	printf("\n\nR giao S: ");
+	liet_ke(giao(R, S, NULL));
+	
+	printf("\n\nR hop S: ");
+	liet_ke(hop(R, S));
+	
+	printf("\n\nR hieu S: ");
+	liet_ke(hieu(R, S, NULL));
 	return 0;
 }
 
@@ -103,8 +122,8 @@ void liet_ke(struct Tap_Hop *S)
 		return;
 	}
 
-	printf("%d  ", S->so);
 	liet_ke(S->trai);
+	printf("%d ", S->so);
 	liet_ke(S->phai);
 }
 
@@ -119,24 +138,6 @@ int la_tap_con(struct Tap_Hop *S1, struct Tap_Hop *S2)
 	return thuoc(S2, S1->so) && la_tap_con(S1->trai, S2) && la_tap_con(S1->phai, S2);
 
 	return 0;
-}
-
-
-
-struct Tap_Hop *hieu(struct Tap_Hop *S1, struct Tap_Hop *S2, struct Tap_Hop *S3)
-{
-	if (S1 != NULL)
-	{
-		if (!thuoc(S2, S1->so))
-		{
-			them(S3, S1->so);
-		}
-
-		S3 = hieu(S1->trai, S2, S3);
-		S3 = hieu(S1->phai, S2, S3);
-	}
-
-	return S3;
 }
 
 // d) Tìm giao của hai tập hợp S1 và S2.
@@ -156,23 +157,31 @@ struct Tap_Hop *giao(struct Tap_Hop *S1, struct Tap_Hop *S2, struct Tap_Hop *S3)
 	return S3;
 }
 
-void them_TH(struct Tap_Hop **S1, struct Tap_Hop *S2)
+// e) Tim hop cua hai tap hop S1 va S2
+struct Tap_Hop *hop(struct Tap_Hop *S1, struct Tap_Hop *S2)
 {
-//	if (S2 == NULL)
-//	{
-//		return;
-//	}
-//
-//	them(S1, S2->so);
-//	them_TH(S1, S2->trai);
-//	them_TH(S1, S2->phai);
+	struct Tap_Hop *S3 = NULL;
+	
+	S3 = them_TH(S3, S1);
+	S3 = them_TH(S3, S2);
+
+	return S3;
 }
 
-struct Tap_Hop *hop(struct Tap_Hop *S1, struct Tap_Hop *S2, struct Tap_Hop *S3)
-{
-	them_TH(S3, S1);
-	them_TH(S3, S2);
-
+// f) Tim hieu cua hai tap hop S1 va S2
+struct Tap_Hop *hieu(struct Tap_Hop *S1, struct Tap_Hop *S2, struct Tap_Hop *S3)
+{	
+	if (S1 != NULL)
+	{
+		if (!thuoc(S2, S1->so))
+		{
+			S3 = them(S3, S1->so);
+		}
+		
+		S3 = hieu(S1->trai, S2, S3);
+		S3 = hieu(S1->phai, S2, S3);
+	}
+	
 	return S3;
 }
 
@@ -314,4 +323,16 @@ struct Tap_Hop *them(struct Tap_Hop *S, int so)
 	}
 	
 	return S;
+}
+
+struct Tap_Hop *them_TH(struct Tap_Hop *S1, struct Tap_Hop *S2)
+{
+	if (S2 != NULL)
+	{
+		S1 = them(S1, S2->so);
+		S1 = them_TH(S1, S2->trai);
+		S1 = them_TH(S1, S2->phai);
+	}
+
+	return S1;
 }

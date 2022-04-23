@@ -22,8 +22,10 @@ struct CCB *tim(struct CCB*, int);
 int main()
 {
 	struct CCB *goc = NULL;
+	struct CCB *p;
+	
 	const int n = 1000000;
-	int i;
+	int i, so;
 	
 	for (i = 1; i <= n; i++)
 	{
@@ -37,6 +39,16 @@ int main()
 	}
 	printf("Chieu cao cay sau khi xoa: %d\n", lay_chieu_cao(goc));
 	
+	so = 1000000;
+	p = tim(goc, so);
+	if (p == NULL)
+	{
+		printf("Khong tim thay so %d", so);
+	}
+	else
+	{
+		printf("CCB co chua so %d", so);
+	}
 	return 0;
 }
 
@@ -145,7 +157,7 @@ struct CCB *xoa(struct CCB *goc, int so)
 
 	if (goc == NULL)
 	{
-		return NULL;
+		return goc;
 	}
 	
 	cap_nhat_chieu_cao(goc);
@@ -278,10 +290,10 @@ struct CCB *tim(struct CCB *goc, int so)
 	}
 	else if (goc->so < so)
 	{
-		return tim(goc->trai, so);
+		return tim(goc->phai, so);
 	}
 	else
 	{
-		return tim(goc->phai, so);
+		return tim(goc->trai, so);
 	}
 }
