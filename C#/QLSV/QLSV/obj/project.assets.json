@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\LENOVO LEGION\\.nuget\\packages\\": {}
+    "C:\\Users\\May-14\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LENOVO LEGION\\basic-coding\\C#\\QLSV\\QLSV\\QLSV.csproj",
+      "projectUniqueName": "C:\\Users\\May-14\\Desktop\\VanVinh\\C#\\QLSV\\QLSV\\QLSV.csproj",
       "projectName": "QLSV",
-      "projectPath": "C:\\Users\\LENOVO LEGION\\basic-coding\\C#\\QLSV\\QLSV\\QLSV.csproj",
-      "packagesPath": "C:\\Users\\LENOVO LEGION\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LENOVO LEGION\\basic-coding\\C#\\QLSV\\QLSV\\obj\\",
+      "projectPath": "C:\\Users\\May-14\\Desktop\\VanVinh\\C#\\QLSV\\QLSV\\QLSV.csproj",
+      "packagesPath": "C:\\Users\\May-14\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\May-14\\Desktop\\VanVinh\\C#\\QLSV\\QLSV\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LENOVO LEGION\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\May-14\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -55,12 +55,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "frameworkReferences": {
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          }
-        },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }

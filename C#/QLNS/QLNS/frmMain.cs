@@ -94,7 +94,7 @@ namespace QLNS
             }
             finally
             {
-                InformSucessfulAction(sender, isSuccessfull);
+                connect.InformSucessfulAction(sender, isSuccessfull);
                 conn.Close();
             }
         }
