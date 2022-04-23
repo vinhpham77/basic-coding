@@ -191,10 +191,10 @@
 				. px1 px2 px3 ... pxn; -> n cột
 				. 1fr 1fr 1fr ...; -> n cột bằng nhau hoặc repeat(n, 1fr);
 				. Số lượng cột mỗi hàng tự động theo cửa sổ
-					repeat((auto-fill), minmax(px, 1fr)); -> zoom hiển thị đủ số cột, có thể còn thừa khoảng trống
-					repeat((auto-fit), minmax(px, 1fr)); -> zoom hiển thị đầy container
+					repeat(auto-fill, minmax(px, 1fr)); -> zoom hiển thị đủ số cột, có thể còn thừa khoảng trống
+					repeat(auto-fit, minmax(px, 1fr)); -> zoom hiển thị đầy container
 			+ grid-template-rows: px px; hoặc auto....; -> n hàng, không cần dùng rows khi mỗi ô đều có kích thước giống nhau
-			+ gap: (khoảng cách giữa các ô)
+			+ grid-gap: (khoảng cách giữa các ô)
 				. row-gap;
 				. row-gap column-gap; 
 		- element:
