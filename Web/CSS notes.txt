@@ -406,7 +406,7 @@
 29. Transition
 	- transition: 
 		+ property1 transition-duration (transition-timing-function), ...;
-			transition: background-color 0.2s linear, color 0.5s linear
+			transition: background-color 0.2s linear, color 0.5s linear;
 		+ all time type;
 	- transition-delay: time;
 	- transition-duration: time;
@@ -445,7 +445,7 @@
 		+ matrix(n, n, n, n, n, n); -> tự định nghĩa transform 2D
 		+ matrix3d(n, n, n, n, n, n, n, n, n, n, n, n, n, n, n, n); -> tự định nghĩa transform 3D, ma trận 4x4
 	- transform: perspective(n); -> tự định nghĩa kiểu xem phối cảnh
-	- transform: none
+	- transform: none;
 31. Position
 	- position:
 		+ static; (mặc định, các phần tử hiển thị đúng thứ tự)
