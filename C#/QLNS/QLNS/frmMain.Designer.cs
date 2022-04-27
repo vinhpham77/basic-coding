@@ -32,6 +32,8 @@ namespace QLNS
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQLNS));
             this.pnlInfo = new System.Windows.Forms.Panel();
+            this.cbbPosition = new System.Windows.Forms.ComboBox();
+            this.lblPosition = new System.Windows.Forms.Label();
             this.cbbDepartment = new System.Windows.Forms.ComboBox();
             this.txtCoefficientsSal = new System.Windows.Forms.TextBox();
             this.txtEmployeeName = new System.Windows.Forms.TextBox();
@@ -57,6 +59,8 @@ namespace QLNS
             // pnlInfo
             // 
             this.pnlInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlInfo.Controls.Add(this.cbbPosition);
+            this.pnlInfo.Controls.Add(this.lblPosition);
             this.pnlInfo.Controls.Add(this.cbbDepartment);
             this.pnlInfo.Controls.Add(this.txtCoefficientsSal);
             this.pnlInfo.Controls.Add(this.txtEmployeeName);
@@ -67,6 +71,18 @@ namespace QLNS
             this.pnlInfo.Controls.Add(this.lblEmployeeNo);
             resources.ApplyResources(this.pnlInfo, "pnlInfo");
             this.pnlInfo.Name = "pnlInfo";
+            // 
+            // cbbPosition
+            // 
+            this.cbbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbPosition.FormattingEnabled = true;
+            resources.ApplyResources(this.cbbPosition, "cbbPosition");
+            this.cbbPosition.Name = "cbbPosition";
+            // 
+            // lblPosition
+            // 
+            resources.ApplyResources(this.lblPosition, "lblPosition");
+            this.lblPosition.Name = "lblPosition";
             // 
             // cbbDepartment
             // 
@@ -126,24 +142,28 @@ namespace QLNS
             resources.ApplyResources(this.btnRefresh, "btnRefresh");
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnGroupBy
             // 
             resources.ApplyResources(this.btnGroupBy, "btnGroupBy");
             this.btnGroupBy.Name = "btnGroupBy";
             this.btnGroupBy.UseVisualStyleBackColor = true;
+            this.btnGroupBy.Click += new System.EventHandler(this.btnGroupBy_Click);
             // 
             // btnDelete
             // 
             resources.ApplyResources(this.btnDelete, "btnDelete");
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
             resources.ApplyResources(this.btnUpdate, "btnUpdate");
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnInsert
             // 
@@ -156,22 +176,28 @@ namespace QLNS
             // 
             resources.ApplyResources(this.txtSearch, "txtSearch");
             this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Enter += new System.EventHandler(this.txtSearch_Enter);
+            this.txtSearch.Leave += new System.EventHandler(this.txtSearch_Leave);
             // 
             // btnSearch
             // 
             resources.ApplyResources(this.btnSearch, "btnSearch");
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // dgvQLNS
             // 
+            this.dgvQLNS.AllowUserToAddRows = false;
+            this.dgvQLNS.AllowUserToDeleteRows = false;
             this.dgvQLNS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvQLNS.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvQLNS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             resources.ApplyResources(this.dgvQLNS, "dgvQLNS");
             this.dgvQLNS.Name = "dgvQLNS";
+            this.dgvQLNS.ReadOnly = true;
             this.dgvQLNS.RowTemplate.Height = 24;
-            this.dgvQLNS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQLNS_CellContentClick);
+            this.dgvQLNS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQLNS_CellClick);
             // 
             // frmQLNS
             // 
@@ -215,6 +241,8 @@ namespace QLNS
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.DataGridView dgvQLNS;
+        private Label lblPosition;
+        private ComboBox cbbPosition;
     }
 }
 
