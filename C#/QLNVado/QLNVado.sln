@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.1.32414.318
+VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLNVado", "QLNVado\QLNVado.csproj", "{3AF90F06-01F7-49C1-9875-F3D26746936D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLNVado", "QLNVado\QLNVado.csproj", "{37620CB3-F5AB-4B15-ACD4-79EE06D867A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3AF90F06-01F7-49C1-9875-F3D26746936D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3AF90F06-01F7-49C1-9875-F3D26746936D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3AF90F06-01F7-49C1-9875-F3D26746936D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3AF90F06-01F7-49C1-9875-F3D26746936D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37620CB3-F5AB-4B15-ACD4-79EE06D867A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37620CB3-F5AB-4B15-ACD4-79EE06D867A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37620CB3-F5AB-4B15-ACD4-79EE06D867A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37620CB3-F5AB-4B15-ACD4-79EE06D867A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {3EE59391-5529-4567-B80B-5CB0DB2959D3}
+		SolutionGuid = {90F166C8-E94D-4033-AA95-39F8EADFF714}
 	EndGlobalSection
 EndGlobal

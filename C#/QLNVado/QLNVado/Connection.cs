@@ -6,13 +6,13 @@ using System.Windows.Forms;
 
 namespace QLNVado
 {
-    internal static class Connect
+    internal static class Connection
     {
         public static SqlConnection Conn;
         public static SqlDataAdapter Da;
         public static SqlCommand Cmd;
 
-        public static void OpenConnection()
+        public static void Open()
         {
             Conn = new SqlConnection();
             Conn.ConnectionString = ConfigurationManager.ConnectionStrings["VinCowboi"].ConnectionString;
@@ -26,7 +26,7 @@ namespace QLNVado
             }
         }
 
-        public static void CloseConnection()
+        public static void Close()
         {
             Conn.Close();
         }
@@ -34,13 +34,10 @@ namespace QLNVado
         public static DataTable GetData(string cmdText)
         {
             DataTable dt = new DataTable();
-            Cmd = new SqlCommand(cmdText);
+            Cmd = new SqlCommand(cmdText, Conn);
             Da = new SqlDataAdapter(Cmd);
             Da.Fill(dt);
             return dt;
         }
     }
-
-
-
 }
