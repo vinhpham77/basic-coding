@@ -32,6 +32,7 @@ void liet_ke_con_chau(struct CGP*, char*);
 void in_the_he(struct CGP*, int);
 int tinh_bac(struct CGP*);
 int xoa(struct CGP*, char*);
+void xoa_cgp(struct CGP*);
 
 int main()
 {
@@ -44,34 +45,34 @@ int main()
 
 	in_theo_the_he(goc);
 
-	printf("\nSo nguoi trong cay gia pha: %d", dem(goc));
+	printf("\nSo nguoi trong cay gia pha: %d\n", dem(goc));
 
-	printf("\nSo the he trong cay gia pha: %d", tinh_so_the_he(goc));
+	printf("\nSo the he trong cay gia pha: %d\n", tinh_so_the_he(goc));
 
 	strcpy(ho_ten, "Nguyen B");
 	p = tim(goc, ho_ten);
 	if (p == NULL)
 	{
-		printf("\nKhong tim thay %s trong cay gia pha", ho_ten);
+		printf("\nKhong tim thay %s trong cay gia pha\n", ho_ten);
 	}
 	else
 	{
-		printf("\nKet qua tim kiem: %s, %d", p->du_lieu.ho_ten, p->du_lieu.nam_sinh);
+		printf("\nKet qua tim kiem: %s, %d\n", p->du_lieu.ho_ten, p->du_lieu.nam_sinh);
 	}
 
 	strcpy(ho_ten, "Nguyen B");
 	strcpy(ho_ten2, "Nguyen F");
 	if (la_con(goc, ho_ten, ho_ten2))
 	{
-		printf("\n%s la cha cua %s trong cay gia pha", ho_ten, ho_ten2);
+		printf("\n%s la cha cua %s trong cay gia pha\n", ho_ten, ho_ten2);
 	}
 	else
 	{
-		printf("\n%s khong phai la cha cua %s trong cay gia pha", ho_ten, ho_ten2);
+		printf("\n%s khong phai la cha cua %s trong cay gia pha\n", ho_ten, ho_ten2);
 	}
 
 	strcpy(ng.ho_ten, "Nguyen Van Vinh");
-	ng.nam_sinh = 1956;
+	ng.nam_sinh = 1954;
 	them_con(goc, "Nguyen B", ng);
 	printf("\nSau khi them %s:\n", ng.ho_ten);
 	in_theo_the_he(goc);
@@ -79,11 +80,13 @@ int main()
 	strcpy(ho_ten, "Nguyen B");
 	printf("\nCon chau cua %s: \n", ho_ten);
 	liet_ke_con_chau(goc, ho_ten);
-	
+
 	the_he = 1;
 	printf("\nNhung nguoi thuoc the he thu %d: \n", the_he);
 	in_the_he(goc, the_he);
-	
+
+	printf("\nSo bac cua %s: %d\n", goc->con->du_lieu.ho_ten, tinh_bac(goc->con));
+
 	strcpy(ho_ten, "Nguyen B");
 	if (xoa(goc, ho_ten))
 	{
@@ -117,6 +120,7 @@ void in_theo_the_he(struct CGP *goc)
 {
 	struct CGP *p;
 	struct Queue *dau, *cuoi;
+	int lan_them_trc, lan_them_sau, lan_rut;
 
 	if (goc == NULL)
 	{
@@ -126,13 +130,17 @@ void in_theo_the_he(struct CGP *goc)
 	p = goc;
 	dau = cuoi = NULL;
 
+	lan_them_trc = 1;
+	lan_them_sau = lan_rut = 0;
+
 	do
 	{
-		printf("%s, %d\n", p->du_lieu.ho_ten, p->du_lieu.nam_sinh);
+		printf("%s, %d | ", p->du_lieu.ho_ten, p->du_lieu.nam_sinh);
 
 		if (p->con != NULL)
 		{
 			add(&dau, &cuoi, p->con);
+	  		lan_them_sau++;
 		}
 
 		p = p->em;
@@ -140,6 +148,14 @@ void in_theo_the_he(struct CGP *goc)
 		if (p == NULL)
 		{
 			p = removee(&dau, &cuoi);
+			lan_rut++;
+			if (lan_them_trc == lan_rut)
+			{
+				printf("\n");
+				lan_them_trc = lan_them_sau;
+				lan_them_sau = lan_rut = 0;
+			}
+
 		}
 	}
 	while (dau != NULL || p != NULL);
@@ -254,9 +270,18 @@ int la_con(struct CGP *goc, char *ht_x, char *ht_y)
 void them_con(struct CGP *goc, char *ho_ten, struct Nguoi nguoi)
 {
 	struct CGP *p = tim(goc, ho_ten);
-	struct CGP *q= tao_nut(nguoi.ho_ten, nguoi.nam_sinh, NULL, NULL);
-	struct CGP *l = p->con;
-	struct CGP *tmp = NULL;
+	struct CGP *q;
+	struct CGP *l;
+	struct CGP *tmp;
+
+	if (p == NULL || p->du_lieu.nam_sinh >= nguoi.nam_sinh)
+	{
+		return;
+	}
+
+	q = tao_nut(nguoi.ho_ten, nguoi.nam_sinh, NULL, NULL);
+	l = p->con;
+	tmp = NULL;
 
 	while (l != NULL)
 	{
@@ -282,12 +307,13 @@ void them_con(struct CGP *goc, char *ho_ten, struct Nguoi nguoi)
 		q->em = l;
 	}
 }
+
 // VE NHA
 // 1. Liet ke con, chau cua mot nguoi co ho ten x.
 void liet_ke_con_chau(struct CGP *goc, char *ho_ten)
 {
 	struct CGP *p = tim(goc, ho_ten);
-	
+
 	if (p != NULL)
 	{
 		in_theo_the_he(p->con);
@@ -298,15 +324,15 @@ void liet_ke_con_chau(struct CGP *goc, char *ho_ten)
 void in_the_he(struct CGP *goc, int the_he)
 {
 	struct CGP *p;
-	
+
 	if (goc != NULL)
 	{
 		if (the_he > 1)
 		{
 			for (p = goc->con; p != NULL; p = p->em)
 			{
-				in_the_he(p, the_he - 1);				
-			}		
+				in_the_he(p, the_he - 1);
+			}
 		}
 		else if (the_he == 1)
 		{
@@ -316,22 +342,31 @@ void in_the_he(struct CGP *goc, int the_he)
 }
 
 // 3. Tinh bac cua cay.
-int tinh_bac(struct CGP*);
+int tinh_bac(struct CGP *goc)
+{
+	int bac = 0;
+	struct CGP *p;
+
+	for (p = goc->con; p != NULL ; p = p->em, bac++);
+
+	return bac;
+}
 
 // 4. Xoa mot nguoi tren cay co ten x(x khong phai ong to cua dong ho).
 int xoa(struct CGP *goc, char *ho_ten)
 {
 	struct CGP *p;
 	struct CGP *tmp;
-	
+	struct CGP *q;
+
 	if (goc == NULL)
 	{
 		return 0;
 	}
-	
+
 	tmp = goc;
 	p = goc->con;
-	
+
 	while (p != NULL)
 	{
 		if (strcmp(p->du_lieu.ho_ten, ho_ten) == 0)
@@ -340,30 +375,35 @@ int xoa(struct CGP *goc, char *ho_ten)
 		}
 		else
 		{
+			if (xoa(p, ho_ten))
+			{
+				return 1;
+			}
+
 			tmp = p;
 			p = p->em;
 		}
 	}
-	
+
 	if (p == NULL)
 	{
-		return xoa(goc->con, ho_ten);
+		return 0;
+	}
+	
+	if (tmp == goc)
+	{
+		goc->con = p->em;
 	}
 	else
 	{
-		if (tmp == goc)
-		{
-			goc->con = p->em;
-		}
-		else
-		{
-			tmp->em = p->em;
-		}
-		
-		free(p);
-		return 1;
+		tmp->em = p->em;
 	}
+
+	xoa_cgp(p);
+	return 1;
 }
+
+
 
 struct CGP *tao_nut(char *ho_ten, int nam_sinh, struct CGP *em, struct CGP *con)
 {
@@ -423,4 +463,38 @@ struct CGP *removee(struct Queue **dau, struct Queue **cuoi)
 		free(p);
 		return q;
 	}
+}
+
+void xoa_cgp(struct CGP *goc)
+{
+	struct CGP *p;
+	struct CGP *q;
+	struct Queue *dau, *cuoi;
+
+	if (goc == NULL)
+	{
+		return;
+	}
+
+	p = goc->con;
+	dau = cuoi = NULL;
+
+	while (dau != NULL || p != NULL)
+	{
+		if (p->con != NULL)
+		{
+			add(&dau, &cuoi, p->con);
+		}
+
+		q = p;
+		free(q);
+		p = p->em;
+
+		if (p == NULL)
+		{
+			p = removee(&dau, &cuoi);
+		}
+	}
+
+	free(goc);
 }
