@@ -9,3 +9,13 @@ C:\Users\LENOVO LEGION\basic-coding\C#\QLNVado\QLNVado\bin\Debug\QLNVado.exe
 C:\Users\LENOVO LEGION\basic-coding\C#\QLNVado\QLNVado\bin\Debug\QLNVado.pdb
 C:\Users\LENOVO LEGION\basic-coding\C#\QLNVado\QLNVado\obj\Debug\QLNVado.exe
 C:\Users\LENOVO LEGION\basic-coding\C#\QLNVado\QLNVado\obj\Debug\QLNVado.pdb
+C:\Users\May-14\Desktop\VanVinh\C#\QLNVado\QLNVado\bin\Debug\QLNVado.exe.config
+C:\Users\May-14\Desktop\VanVinh\C#\QLNVado\QLNVado\bin\Debug\QLNVado.exe
+C:\Users\May-14\Desktop\VanVinh\C#\QLNVado\QLNVado\bin\Debug\QLNVado.pdb
+C:\Users\May-14\Desktop\VanVinh\C#\QLNVado\QLNVado\obj\Debug\QLNVado.csproj.AssemblyReference.cache
+C:\Users\May-14\Desktop\VanVinh\C#\QLNVado\QLNVado\obj\Debug\QLNVado.FrmMain.resources
+C:\Users\May-14\Desktop\VanVinh\C#\QLNVado\QLNVado\obj\Debug\QLNVado.Properties.Resources.resources
+C:\Users\May-14\Desktop\VanVinh\C#\QLNVado\QLNVado\obj\Debug\QLNVado.csproj.GenerateResource.cache
+C:\Users\May-14\Desktop\VanVinh\C#\QLNVado\QLNVado\obj\Debug\QLNVado.csproj.CoreCompileInputs.cache
+C:\Users\May-14\Desktop\VanVinh\C#\QLNVado\QLNVado\obj\Debug\QLNVado.exe
+C:\Users\May-14\Desktop\VanVinh\C#\QLNVado\QLNVado\obj\Debug\QLNVado.pdb

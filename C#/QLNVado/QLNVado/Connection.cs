@@ -15,7 +15,7 @@ namespace QLNVado
         public static void Open()
         {
             Conn = new SqlConnection();
-            Conn.ConnectionString = ConfigurationManager.ConnectionStrings["VinCowboi"].ConnectionString;
+            Conn.ConnectionString = ConfigurationManager.ConnectionStrings["VinCowboi"].ConnectionString.ToString();
             try
             {
                 Conn.Open();
