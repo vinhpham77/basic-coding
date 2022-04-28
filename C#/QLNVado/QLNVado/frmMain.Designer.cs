@@ -57,7 +57,7 @@ namespace QLNVado
             this.lblName.Location = new System.Drawing.Point(22, 68);
             this.lblName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(99, 20);
+            this.lblName.Size = new System.Drawing.Size(119, 25);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Tên nhân viên";
             // 
@@ -67,7 +67,7 @@ namespace QLNVado
             this.lblBirthday.Location = new System.Drawing.Point(23, 114);
             this.lblBirthday.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblBirthday.Name = "lblBirthday";
-            this.lblBirthday.Size = new System.Drawing.Size(74, 20);
+            this.lblBirthday.Size = new System.Drawing.Size(91, 25);
             this.lblBirthday.TabIndex = 1;
             this.lblBirthday.Text = "Ngày sinh";
             // 
@@ -77,7 +77,7 @@ namespace QLNVado
             this.lblNo.Location = new System.Drawing.Point(23, 22);
             this.lblNo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNo.Name = "lblNo";
-            this.lblNo.Size = new System.Drawing.Size(97, 20);
+            this.lblNo.Size = new System.Drawing.Size(118, 25);
             this.lblNo.TabIndex = 2;
             this.lblNo.Text = "Mã nhân viên";
             // 
@@ -86,7 +86,7 @@ namespace QLNVado
             this.txtName.Location = new System.Drawing.Point(151, 65);
             this.txtName.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(224, 27);
+            this.txtName.Size = new System.Drawing.Size(224, 31);
             this.txtName.TabIndex = 4;
             // 
             // txtNo
@@ -94,7 +94,7 @@ namespace QLNVado
             this.txtNo.Location = new System.Drawing.Point(151, 19);
             this.txtNo.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.txtNo.Name = "txtNo";
-            this.txtNo.Size = new System.Drawing.Size(115, 27);
+            this.txtNo.Size = new System.Drawing.Size(115, 31);
             this.txtNo.TabIndex = 5;
             // 
             // lblDepartment
@@ -103,7 +103,7 @@ namespace QLNVado
             this.lblDepartment.Location = new System.Drawing.Point(24, 247);
             this.lblDepartment.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(80, 20);
+            this.lblDepartment.Size = new System.Drawing.Size(99, 25);
             this.lblDepartment.TabIndex = 7;
             this.lblDepartment.Text = "Phòng ban";
             // 
@@ -113,16 +113,17 @@ namespace QLNVado
             this.dtpBirthday.Location = new System.Drawing.Point(151, 114);
             this.dtpBirthday.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(164, 27);
+            this.dtpBirthday.Size = new System.Drawing.Size(164, 31);
             this.dtpBirthday.TabIndex = 8;
             // 
             // rbnMale
             // 
             this.rbnMale.AutoSize = true;
+            this.rbnMale.Checked = true;
             this.rbnMale.Location = new System.Drawing.Point(28, 159);
             this.rbnMale.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.rbnMale.Name = "rbnMale";
-            this.rbnMale.Size = new System.Drawing.Size(59, 24);
+            this.rbnMale.Size = new System.Drawing.Size(71, 29);
             this.rbnMale.TabIndex = 9;
             this.rbnMale.TabStop = true;
             this.rbnMale.Text = "Nam";
@@ -134,9 +135,8 @@ namespace QLNVado
             this.rbnFemale.Location = new System.Drawing.Point(151, 159);
             this.rbnFemale.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.rbnFemale.Name = "rbnFemale";
-            this.rbnFemale.Size = new System.Drawing.Size(47, 24);
+            this.rbnFemale.Size = new System.Drawing.Size(57, 29);
             this.rbnFemale.TabIndex = 10;
-            this.rbnFemale.TabStop = true;
             this.rbnFemale.Text = "Nữ";
             this.rbnFemale.UseVisualStyleBackColor = true;
             // 
@@ -147,7 +147,7 @@ namespace QLNVado
             this.cbbDepartment.Location = new System.Drawing.Point(151, 247);
             this.cbbDepartment.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.cbbDepartment.Name = "cbbDepartment";
-            this.cbbDepartment.Size = new System.Drawing.Size(164, 27);
+            this.cbbDepartment.Size = new System.Drawing.Size(164, 33);
             this.cbbDepartment.TabIndex = 12;
             // 
             // dgvDSNV
@@ -156,13 +156,13 @@ namespace QLNVado
             this.dgvDSNV.AllowUserToDeleteRows = false;
             this.dgvDSNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDSNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSNV.Location = new System.Drawing.Point(26, 305);
+            this.dgvDSNV.Location = new System.Drawing.Point(29, 305);
             this.dgvDSNV.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.dgvDSNV.Name = "dgvDSNV";
             this.dgvDSNV.ReadOnly = true;
             this.dgvDSNV.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvDSNV.RowHeadersWidth = 51;
-            this.dgvDSNV.Size = new System.Drawing.Size(727, 264);
+            this.dgvDSNV.Size = new System.Drawing.Size(715, 264);
             this.dgvDSNV.TabIndex = 13;
             this.dgvDSNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSNV_CellClick);
             // 
@@ -172,8 +172,8 @@ namespace QLNVado
             this.ptbImage.Location = new System.Drawing.Point(610, 19);
             this.ptbImage.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.ptbImage.Name = "ptbImage";
-            this.ptbImage.Size = new System.Drawing.Size(144, 172);
-            this.ptbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.ptbImage.Size = new System.Drawing.Size(134, 172);
+            this.ptbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ptbImage.TabIndex = 14;
             this.ptbImage.TabStop = false;
             // 
@@ -182,7 +182,7 @@ namespace QLNVado
             this.btnChooseImage.Location = new System.Drawing.Point(609, 205);
             this.btnChooseImage.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.btnChooseImage.Name = "btnChooseImage";
-            this.btnChooseImage.Size = new System.Drawing.Size(144, 43);
+            this.btnChooseImage.Size = new System.Drawing.Size(135, 43);
             this.btnChooseImage.TabIndex = 15;
             this.btnChooseImage.Text = "Chọn Ảnh";
             this.btnChooseImage.UseVisualStyleBackColor = true;
@@ -192,35 +192,38 @@ namespace QLNVado
             // 
             this.btnInsert.Location = new System.Drawing.Point(498, 19);
             this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(75, 30);
+            this.btnInsert.Size = new System.Drawing.Size(75, 40);
             this.btnInsert.TabIndex = 16;
             this.btnInsert.Text = "Thêm";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.Location = new System.Drawing.Point(498, 69);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 30);
+            this.btnUpdate.Size = new System.Drawing.Size(75, 40);
             this.btnUpdate.TabIndex = 17;
             this.btnUpdate.Text = "Sửa";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(498, 119);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 30);
+            this.btnDelete.Size = new System.Drawing.Size(75, 40);
             this.btnDelete.TabIndex = 18;
             this.btnDelete.Text = "Xoá";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // lblPhoneNumber
             // 
             this.lblPhoneNumber.AutoSize = true;
             this.lblPhoneNumber.Location = new System.Drawing.Point(24, 201);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(97, 20);
+            this.lblPhoneNumber.Size = new System.Drawing.Size(117, 25);
             this.lblPhoneNumber.TabIndex = 19;
             this.lblPhoneNumber.Text = "Số điện thoại";
             // 
@@ -228,14 +231,14 @@ namespace QLNVado
             // 
             this.txtPhoneNumber.Location = new System.Drawing.Point(151, 198);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(100, 27);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(100, 31);
             this.txtPhoneNumber.TabIndex = 20;
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(785, 596);
+            this.ClientSize = new System.Drawing.Size(775, 596);
             this.Controls.Add(this.txtPhoneNumber);
             this.Controls.Add(this.lblPhoneNumber);
             this.Controls.Add(this.btnDelete);
@@ -256,6 +259,7 @@ namespace QLNVado
             this.Controls.Add(this.lblName);
             this.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.MaximizeBox = false;
             this.Name = "FrmMain";
             this.Text = "QLNV";
             this.Load += new System.EventHandler(this.FrmMain_Load);
