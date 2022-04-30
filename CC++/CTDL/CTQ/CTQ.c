@@ -129,7 +129,6 @@ void in_theo_the_he(struct CGP *goc)
 
 	p = goc;
 	dau = cuoi = NULL;
-
 	lan_them_trc = 1;
 	lan_them_sau = lan_rut = 0;
 
@@ -204,12 +203,10 @@ int tinh_so_the_he(struct CGP *goc)
 		while (p != NULL)
 		{
 			n = tinh_so_the_he(p);
-
 			if (max < n)
 			{
 				max = n;
 			}
-
 			p = p->em;
 		}
 
@@ -237,7 +234,6 @@ struct CGP *tim(struct CGP *goc, char *ho_ten)
 		for (p = goc->con; p != NULL; p = p->em)
 		{
 			q = tim(p, ho_ten);
-
 			if (q != NULL)
 			{
 				return q;
@@ -347,7 +343,8 @@ int tinh_bac(struct CGP *goc)
 	int bac = 0;
 	struct CGP *p;
 
-	for (p = goc->con; p != NULL ; p = p->em, bac++);
+	for (p = goc->con; p != NULL ; p = p->em, bac++)
+		;
 
 	return bac;
 }
@@ -389,8 +386,7 @@ int xoa(struct CGP *goc, char *ho_ten)
 	{
 		return 0;
 	}
-	
-	if (tmp == goc)
+	else if (tmp == goc)
 	{
 		goc->con = p->em;
 	}
@@ -402,7 +398,6 @@ int xoa(struct CGP *goc, char *ho_ten)
 	xoa_cgp(p);
 	return 1;
 }
-
 
 
 struct CGP *tao_nut(char *ho_ten, int nam_sinh, struct CGP *em, struct CGP *con)
