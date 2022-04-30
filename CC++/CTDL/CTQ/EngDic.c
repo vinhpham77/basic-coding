@@ -181,7 +181,7 @@ void main()
 	k = readDic("words_alpha.txt", goc);
 	printf("%d words finished.\n",k);
 	printf("\nSearching...");
-	k = find(goc, "inher");
+	k = find(goc, "inherit");
 	printf("\nSearch result: %d\n", k);
 	k = getEngDicHeight(goc);
 	printf("\nHeight: %d\n", k);
