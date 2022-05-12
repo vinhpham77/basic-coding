@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Data.SqlClient;
 using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace LoginADO
 {
@@ -37,18 +31,18 @@ namespace LoginADO
             catch (Exception)
             {
                 match = false;
-                MessageBox.Show("Lỗi liên quan CSDL!");
+                MessageBox.Show("Error(database)!");
             }
             finally
             {
                 conn.Close();
                 if (match)
                 {
-                    MessageBox.Show("Đăng nhập thành công!");
+                    MessageBox.Show("Login successfully!");
                 }
                 else
                 {
-                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu!");
+                    MessageBox.Show("Invalid username or password!");
                 }
             }
 

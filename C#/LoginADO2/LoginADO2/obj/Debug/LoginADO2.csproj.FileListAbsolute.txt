@@ -1,0 +1,11 @@
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO2\LoginADO2\bin\Debug\LoginADO2.exe.config
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO2\LoginADO2\bin\Debug\LoginADO2.exe
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO2\LoginADO2\bin\Debug\LoginADO2.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO2\LoginADO2\obj\Debug\LoginADO2.csproj.AssemblyReference.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO2\LoginADO2\obj\Debug\LoginADO2.csproj.SuggestedBindingRedirects.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO2\LoginADO2\obj\Debug\LoginADO2.frmAdmin.resources
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO2\LoginADO2\obj\Debug\LoginADO2.Properties.Resources.resources
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO2\LoginADO2\obj\Debug\LoginADO2.csproj.GenerateResource.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO2\LoginADO2\obj\Debug\LoginADO2.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO2\LoginADO2\obj\Debug\LoginADO2.exe
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO2\LoginADO2\obj\Debug\LoginADO2.pdb

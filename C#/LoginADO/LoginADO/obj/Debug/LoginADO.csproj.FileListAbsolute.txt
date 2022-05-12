@@ -8,3 +8,14 @@ C:\Users\May-14\Desktop\VanVinh\C#\LoginADO\LoginADO\obj\Debug\LoginADO.csproj.G
 C:\Users\May-14\Desktop\VanVinh\C#\LoginADO\LoginADO\obj\Debug\LoginADO.csproj.CoreCompileInputs.cache
 C:\Users\May-14\Desktop\VanVinh\C#\LoginADO\LoginADO\obj\Debug\LoginADO.exe
 C:\Users\May-14\Desktop\VanVinh\C#\LoginADO\LoginADO\obj\Debug\LoginADO.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO\LoginADO\bin\Debug\LoginADO.exe.config
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO\LoginADO\bin\Debug\LoginADO.exe
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO\LoginADO\bin\Debug\LoginADO.pdb
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO\LoginADO\obj\Debug\LoginADO.csproj.AssemblyReference.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO\LoginADO\obj\Debug\LoginADO.csproj.SuggestedBindingRedirects.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO\LoginADO\obj\Debug\LoginADO.frmLoginADO.resources
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO\LoginADO\obj\Debug\LoginADO.Properties.Resources.resources
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO\LoginADO\obj\Debug\LoginADO.csproj.GenerateResource.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO\LoginADO\obj\Debug\LoginADO.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO\LoginADO\obj\Debug\LoginADO.exe
+C:\Users\LENOVO LEGION\basic-coding\C#\LoginADO\LoginADO\obj\Debug\LoginADO.pdb
