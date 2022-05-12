@@ -1,0 +1,10 @@
+C:\Users\May-14\Desktop\VanVinh\C#\LoginADO\LoginADO\bin\Debug\LoginADO.exe.config
+C:\Users\May-14\Desktop\VanVinh\C#\LoginADO\LoginADO\bin\Debug\LoginADO.exe
+C:\Users\May-14\Desktop\VanVinh\C#\LoginADO\LoginADO\bin\Debug\LoginADO.pdb
+C:\Users\May-14\Desktop\VanVinh\C#\LoginADO\LoginADO\obj\Debug\LoginADO.csproj.AssemblyReference.cache
+C:\Users\May-14\Desktop\VanVinh\C#\LoginADO\LoginADO\obj\Debug\LoginADO.frmLoginADO.resources
+C:\Users\May-14\Desktop\VanVinh\C#\LoginADO\LoginADO\obj\Debug\LoginADO.Properties.Resources.resources
+C:\Users\May-14\Desktop\VanVinh\C#\LoginADO\LoginADO\obj\Debug\LoginADO.csproj.GenerateResource.cache
+C:\Users\May-14\Desktop\VanVinh\C#\LoginADO\LoginADO\obj\Debug\LoginADO.csproj.CoreCompileInputs.cache
+C:\Users\May-14\Desktop\VanVinh\C#\LoginADO\LoginADO\obj\Debug\LoginADO.exe
+C:\Users\May-14\Desktop\VanVinh\C#\LoginADO\LoginADO\obj\Debug\LoginADO.pdb
