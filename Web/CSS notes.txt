@@ -183,6 +183,24 @@
 			. center: đưa các hàng(cột) ra giữa
 
 	- Khi sử dụng table hay grid thì các phần tử mà dùng display: flex thì phải dùng direction column để giao diện không bị bóp méo. -> mục đích chỉnh vị trí những thành phần bên trong ô
+		- Hiệu ứng snap scroll(scroll mượt hơn)
+		+ container:
+			. display: flex;
+			. overflow-x: auto;
+			. scroll-snap-type:
+				. x mandatory -> scroll ngang đến đầu phần tử sau
+				. y proximity(mặc định)-> scroll dọc đến hết lực
+		+ element:
+			. scroll-snap-align:
+				. start; -> lướt đến đầu element tiếp theo, element ở vị trí đầu
+				. center; -> lướt đến element tiếp theo, element nằm ở center
+				. end; -> lướt đến cuối element tiếp theo, element nằm ở cuối
+			. scroll-snap-stop:
+				. normal(mặc định) -> lướt nhả hết lực
+				. always -> lướt nhả đến element sau
+			. khi sử dụng box-shadow mà có scroll-snap thì phải thêm scroll-padding để phần shadow không bị cắt đi
+				. scroll-padding cách phần tử khỏi lề;
+			. webkit-overflow-scrolling: touch;
 14. Grid Layout
 	Cách 1
 		- container:
@@ -226,24 +244,6 @@
 			. row; -> scroll ngang
 		+ grid-auto-columns: kích thước mỗi cột nên cho 50-80% để hiển thị một phần ô để biết có scroll
 		+ overflow-x: auto; hiển thị scroll ngang
-	- Hiệu ứng snap scroll(scroll mượt hơn)
-		+ container:
-			. display: flex;
-			. overflow-x: auto;
-			. scroll-snap-type:
-				. x mandatory -> scroll ngang đến đầu phần tử sau
-				. y proximity(mặc định)-> scroll dọc đến hết lực
-		+ element:
-			. scroll-snap-align:
-				. start; -> lướt đến đầu element tiếp theo, element ở vị trí đầu
-				. center; -> lướt đến element tiếp theo, element nằm ở center
-				. end; -> lướt đến cuối element tiếp theo, element nằm ở cuối
-			. scroll-snap-stop:
-				. normal(mặc định) -> lướt nhả hết lực
-				. always -> lướt nhả đến element sau
-			. khi sử dụng box-shadow mà có scroll-snap thì phải thêm scroll-padding để phần shadow không bị cắt đi
-				. scroll-padding cách phần tử khỏi lề;
-			. webkit-overflow-scrolling: touch;
 15. Thuộc tính font
 	- Font chữ mặc định là Times New Roman
 	- Nên nhúng font từ Google Font
