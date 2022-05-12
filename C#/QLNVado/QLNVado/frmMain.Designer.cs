@@ -57,7 +57,7 @@ namespace QLNVado
             this.lblName.Location = new System.Drawing.Point(22, 68);
             this.lblName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(119, 25);
+            this.lblName.Size = new System.Drawing.Size(99, 20);
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Tên nhân viên";
             // 
@@ -67,7 +67,7 @@ namespace QLNVado
             this.lblBirthday.Location = new System.Drawing.Point(23, 114);
             this.lblBirthday.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblBirthday.Name = "lblBirthday";
-            this.lblBirthday.Size = new System.Drawing.Size(91, 25);
+            this.lblBirthday.Size = new System.Drawing.Size(74, 20);
             this.lblBirthday.TabIndex = 1;
             this.lblBirthday.Text = "Ngày sinh";
             // 
@@ -77,7 +77,7 @@ namespace QLNVado
             this.lblNo.Location = new System.Drawing.Point(23, 22);
             this.lblNo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblNo.Name = "lblNo";
-            this.lblNo.Size = new System.Drawing.Size(118, 25);
+            this.lblNo.Size = new System.Drawing.Size(97, 20);
             this.lblNo.TabIndex = 2;
             this.lblNo.Text = "Mã nhân viên";
             // 
@@ -86,7 +86,7 @@ namespace QLNVado
             this.txtName.Location = new System.Drawing.Point(151, 65);
             this.txtName.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(224, 31);
+            this.txtName.Size = new System.Drawing.Size(224, 27);
             this.txtName.TabIndex = 4;
             // 
             // txtNo
@@ -94,7 +94,7 @@ namespace QLNVado
             this.txtNo.Location = new System.Drawing.Point(151, 19);
             this.txtNo.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.txtNo.Name = "txtNo";
-            this.txtNo.Size = new System.Drawing.Size(115, 31);
+            this.txtNo.Size = new System.Drawing.Size(115, 27);
             this.txtNo.TabIndex = 5;
             // 
             // lblDepartment
@@ -103,7 +103,7 @@ namespace QLNVado
             this.lblDepartment.Location = new System.Drawing.Point(24, 247);
             this.lblDepartment.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblDepartment.Name = "lblDepartment";
-            this.lblDepartment.Size = new System.Drawing.Size(99, 25);
+            this.lblDepartment.Size = new System.Drawing.Size(80, 20);
             this.lblDepartment.TabIndex = 7;
             this.lblDepartment.Text = "Phòng ban";
             // 
@@ -113,7 +113,7 @@ namespace QLNVado
             this.dtpBirthday.Location = new System.Drawing.Point(151, 114);
             this.dtpBirthday.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.dtpBirthday.Name = "dtpBirthday";
-            this.dtpBirthday.Size = new System.Drawing.Size(164, 31);
+            this.dtpBirthday.Size = new System.Drawing.Size(164, 27);
             this.dtpBirthday.TabIndex = 8;
             // 
             // rbnMale
@@ -123,7 +123,7 @@ namespace QLNVado
             this.rbnMale.Location = new System.Drawing.Point(28, 159);
             this.rbnMale.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.rbnMale.Name = "rbnMale";
-            this.rbnMale.Size = new System.Drawing.Size(71, 29);
+            this.rbnMale.Size = new System.Drawing.Size(59, 24);
             this.rbnMale.TabIndex = 9;
             this.rbnMale.TabStop = true;
             this.rbnMale.Text = "Nam";
@@ -135,7 +135,7 @@ namespace QLNVado
             this.rbnFemale.Location = new System.Drawing.Point(151, 159);
             this.rbnFemale.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.rbnFemale.Name = "rbnFemale";
-            this.rbnFemale.Size = new System.Drawing.Size(57, 29);
+            this.rbnFemale.Size = new System.Drawing.Size(47, 24);
             this.rbnFemale.TabIndex = 10;
             this.rbnFemale.Text = "Nữ";
             this.rbnFemale.UseVisualStyleBackColor = true;
@@ -147,14 +147,13 @@ namespace QLNVado
             this.cbbDepartment.Location = new System.Drawing.Point(151, 247);
             this.cbbDepartment.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.cbbDepartment.Name = "cbbDepartment";
-            this.cbbDepartment.Size = new System.Drawing.Size(164, 33);
+            this.cbbDepartment.Size = new System.Drawing.Size(164, 27);
             this.cbbDepartment.TabIndex = 12;
             // 
             // dgvDSNV
             // 
             this.dgvDSNV.AllowUserToAddRows = false;
             this.dgvDSNV.AllowUserToDeleteRows = false;
-            this.dgvDSNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDSNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSNV.Location = new System.Drawing.Point(29, 305);
             this.dgvDSNV.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
@@ -168,7 +167,7 @@ namespace QLNVado
             // 
             // ptbImage
             // 
-            this.ptbImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptbImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.ptbImage.Location = new System.Drawing.Point(610, 19);
             this.ptbImage.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.ptbImage.Name = "ptbImage";
@@ -223,7 +222,7 @@ namespace QLNVado
             this.lblPhoneNumber.AutoSize = true;
             this.lblPhoneNumber.Location = new System.Drawing.Point(24, 201);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(117, 25);
+            this.lblPhoneNumber.Size = new System.Drawing.Size(97, 20);
             this.lblPhoneNumber.TabIndex = 19;
             this.lblPhoneNumber.Text = "Số điện thoại";
             // 
@@ -231,12 +230,12 @@ namespace QLNVado
             // 
             this.txtPhoneNumber.Location = new System.Drawing.Point(151, 198);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(100, 31);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(100, 27);
             this.txtPhoneNumber.TabIndex = 20;
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 596);
             this.Controls.Add(this.txtPhoneNumber);

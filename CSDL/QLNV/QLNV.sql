@@ -34,4 +34,4 @@ VALUES('00002', N'Phạm Ngọc Thái', '05/09/2003', '1', '0394312345', 'HC' , 
 INSERT NhanVien
 VALUES('00003', N'Trần Thái Công', '06/30/2002', '1', '0292929292', 'NS' , NULL)
 INSERT NhanVien
-VALUES('00004', N'Nguyễn Yến Linh', '05/20/2002', '0', '0123823727', 'HC' , '00004.jpg');
+VALUES('00004', N'Nguyễn Yến Linh', '05/20/2002', '0', '0123823727', 'HC' , NULL);

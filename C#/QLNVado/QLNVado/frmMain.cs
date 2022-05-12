@@ -41,10 +41,16 @@ namespace QLNVado
             dgvDSNV_Load();
             imgFolderPath = Directory.GetCurrentDirectory() + "\\Img\\";
             Directory.CreateDirectory(imgFolderPath);
+            int columnsCount = dgvDSNV.Columns.Count;
+            if (columnsCount > 0)
+            {
+                dgvDSNV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                dgvDSNV.Columns[dgvDSNV.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            }
             Connection.Close();
         }
 
-        private bool IsValidate()
+        private bool IsValid()
         {
             string loi = null;
             string phoneNumber = txtPhoneNumber.Text.Trim();
@@ -58,9 +64,9 @@ namespace QLNVado
             {
                 loi = "Tên không được để trống";
             }
-            else if ((phoneNumber.Length != 10 && phoneNumber.Length != 13) || !int.TryParse(phoneNumber, out sdt))
+            else if (phoneNumber.Length != 10 || !int.TryParse(phoneNumber, out sdt))
             {
-                loi = "Số điện thoại phải không hợp lệ";
+                loi = "Số điện thoại không hợp lệ";
             }
 
             if (string.IsNullOrEmpty(loi))
@@ -93,7 +99,7 @@ namespace QLNVado
                 return;
             }
 
-            txtNo.Text = dgvDSNV.Rows[index].Cells["MaNV"].Value.ToString().Trim();
+            txtNo.Text = dgvDSNV.Rows[index].Cells["MaNV"].Value.ToString();
             txtName.Text = dgvDSNV.Rows[index].Cells["TenNV"].Value.ToString();
             dtpBirthday.Text = dgvDSNV.Rows[index].Cells["NgaySinh"].Value.ToString();
 
@@ -106,7 +112,7 @@ namespace QLNVado
                 rbnFemale.Checked = true;
             }
 
-            txtPhoneNumber.Text = dgvDSNV.Rows[index].Cells["SoDT"].Value.ToString().Trim();
+            txtPhoneNumber.Text = dgvDSNV.Rows[index].Cells["SoDT"].Value.ToString();
             cbbDepartment.SelectedValue = dgvDSNV.Rows[index].Cells["MaPB"].Value.ToString();
             imgPath = imgFolderPath + dgvDSNV.Rows[index].Cells["Picture"].Value.ToString();
 
@@ -122,7 +128,7 @@ namespace QLNVado
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            if (IsValidate())
+            if (IsValid())
             {
                 Connection.Open();
 
@@ -130,7 +136,7 @@ namespace QLNVado
                 {
                     cmdText = "INSERT NhanVien VALUES (@MaNV, @TenNV, @NgaySinh, @GioiTinh, @SoDT, @MaPB, @Picture)";
                     string[] name = { "@MaNV", "@TenNV", "@NgaySinh", "@GioiTinh", "@SoDT", "@MaPB", "@Picture" };
-                    string imgClonePath = null;
+                    string imgClonePath = "";
 
                     if (File.Exists(imgPath))
                     {
@@ -185,7 +191,7 @@ namespace QLNVado
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (IsValidate())
+            if (IsValid())
             {
                 Connection.Open();
 
@@ -196,12 +202,14 @@ namespace QLNVado
                         "WHERE MaNV = @MaNV";
                     string[] name = { "@TenNV", "@NgaySinh", "@GioiTinh", "@SoDT", "@MaPB", "@Picture", "@MaNV" };
                     string imgClonePath = "";
-
-                    if (File.Exists(imgPath))
-                    {
+                    
+                    //if (File.Exists(imgPath))
+                    //{
                         imgClonePath = txtNo.Text + Path.GetExtension(imgPath);
+                       
+                        
                         File.Copy(imgPath, imgFolderPath + imgClonePath, true);
-                    }
+                    //}
 
                     string[] value = { txtName.Text, dtpBirthday.Text, rbnMale.Checked ? "True" : "False", txtPhoneNumber.Text, cbbDepartment.SelectedValue.ToString(), imgClonePath, txtNo.Text };
                     InformResult(sender, Connection.UpdateData(cmdText, name, value));
