@@ -30,21 +30,23 @@ int main()
 	struct Priority_Queue *pq = init();
 	struct Element e;
 	int i;
+	
 	srand(time(0));
-
 	for (i = 0; i < 10; i++)
 	{
 		// e.data is a random character ranged from 'a'(97) to 'z'(122)
 		e.data = random(97, 122);
-		e.priority = rand();
+		e.priority = random(1, 10);
 		add(pq, e);
 	}
 
-	printf("Priority Queue: ");
+	printf("Priority queue: ");
 	print_PQ(*pq);
 	e = removee(pq);
 	printf("\n\nThe element got by removing: ");
 	print_Element(e);
+	printf("\n\nPriority queue after removing: ");
+	print_PQ(*pq);
 
 	return 0;
 }
@@ -93,12 +95,12 @@ void sift_up(struct Priority_Queue *pq)
 	}
 }
 
-void add(struct Priority_Queue *pq, struct Element element)
+void add(struct Priority_Queue *pq, struct Element e)
 {
 	int current_size = pq->size;
 	if (current_size < MAX_SIZE)
 	{
-		pq->elements[current_size] = element;
+		pq->elements[current_size] = e;
 		pq->size++;
 		sift_up(pq);
 	}
@@ -107,7 +109,7 @@ void add(struct Priority_Queue *pq, struct Element element)
 void sift_down(struct Priority_Queue *pq, int start_index, int size)
 {
 	int parent_index = start_index;
-	int left_child_index = (parent_index * 2 ) + 1;
+	int left_child_index = (parent_index * 2) + 1;
 	int right_child_index;
 	int highest_priority_child_index;
 	int left_child_priority;
@@ -128,7 +130,7 @@ void sift_down(struct Priority_Queue *pq, int start_index, int size)
 			highest_priority_child_index = right_child_index;
 			highest_child_priority = right_child_priority;
 		}
-
+		
 		if (parent_priority < highest_child_priority)
 		{
 			swap(&pq->elements[parent_index], &pq->elements[highest_priority_child_index]);
@@ -160,7 +162,8 @@ void print_Element(struct Element e)
 
 void print_PQ(struct Priority_Queue pq)
 {
-	for (int i = 0; i < pq.size; i++)
+	int i;
+	for (i = 0; i < pq.size; i++)
 	{
 		print_Element(pq.elements[i]);
 		printf(", ");

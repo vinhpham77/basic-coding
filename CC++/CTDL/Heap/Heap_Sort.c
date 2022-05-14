@@ -4,37 +4,31 @@
 
 #define MAX_SIZE 1000
 
-struct Heap
-{
-	int elements[MAX_SIZE];
-	int size;
-};
-
-struct Heap *create_heap(int*, int);
+void create_heap(int*, int);
 void create_random_array(int*, int);
 void sort(int *, int);
 void swap(int*, int*);
-void sift_down(struct Heap*, int, int);
+void sift_down(int*, int, int);
 void print_array(int*, int);
 
 int main()
 {
-	int array[MAX_SIZE];
+	int arr[MAX_SIZE];
 
 	srand(time(0));
-	create_random_array(array, MAX_SIZE);
-	sort(array, MAX_SIZE);
-	print_array(array, MAX_SIZE);
+	create_random_array(arr, MAX_SIZE);
+	sort(arr, MAX_SIZE);
+	print_array(arr, MAX_SIZE);
 
 	return 0;
 }
 
-void create_random_array(int *array, int size)
+void create_random_array(int *arr, int size)
 {
 	int i;
 	for (i = 0; i < size; i++)
 	{
-		array[i] = rand();
+		arr[i] = rand();
 	}
 }
 
@@ -45,7 +39,7 @@ void swap(int *a, int *b)
 	*b = temp;
 }
 
-void sift_down(struct Heap *heap, int start_index, int size)
+void sift_down(int *heap, int start_index, int size)
 {
 	int parent_index = start_index;
 	int left_child_index = parent_index * 2 + 1;
@@ -57,14 +51,14 @@ void sift_down(struct Heap *heap, int start_index, int size)
 		max_child_index = left_child_index;
 		right_child_index = left_child_index + 1;
 
-		if (right_child_index < size && heap->elements[right_child_index] > heap->elements[max_child_index])
+		if (right_child_index < size && heap[right_child_index] > heap[max_child_index])
 		{
 			max_child_index = right_child_index;
 		}
 
-		if (heap->elements[parent_index] < heap->elements[max_child_index])
+		if (heap[parent_index] < heap[max_child_index])
 		{
-			swap(&heap->elements[parent_index], &heap->elements[max_child_index]);
+			swap(&heap[parent_index], &heap[max_child_index]);
 			parent_index = max_child_index;
 			left_child_index = parent_index * 2 + 1;
 		}
@@ -75,47 +69,33 @@ void sift_down(struct Heap *heap, int start_index, int size)
 	}
 }
 
-struct Heap *create_heap(int *array, int size)
+void create_heap(int *arr, int size)
 {
 	int i;
-	struct Heap *heap = (struct Heap*) malloc(sizeof(struct Heap));
-
-	heap->size = size;
-	for (i = 0; i < size; i++)
-	{
-		heap->elements[i] = array[i];
-	}
-
 	for (i = (size - 1) / 2; i >= 0; i--)
 	{
-		sift_down(heap, i, heap->size - 1);
+		sift_down(arr, i, size - 1);
 	}
-
-	return heap;
 }
 
-void sort(int *array, int size)
+void sort(int *arr, int size)
 {
 	int i;
-	struct Heap *heap = create_heap(array, size);
-
-	for (i = heap->size - 1; i > 0; i--)
+	
+	create_heap(arr, size);
+	
+	for (i = size - 1; i > 0; i--)
 	{
-		swap(&heap->elements[0], &heap->elements[i]);
-		sift_down(heap, 0, i);
-	}
-
-	for (i = 0; i < size; i++)
-	{
-		array[i] = heap->elements[i];
+		swap(&arr[0], &arr[i]);
+		sift_down(arr, 0, i);
 	}
 }
 
-void print_array(int *array, int size)
+void print_array(int *arr, int size)
 {
 	int i;
 	for (i = 0; i < size; i++)
 	{
-		printf("%d ", array[i]);
+		printf("%d ", arr[i]);
 	}
 }
