@@ -1,0 +1,82 @@
+1. FormDangNhap
+	
+
+2. FormDangKy(Đoc giả, Thủ kho, Thủ thư)
+	- Họ tên
+	- Giới tính
+	- Ngày sinh
+	- CMND/CCCD
+	- SDT
+	- Email
+
+3. FormThuThu
+	- Thêm đọc giả
+	- Sửa thông tin đọc giả
+	- Xoá đọc giả
+	- Tìm đọc giả
+	- Tìm sách
+	- Cho mượn
+	- Xác nhận trả
+	- Thống kê hoạt động mượn trả(của người nào đó)
+
+4. FormThuKho
+	- Thêm sách
+	- Sửa thông tin sách
+	- Xoá sách
+	- Tìm sách
+
+5. FormQuanLyNhanSu
+	- Thêm nhân viên(thủ kho, thủ thư).
+	- Xoá nhân viên
+	- Thống kê hoạt động mượn trả.
+	- Thống kê hoạt động của thủ thư.
+
+6. FormDocGia
+	- Tìm sách
+	- Xem hoạt động mượn trả của bản thân.
+
+SQL
+	TaiKhoan
+		TenTaiKhoan
+		MatKhau
+
+	ThongTinTaiKhoan
+		TenTaiKhoan
+		HoTen
+		GioiTinh
+		NgaySinh
+		CMND/CCCD
+		SDT
+		Email
+		LoaiTaiKhoan
+		NgayTao
+		NguoiTao
+
+	Sach
+		MaSach
+		TenSach
+		TacGia
+		NhaXB
+		Gia
+		SoLuong
+		TinhTrang
+
+	TheoDoiMuonTra
+		TenTaiKhoan
+		MaSach
+		NgayMuon
+		NgayTra
+		TinhTrangSach(truoc)
+		TinhTrangSach(sau)
+
+	TheoDoiKho
+		MaSach
+		TenSach
+		TacGia
+		NhaXB
+		Gia
+		TinhTrang
+		ThaoTac
+		NguoiThaoTac
+		NgayThaoTac
+
