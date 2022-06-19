@@ -30,4 +30,4 @@ int main()
 
 ### Liên hệ
 
-Nếu có điều gì còn thắc mắc, vui lòng liên hệ [địa chỉ](https://www.facebook.com/me/) và vấn đề sẽ được giải quyết.
+Nếu có điều gì còn thắc mắc, vui lòng liên hệ [địa chỉ](https://www.facebook.com/me/).
