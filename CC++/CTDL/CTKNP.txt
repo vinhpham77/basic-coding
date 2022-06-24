@@ -1,0 +1,10 @@
+cat:meo
+dog:cho
+house:ngoi nha
+drink:uong
+drive:lai
+handsome:dep trai
+hardware:phan cung
+software:phan mem
+disk:o dia
+RAM:bo nho truy xuat ngau nhien

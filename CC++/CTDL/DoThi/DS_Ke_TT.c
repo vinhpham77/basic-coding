@@ -39,7 +39,6 @@ int main()
 	return 0;
 }
 
-
 void doc_tep(struct Do_Thi *dt, char *duong_dan)
 {
 	FILE *f = fopen(duong_dan, "r");
@@ -141,21 +140,21 @@ void tim_duong_di_ngan_nhat(struct Do_Thi dt, int dinh_dau, int dinh_cuoi)
 
 void dijktra(struct Do_Thi dt, int dinh_dau, int *da_tham, int *truoc)
 {
-	int i, k, duong_di[TOI_DA], heap[TOI_DA];
-	da_tham[dinh_dau] = 1;
-
-	for (i = 0; i < dt.so_dinh; i++)
-	{
-		duong_di[i] = VO_CUNG;
-	}
-	duong_di[dinh_dau] = 0;
-
-	struct DS_Ke *p = dt.ds[dinh_dau];
-	while (p != NULL)
-	{
-		
-		p = p->lk;
-	}
+//	int i, k, duong_di[TOI_DA], heap[TOI_DA];
+//	da_tham[dinh_dau] = 1;
+//
+//	for (i = 0; i < dt.so_dinh; i++)
+//	{
+//		duong_di[i] = dt.ds[dinh_dau];
+//	}
+//	duong_di[dinh_dau] = 0;
+//
+//	struct DS_Ke *p = dt.ds[dinh_dau];
+//	while (p != NULL)
+//	{
+//
+//		p = p->lk;
+//	}
 
 
 }

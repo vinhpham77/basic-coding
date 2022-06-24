@@ -18,7 +18,11 @@ void duyet_sau_het_dinh(struct Do_Thi);
 int dem_canh(struct Do_Thi);
 int dem_canh_ke(struct Do_Thi, int);
 int liet_ke_khong_tham_rong(struct Do_Thi, int);
-
+void dijkstra(struct Do_Thi, int, int*, int*);
+void sift_down(int*, int, int);
+void tao_heap(int*, int*, int);
+void sift_up(int*, int*, int);
+void swap(int*, int*);
 int main()
 {
 	char duong_dan[] = "DT2.txt";
@@ -205,4 +209,114 @@ int liet_ke_khong_tham_rong(struct Do_Thi dt, int dinh)
 			printf("%d ", i);
 		}
 	}
+}
+
+void tim_ddnn(struct Do_Thi dt, int dinh_dau, int dinh_cuoi)
+{
+	int i, truoc[TOI_DA], da_tham[TOI_DA];
+
+	for (i = 0; i < dt.so_dinh; i++)
+	{
+		da_tham[i] = 0;
+	}
+
+	dijkstra(dt, dinh_dau, da_tham, truoc);
+}
+
+void dijkstra(struct Do_Thi dt, int dinh_dau, int *da_tham, int *truoc)
+{
+    int i, j, k, vmin, min;
+    int duong_di[TOI_DA];
+    int heap[TOI_DA];
+    for(i = 0; i < dt.so_dinh; i++)
+    {
+        duong_di[i] = dt.mtts[dinh_dau][i];
+        truoc[i] = dinh_dau;
+    }
+    duong_di[dinh_dau] = 0;
+    //tao_heap(heap, duong_di, dt.so_dinh);
+
+    for(k = 0; k < dt.so_dinh; k++)
+    {
+        //vmin=extracMin(heap, duong_di, dt.so_dinh - k);
+        for(j = 0; i < dt.so_dinh - k; j++)
+        {
+            i = heap[j];
+            if(!da_tham[i] && dt.mtts[vmin][i] != VO_CUNG &&
+                duong_di[i] > duong_di[vmin] + dt.mtts[vmin][i])
+            {
+                duong_di[i] = duong_di[vmin] + dt.mtts[vmin][i];
+                truoc[i] = vmin;
+                sift_up(heap, duong_di, j);
+            }
+        }
+    }
+}
+
+void sift_down(int *heap, int dau, int so_pt)
+{
+	int cha = dau;
+	int con_trai = cha * 2 + 1;
+	int con_phai;
+	int con_nho_nhat;
+
+	while (con_trai < so_pt)
+	{
+		con_nho_nhat = con_trai;
+		con_phai = con_trai + 1;
+
+		if (con_phai < so_pt && heap[con_phai] < heap[con_nho_nhat])
+		{
+			con_nho_nhat = con_phai;
+		}
+
+		if (heap[cha] > heap[con_nho_nhat])
+		{
+			swap(&heap[cha], &heap[con_nho_nhat]);
+			cha = con_nho_nhat;
+			con_trai = cha * 2 + 1;
+		}
+		else
+		{
+			return;
+		}
+	}
+}
+
+void swap(int *a, int *b)
+{
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+void sift_up(int *heap, int *duong_di, int so_pt)
+{
+	int con = so_pt - 1;
+	int cha;
+
+	while (con > 0)
+	{
+		cha = (con - 1) / 2;
+
+		if (duong_di[cha] > duong_di[con])
+		{
+			swap(&heap[cha], &heap[con]);
+			con = cha;
+		}
+		else
+		{
+			return;
+		}
+	}
+}
+
+int lay(int *heap, int *so_pt)
+{
+	int cuoi = *so_pt - 1;
+	*so_pt = *so_pt - 1;
+ 	swap(&heap[0], &heap[cuoi]);
+	sift_down(heap, 0, *so_pt);
+
+	return heap[cuoi];
 }
